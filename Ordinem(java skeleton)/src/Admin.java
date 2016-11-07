@@ -6,12 +6,13 @@ public class Admin {
 
     public Admin() {
         //nothing
+        this.sql = new SQLConnector("chapman_university", // database name
+                "jdbc:mysql://us-cdbr-azure-west-b.cleardb.com:3306/chapman_university", //connection url
+                "b8adaded8c4294", // username
+                "67e46b7b"); // password
     }
 
-    private SQLConnector sql = new SQLConnector("chapman_university", // database name
-            "jdbc:mysql://us-cdbr-azure-west-b.cleardb.com:3306/chapman_university", //connection url
-            "b8adaded8c4294", // username
-            "67e46b7b"); // password
+    private SQLConnector sql;
 
     private String username, password, email, uniqueID, typeID;
 
@@ -53,9 +54,9 @@ public class Admin {
                         "5.) Recreational\n6.) Greek Chapter\n7.) Leisure\n8.) Civic Engagement\n\nPlease enter organization type as a number: ");
         typeID = prompt.next();
 
-        uniqueID = UUID.randomUUID().toString();
+        //uniqueID = UUID.randomUUID().toString();
 
-        return sql.runUpdate("INSERT INTO organizations(orgID, name, email, password, typeID) VALUES ('"+uniqueID+"', '"+username+"', '"+email+"', '"+password+"', "+typeID+")");
+        return sql.runUpdate("INSERT INTO organizations(name, email, password, typeID) VALUES ('"+username+"', '"+email+"', '"+password+"', "+typeID+")");
     }
 
     public String editOrg(){

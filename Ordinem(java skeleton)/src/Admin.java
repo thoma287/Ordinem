@@ -4,7 +4,16 @@ import java.util.UUID;
 
 public class Admin {
 
-    private String username, password, email, uniqueID;
+    public Admin() {
+        //nothing
+    }
+
+    private SQLConnector sql = new SQLConnector("chapman_university", // database name
+            "jdbc:mysql://us-cdbr-azure-west-b.cleardb.com:3306/chapman_university", //connection url
+            "b8adaded8c4294", // username
+            "67e46b7b"); // password
+
+    private String username, password, email, uniqueID, typeID;
 
     public String getUsername(){
         return username;  //getter username
@@ -29,9 +38,9 @@ public class Admin {
         System.out.print("ID: " + uniqueID);
     }
 
-    public String AddOrg(){
+    public boolean AddOrg(){
         Scanner prompt = new Scanner(System.in);
-        System.out.print("Choose Username: ");
+        System.out.print("Choose Organization Name: ");
         username = prompt.next();
 
         System.out.print("Choose Password: ");
@@ -40,14 +49,13 @@ public class Admin {
         System.out.print("Email: ");
         email = prompt.next();
 
+        System.out.print("1.) Academic/Professional\n2.) Honor Society\n3.) Diversity/Cultural\n4.) Religious/Spiritual\n" +
+                        "5.) Recreational\n6.) Greek Chapter\n7.) Leisure\n8.) Civic Engagement\n\nPlease enter organization type as a number: ");
+        typeID = prompt.next();
+
         uniqueID = UUID.randomUUID().toString();
 
-        System.out.println("Username: " + username);
-        System.out.println("Password: " + password);
-        System.out.println("Email: " + email);
-        System.out.println("Administration ID: " + uniqueID);
-
-        return (username +  email +  password + uniqueID);
+        return sql.runUpdate("INSERT INTO organizations(orgID, name, email, password, typeID) VALUES ('"+uniqueID+"', '"+username+"', '"+email+"', '"+password+"', "+typeID+")");
     }
 
     public String editOrg(){

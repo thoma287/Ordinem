@@ -4,9 +4,7 @@
 //
 // Description: Helper for connecting to a SQL database
 
-package com.kraylus;
-
-import com.intellij.ide.ui.AppearanceOptionsTopHitProvider;
+//import com.intellij.ide.ui.AppearanceOptionsTopHitProvider;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

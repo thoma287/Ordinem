@@ -10,6 +10,7 @@ public class Organizer {
     private Date date2;
     private Date startTime;
     private Date endTime;
+    private Date[] time;
     private String location;
     private String description;
     private int pointsGiven;
@@ -66,11 +67,11 @@ public class Organizer {
         location = x.setLocation();
         pointsGiven = x.setPoints();
         date2 = x.setDate();
-        x.getTime();
+        time = x.getTime();
         startTime = x.getStartTime();
         endTime = x.getEndTime();
 
-        return date2 + description + location + pointsGiven + date2 + startTime + endTime;
+        return date2 + description + location + time + pointsGiven + date2 + startTime + endTime;
     }
 
     public void viewFutureEvents(){

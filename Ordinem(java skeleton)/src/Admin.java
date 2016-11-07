@@ -1,4 +1,5 @@
 import java.text.ParseException;
+import java.util.Date;
 import java.util.Scanner;
 import java.util.UUID;
 
@@ -16,6 +17,14 @@ public class Admin {
 
     private String username, password, email, uniqueID, typeID;
 
+    //Included for Event adder
+    private Date date2;
+    private Date startTime;
+    private Date endTime;
+    private String location;
+    private String description;
+    private int pointsGiven;
+
     public String getUsername(){
         return username;  //getter username
     }
@@ -32,6 +41,14 @@ public class Admin {
         return uniqueID; //getter unique ID
                             //not to be confused with student ID
     }
+    public Date getDate2(){return date2;}
+    public Date getStartTime(){return startTime;}
+    public Date getEndTime(){return endTime;}
+    public String getLocation(){return location;}
+    public String getDescription(){return description;}
+    public int getPointsGiven(){return pointsGiven;}
+
+
 
     public void viewAccount(){
         System.out.println("Username: " + username);
@@ -41,13 +58,13 @@ public class Admin {
 
     public boolean AddOrg(){
         Scanner prompt = new Scanner(System.in);
-        System.out.print("Choose Organization Name: ");
+        System.out.println("Choose Organization Name: ");
         username = prompt.next();
 
-        System.out.print("Choose Password: ");
+        System.out.println("Choose Password: ");
         password = prompt.next();
 
-        System.out.print("Email: ");
+        System.out.println("Email: ");
         email = prompt.next();
 
         System.out.print("1.) Academic/Professional\n2.) Honor Society\n3.) Diversity/Cultural\n4.) Religious/Spiritual\n" +
@@ -63,12 +80,12 @@ public class Admin {
 
         Scanner prompt = new Scanner(System.in);
         System.out.println("Administration ID: ");
-        String checkID = prompt.next();
+        String checkID = prompt.next();  //TODO look for Administration ID entered in server
 
         System.out.println("Password: ");
         String checkPassword = prompt.next();
 
-        if (checkID == username && checkPassword == password){
+        if (checkID == username && checkPassword == password){  //TODO Check password with respective ID
             System.out.println("Edit Username, password, or email?");
             String chosen = prompt.next();
 
@@ -80,7 +97,7 @@ public class Admin {
                 String verifyNewUsername = prompt.next();
                 if (newUsername == verifyNewUsername){
                     username = newUsername;
-                    System.out.println("Success");
+                    System.out.println("Success");  //TODO changes username in server
                 }
 
                 }
@@ -94,7 +111,7 @@ public class Admin {
 
                 if (newPassword == verifyNewPassword){
                     username = newPassword;
-                    System.out.println("Success");
+                    System.out.println("Success");  //TODO changes password in server
             }
             }
 
@@ -107,19 +124,23 @@ public class Admin {
 
                 if (newEmail == verifyNewEmail){
                     email = newEmail;
-                    System.out.println("Success");
+                    System.out.println("Success");  //TODO changes email in server
                 }
             }
+            return (username +  email +  password + uniqueID);
+        }
+        else{
+            return null;
         }
 
-        return (username +  email +  password + uniqueID);
+
 
     }
 
     public void deleteOrg(){
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter ID that you would like to delete: ");
-        String ID = scan.next();
+        String ID = scan.next();  //TODO searches for ID in ID database in orgs
         //Search for ID in database
         //let it be contained from here to the end of the function
 
@@ -133,7 +154,7 @@ public class Admin {
             uniqueID = null;
             username = null;
             password = null;
-            email = null;
+            email = null;   //TODO interprets the nulls to the Organization selected
 
         }
         if (verify.toLowerCase().startsWith("n")){
@@ -144,12 +165,13 @@ public class Admin {
 
     public EventManager addEvent() throws ParseException {
         //Uses composition for the sake of renewability
+        //TODO creates new event under ADMINSTRATOR
 
             EventManager x = null;
             x = new EventManager();
 
-            x.setDate();
-            x.getTime();
+            date2 = x.setDate();
+              x.getTime();
             x.setDescription();
             x.setLocation();
             x.setPoints();

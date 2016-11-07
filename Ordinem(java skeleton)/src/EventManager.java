@@ -90,7 +90,7 @@ public class EventManager {
             System.out.println("The difference is 0 minutes and 0 seconds.");
         }
 
-        return new Date[]{startTime, endTime};
+        return new Date[]{startTime , endTime};
 
     }
 

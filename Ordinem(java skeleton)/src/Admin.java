@@ -19,8 +19,7 @@ public class Admin {
 
     //Included for Event adder
     private Date date2;
-    private Date startTime;
-    private Date endTime;
+    private Date[] time;
     private String location;
     private String description;
     private int pointsGiven;
@@ -42,8 +41,7 @@ public class Admin {
                             //not to be confused with student ID
     }
     public Date getDate2(){return date2;}
-    public Date getStartTime(){return startTime;}
-    public Date getEndTime(){return endTime;}
+    public Date[] getStartTime(){return time;}
     public String getLocation(){return location;}
     public String getDescription(){return description;}
     public int getPointsGiven(){return pointsGiven;}
@@ -171,12 +169,14 @@ public class Admin {
             x = new EventManager();
 
             date2 = x.setDate();
-              x.getTime();
-            x.setDescription();
-            x.setLocation();
-            x.setPoints();
+            time = x.getTime();
+            description = x.setDescription();
+            location = x.setLocation();
+            pointsGiven = x.setPoints();
 
-            return new EventManager();
+        //TODO add all of the stuff above as new event under respective user (in this case ADMIN)
+
+            return x;
         }
 
 

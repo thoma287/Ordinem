@@ -4,7 +4,7 @@
 //
 // Decription: Runs an interface for a MySQL Database of students
 
-package com.kraylus;
+//package com.kraylus;
 
 import java.util.*;
 import java.io.*;

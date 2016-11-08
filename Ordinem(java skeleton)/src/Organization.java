@@ -4,8 +4,10 @@ import java.util.Date;
 import java.util.Calendar;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Scanner;
+import java.io.*;
 
-public class Organizer {
+public class Organization {
 
     private Date date2;
     private Date startTime;
@@ -14,8 +16,10 @@ public class Organizer {
     private String location;
     private String description;
     private int pointsGiven;
-    private String username;
+    private String email;
     private String password;
+    private int orgID;
+    private SQLConnector sql;
 
 
     public Date getDate2() {
@@ -41,19 +45,69 @@ public class Organizer {
     public int getPointsGiven() {
         return pointsGiven;
     }
-    public String getUsername() {
-        return username;
+    public String getEmail() {
+        return email;
     }
     public String getPassword() { return password; }
 
+    public Organization() {
+        this.sql = new SQLConnector("chapman_university", // database name
+                "jdbc:mysql://us-cdbr-azure-west-b.cleardb.com:3306/chapman_university", //connection url
+                "b8adaded8c4294", // username
+                "67e46b7b"); // password
+        this.retrieveCredentials();
+    }
 
-    public void OrgLogin(String username, String password){
-        if (username.matches(this.username) && password.matches(this.password)) //Check inside database if it contains username/password
+    public Organization(String _email, String _password) {
+        this.sql = new SQLConnector("chapman_university", // database name
+                "jdbc:mysql://us-cdbr-azure-west-b.cleardb.com:3306/chapman_university", //connection url
+                "b8adaded8c4294", // username
+                "67e46b7b"); // password
+        this.email = _email;
+        this.password = _password;
+        if (!(this.OrgLogin(this.email, this.password))) {
+            this.retrieveCredentials();
+        }
+    }
+
+    public void retrieveCredentials() {
+        System.out.println("Organization Login Portal");
+        Scanner prompt = new Scanner(System.in);
+        System.out.print("Email: ");
+        this.email = prompt.next();
+        System.out.print("Password: ");
+        this.password = prompt.next();
+        while (!(this.OrgLogin(this.email, this.password))) {
+            System.out.println("Invalid login credentials, please try again.");
+            System.out.print("Email: ");
+            this.email = prompt.next();
+            System.out.print("Password: ");
+            this.password = prompt.next();
+        }
+    }
+
+    public boolean OrgLogin(String _email, String _password){
+        System.out.println("One moment please...");
+        if (this.sql.runSelect("SELECT * FROM organizations WHERE email='"+_email+"' AND password='"+_password+"';")) //Check inside database if it contains username/password
         { //TODO check login with password and if correct then allow access to perform tasks (addEvent, viewFutureEvents, viewPastEvents)
             //open user account
-
-
+            try {
+                //this.orgID = this.sql.data.getInt("orgID");
+                System.out.println("Successfully logged in!");
+                //System.out.println(this.sql.getColumns(new String[] {"name", "email", "orgID"}));
+                return true;
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+                return false;
+            }
+        } else {
+            return false;
         }
+    }
+
+    private void run() {
+        //main operation code
+
     }
 
     public String addEvent() throws ParseException {

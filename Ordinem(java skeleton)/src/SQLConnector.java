@@ -80,14 +80,14 @@ public class SQLConnector {
         // returns a formatted representation of the columns requested
         String output = "\n";
         for (String attr : attributes) {
-            output += String.format("%16s", attr);
+            output += String.format("%20s", attr);
         }
         output += "\n";
         output +="------------------------------------------------------------------------------------------------";
         output += "\n";
         while (this.data.next()) {
             for (String attr : attributes) {
-                output += String.format("%16s", this.data.getString(attr));
+                output += String.format("%20s", this.data.getString(attr));
             }
             output += "\n";
         }

@@ -96,6 +96,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Okm-uS-kuF">
                                         <rect key="frame" x="0.0" y="90" width="146" height="30"/>
                                         <state key="normal" title="Organization Sign Up"/>
+                                        <connections>
+                                            <segue destination="sH6-cJ-c8b" kind="show" id="FQd-6N-oNL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -128,7 +131,6 @@
         <!--New User View Controller-->
         <scene sceneID="FOp-eO-UNq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="btH-aK-uCW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="U4K-zn-nXI" customClass="NewUserViewController" customModule="Ordinem" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cWC-6L-dZm"/>
@@ -139,10 +141,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rAt-oB-3TX">
-                                <rect key="frame" x="122" y="245.33333333333337" width="143.66666666666669" height="57.666666666666629"/>
+                                <rect key="frame" x="122" y="177" width="144" height="58"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="User" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBp-R3-BBO">
-                                        <rect key="frame" x="42" y="0.0" width="59.666666666666657" height="33.666666666666657"/>
+                                        <rect key="frame" x="42" y="0.0" width="60" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="JBp-R3-BBO" secondAttribute="height" multiplier="58:10" priority="100" constant="-132.90000000000001" id="uyK-1O-myQ"/>
                                         </constraints>
@@ -151,7 +153,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dC-hr-T8T">
-                                        <rect key="frame" x="2.3333333333333286" y="33.666666666666657" width="139" height="24"/>
+                                        <rect key="frame" x="3" y="34" width="139" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="0dC-hr-T8T" secondAttribute="height" multiplier="139:24" id="TAY-Ka-ZRL"/>
                                         </constraints>
@@ -166,7 +168,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hTQ-jT-WTe">
-                                <rect key="frame" x="67" y="343.66666666666663" width="253" height="229.99999999999989"/>
+                                <rect key="frame" x="67" y="276" width="253" height="230"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uva-we-DvC">
                                         <rect key="frame" x="0.0" y="0.0" width="253" height="30"/>
@@ -196,7 +198,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Student ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qiz-h3-p05">
-                                        <rect key="frame" x="0.0" y="150" width="253" height="29.999999999999943"/>
+                                        <rect key="frame" x="0.0" y="150" width="253" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Qiz-h3-p05" secondAttribute="height" multiplier="253:30" id="WKP-Ch-AgS"/>
                                         </constraints>
@@ -205,7 +207,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yD3-dI-5G4">
-                                        <rect key="frame" x="0.0" y="199.99999999999994" width="253" height="30"/>
+                                        <rect key="frame" x="0.0" y="200" width="253" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="yD3-dI-5G4" secondAttribute="height" multiplier="253:30" id="ORQ-6G-OBI"/>
                                         </constraints>
@@ -216,17 +218,17 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGc-AE-SIZ">
-                                <rect key="frame" x="129" y="594" width="157" height="30"/>
+                                <rect key="frame" x="236" y="526" width="128" height="30"/>
                                 <state key="normal" title="Select School"/>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ordinempic" translatesAutoresizingMaskIntoConstraints="NO" id="Znw-yP-iA9">
-                                <rect key="frame" x="105" y="108" width="209" height="111"/>
+                                <rect key="frame" x="217" y="50" width="170" height="91"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Znw-yP-iA9" secondAttribute="height" multiplier="189:100" id="DX0-Kx-jEN"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ORDINEM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBN-L3-agL">
-                                <rect key="frame" x="153" y="122" width="99" height="23"/>
+                                <rect key="frame" x="255" y="57" width="81" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ZBN-L3-agL" secondAttribute="height" multiplier="30:7" id="GTD-wm-Fn8"/>
                                 </constraints>
@@ -258,13 +260,13 @@
                         </constraints>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="btH-aK-uCW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-797" y="-54"/>
         </scene>
         <!--User Sign Up-->
         <scene sceneID="d42-hU-hcG">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="E1V-20-wU1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="sH6-cJ-c8b" customClass="UserSignUp" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ugX-xH-rh1"/>
@@ -275,10 +277,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" axis="vertical" alignment="center" spacing="-12" translatesAutoresizingMaskIntoConstraints="NO" id="e7q-AG-jPQ">
-                                <rect key="frame" x="86.666666666666686" y="230" width="242" height="97"/>
+                                <rect key="frame" x="86" y="229.66666666666663" width="242" height="97.333333333333371"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Organization" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7z-TL-iIW">
-                                        <rect key="frame" x="41.999999999999986" y="0.0" width="158" height="85"/>
+                                        <rect key="frame" x="42" y="0.0" width="158" height="85.333333333333343"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="h7z-TL-iIW" secondAttribute="height" multiplier="58:10" priority="100" constant="-132.90000000000001" id="Wbr-xk-L2n"/>
                                         </constraints>
@@ -287,7 +289,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osk-Lw-6Md">
-                                        <rect key="frame" x="51.666666666666671" y="73" width="138.99999999999994" height="24"/>
+                                        <rect key="frame" x="51.666666666666657" y="73.333333333333343" width="139.00000000000003" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="osk-Lw-6Md" secondAttribute="height" multiplier="139:24" id="umG-Rt-QgN"/>
                                         </constraints>
@@ -302,10 +304,10 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1LE-TF-hGG">
-                                <rect key="frame" x="81" y="366.33333333333337" width="253" height="230.00000000000011"/>
+                                <rect key="frame" x="81.333333333333314" y="367" width="251.33333333333337" height="229.33333333333337"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Organization Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JlR-so-s7I">
-                                        <rect key="frame" x="0.0" y="0.0" width="253" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="251.33333333333337" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="JlR-so-s7I" secondAttribute="height" multiplier="253:30" id="ijy-D6-Obn"/>
                                         </constraints>
@@ -314,11 +316,11 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTU-cw-sa0">
-                                        <rect key="frame" x="0.0" y="50" width="253" height="30"/>
+                                        <rect key="frame" x="0.0" y="50" width="251.33333333333337" height="30"/>
                                         <state key="normal" title="Organization Type"/>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="School Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tlx-ix-mkl">
-                                        <rect key="frame" x="0.0" y="100" width="253" height="30"/>
+                                        <rect key="frame" x="0.0" y="100" width="251.33333333333337" height="29.666666666666686"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="tlx-ix-mkl" secondAttribute="height" multiplier="253:30" id="WDK-5c-NwR"/>
                                         </constraints>
@@ -327,7 +329,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Student ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="512-OC-gGL">
-                                        <rect key="frame" x="0.0" y="150.00000000000006" width="253" height="30"/>
+                                        <rect key="frame" x="0.0" y="149.66666666666663" width="251.33333333333337" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="512-OC-gGL" secondAttribute="height" multiplier="253:30" id="dfh-t0-2Fo"/>
                                         </constraints>
@@ -336,7 +338,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8cL-ch-Sy8">
-                                        <rect key="frame" x="0.0" y="200.00000000000006" width="253" height="30"/>
+                                        <rect key="frame" x="0.0" y="199.66666666666663" width="251.33333333333337" height="29.666666666666742"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="8cL-ch-Sy8" secondAttribute="height" multiplier="253:30" id="n3Z-Vb-upN"/>
                                         </constraints>
@@ -354,7 +356,7 @@
                                 <state key="normal" title="Select School"/>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ordinempic" translatesAutoresizingMaskIntoConstraints="NO" id="OPs-mI-beg">
-                                <rect key="frame" x="119" y="92" width="209" height="111"/>
+                                <rect key="frame" x="119" y="91.999999999999986" width="209" height="110.66666666666664"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="OPs-mI-beg" secondAttribute="height" multiplier="189:100" id="PUi-4p-b7G"/>
                                 </constraints>
@@ -408,6 +410,7 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="mgg-Nl-bfO"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E1V-20-wU1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-797" y="661"/>
         </scene>

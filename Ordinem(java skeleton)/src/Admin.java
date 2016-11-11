@@ -80,6 +80,7 @@ public class Admin {
         System.out.println("Administration ID: ");
         String checkID = prompt.next();  //TODO look for Administration ID entered in server
 
+
         System.out.println("Password: ");
         String checkPassword = prompt.next();
 

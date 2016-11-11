@@ -10,12 +10,14 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    @IBOutlet weak var btn_sign_up: UIButton!
     @IBOutlet weak var SchoolLoginPicker: UIPickerView!
     
     var pickerData: [String] = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        
         
         // Connect data:
         self.SchoolLoginPicker.delegate = self
@@ -50,7 +52,5 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     {
         return 1
     }
-
-
 }
 

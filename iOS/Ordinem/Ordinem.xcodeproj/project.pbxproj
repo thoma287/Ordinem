@@ -15,6 +15,7 @@
 		18B830A81DD5711A0028651C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B830A61DD5711A0028651C /* LaunchScreen.storyboard */; };
 		18B830B31DD5711A0028651C /* OrdinemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B830B21DD5711A0028651C /* OrdinemTests.swift */; };
 		18B830BE1DD5711A0028651C /* OrdinemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B830BD1DD5711A0028651C /* OrdinemUITests.swift */; };
+		255D40CB1DD5A3290050F177 /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255D40CA1DD5A3290050F177 /* NewUserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		18B830B91DD5711A0028651C /* OrdinemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrdinemUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B830BD1DD5711A0028651C /* OrdinemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdinemUITests.swift; sourceTree = "<group>"; };
 		18B830BF1DD5711A0028651C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		255D40CA1DD5A3290050F177 /* NewUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				18B8309A1DD5711A0028651C /* AppDelegate.swift */,
-				18B8309C1DD5711A0028651C /* ViewController.swift */,
 				18B8309E1DD5711A0028651C /* Main.storyboard */,
+				255D40CC1DD5A3300050F177 /* ViewControllers */,
 				18B830A41DD5711A0028651C /* Assets.xcassets */,
 				18B830A61DD5711A0028651C /* LaunchScreen.storyboard */,
 				18B830A91DD5711A0028651C /* Info.plist */,
@@ -126,6 +128,15 @@
 				18B830BF1DD5711A0028651C /* Info.plist */,
 			);
 			path = OrdinemUITests;
+			sourceTree = "<group>";
+		};
+		255D40CC1DD5A3300050F177 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				255D40CA1DD5A3290050F177 /* NewUserViewController.swift */,
+				18B8309C1DD5711A0028651C /* ViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +279,7 @@
 				18B8309D1DD5711A0028651C /* ViewController.swift in Sources */,
 				18B830A31DD5711A0028651C /* Ordinem.xcdatamodeld in Sources */,
 				18B8309B1DD5711A0028651C /* AppDelegate.swift in Sources */,
+				255D40CB1DD5A3290050F177 /* NewUserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +528,7 @@
 				18B830C41DD5711A0028651C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18B830C51DD5711A0028651C /* Build configuration list for PBXNativeTarget "OrdinemTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +537,7 @@
 				18B830C71DD5711A0028651C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18B830C81DD5711A0028651C /* Build configuration list for PBXNativeTarget "OrdinemUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +546,7 @@
 				18B830CA1DD5711A0028651C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -8,6 +8,11 @@
 
 import UIKit
 
-class OrgDirectLoginScreen: NSObject {
+class OrgDirectLoginScreen: UIViewController, UITextFieldDelegate {
+
+    @IBAction func OrgNewEvent(_ sender: UIButton) {
+        
+
+    }
 
 }

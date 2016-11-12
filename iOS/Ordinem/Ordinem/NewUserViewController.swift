@@ -9,6 +9,14 @@
 import UIKit
 
 class NewUserViewController: UIViewController {
+    
+    
+    @IBOutlet weak var CAUserFirstName: UITextField!
+    @IBOutlet weak var CAUserLastName: UITextField!
+    @IBOutlet weak var CAUserPassword: UITextField!
+    @IBOutlet weak var CAUserStudentID: UITextField!
+    @IBOutlet weak var CAUserSchoolEmail: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

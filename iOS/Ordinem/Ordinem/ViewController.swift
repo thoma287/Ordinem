@@ -10,8 +10,9 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    @IBOutlet weak var btn_sign_up: UIButton!
+    @IBOutlet weak var btn_sign_up: UIButton!  //USER SIGN UP
     @IBOutlet weak var SchoolLoginPicker: UIPickerView!
+    @IBOutlet weak var OrgSignUpButton: UIButton! //ORG SIGN UP
     
     var pickerData: [String] = [String]()
     override func viewDidLoad() {
@@ -53,6 +54,18 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return 1
     }
     
+    
+    //LOGIN SCHOOL EMAIL
+    
+    @IBOutlet weak var LoginSchoolPicker: UIPickerView!
+    
+    @IBOutlet weak var LoginSchoolEmail: UITextField!
+    
+    @IBOutlet weak var LoginPassword: UITextField!
+    
+    @IBOutlet weak var LoginUserVsOrg: UISegmentedControl!
+    
+    //CREATE USER ORGANIZATION ACCOUNT
     
     
     

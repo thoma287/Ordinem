@@ -186,7 +186,7 @@
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8J-zV-ul9">
                                             <rect key="frame" x="293" y="6" width="113" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="View My Events"/>
+                                            <state key="normal" title="View My Profile"/>
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>

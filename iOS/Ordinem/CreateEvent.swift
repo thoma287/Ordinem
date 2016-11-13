@@ -55,7 +55,7 @@ class CreateEvent: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         DateOfEvent.delegate = self
-        EndDateOfEvent.delegate = self
+        
         
         PointStepper.maximumValue = 10
         PointStepper.stepValue = 1
@@ -88,7 +88,7 @@ class CreateEvent: UIViewController, UITextFieldDelegate {
         let formatter = DateFormatter()
         formatter.dateStyle = .full
         DateOfEvent.text = formatter.string(from: sender.date)
-        EndDateOfEvent.text = formatter.string(from: sender.date)
+        
         
     }
     

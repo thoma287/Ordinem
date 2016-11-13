@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		18248D891DD79E100022A7D4 /* CreateEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18248D881DD79E100022A7D4 /* CreateEvent.swift */; };
 		18248D8B1DD7BF650022A7D4 /* OrgDirectLoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18248D8A1DD7BF650022A7D4 /* OrgDirectLoginScreen.swift */; };
+		18248D8D1DD8421E0022A7D4 /* QRScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18248D8C1DD8421E0022A7D4 /* QRScan.swift */; };
+		18248D8F1DD848290022A7D4 /* Controller in Resources */ = {isa = PBXBuildFile; fileRef = 18248D8E1DD848290022A7D4 /* Controller */; };
 		18B8309B1DD5711A0028651C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B8309A1DD5711A0028651C /* AppDelegate.swift */; };
 		18B8309D1DD5711A0028651C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B8309C1DD5711A0028651C /* ViewController.swift */; };
 		18B830A01DD5711A0028651C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B8309E1DD5711A0028651C /* Main.storyboard */; };
@@ -41,6 +43,8 @@
 /* Begin PBXFileReference section */
 		18248D881DD79E100022A7D4 /* CreateEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEvent.swift; sourceTree = "<group>"; };
 		18248D8A1DD7BF650022A7D4 /* OrgDirectLoginScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrgDirectLoginScreen.swift; sourceTree = "<group>"; };
+		18248D8C1DD8421E0022A7D4 /* QRScan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScan.swift; sourceTree = "<group>"; };
+		18248D8E1DD848290022A7D4 /* Controller */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Controller; sourceTree = "<group>"; };
 		18B830971DD5711A0028651C /* Ordinem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ordinem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B8309A1DD5711A0028651C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18B8309C1DD5711A0028651C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,8 +113,10 @@
 		18B830991DD5711A0028651C /* Ordinem */ = {
 			isa = PBXGroup;
 			children = (
+				18248D8E1DD848290022A7D4 /* Controller */,
 				18B8309A1DD5711A0028651C /* AppDelegate.swift */,
 				18B8309E1DD5711A0028651C /* Main.storyboard */,
+				18248D8C1DD8421E0022A7D4 /* QRScan.swift */,
 				255D40CC1DD5A3300050F177 /* ViewControllers */,
 				18B830A41DD5711A0028651C /* Assets.xcassets */,
 				18B830A61DD5711A0028651C /* LaunchScreen.storyboard */,
@@ -260,6 +266,7 @@
 			files = (
 				18B830A81DD5711A0028651C /* LaunchScreen.storyboard in Resources */,
 				18B830A51DD5711A0028651C /* Assets.xcassets in Resources */,
+				18248D8F1DD848290022A7D4 /* Controller in Resources */,
 				18B830A01DD5711A0028651C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,6 +299,7 @@
 				18B830A31DD5711A0028651C /* Ordinem.xcdatamodeld in Sources */,
 				18B8309B1DD5711A0028651C /* AppDelegate.swift in Sources */,
 				255D40CB1DD5A3290050F177 /* NewUserViewController.swift in Sources */,
+				18248D8D1DD8421E0022A7D4 /* QRScan.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

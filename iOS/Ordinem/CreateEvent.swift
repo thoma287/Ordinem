@@ -47,6 +47,8 @@ class CreateEvent: UIViewController, UITextFieldDelegate {
     
     var list_of_events = ["First","Second","Third"]
     
+    
+    //PICKER VIEW STUFF FOR EVENTS
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int{
         return 1
     }
@@ -106,7 +108,7 @@ class CreateEvent: UIViewController, UITextFieldDelegate {
         
     }
     
-    //TOUCH EVENT
+    //TOUCH EVENT FOR STEPPER
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         closeKeyBoard()
     }

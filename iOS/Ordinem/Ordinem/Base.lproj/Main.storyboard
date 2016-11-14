@@ -1505,10 +1505,10 @@
             </objects>
             <point key="canvasLocation" x="1965.217391304348" y="-1657.3369565217392"/>
         </scene>
-        <!--View Controller-->
+        <!--User Cash Table-->
         <scene sceneID="NLR-Kr-sgg">
             <objects>
-                <viewController id="c40-wC-J5x" sceneMemberID="viewController">
+                <viewController id="c40-wC-J5x" customClass="UserCashTable" customModule="Ordinem" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xuS-XS-2TK"/>
                         <viewControllerLayoutGuide type="bottom" id="wPw-xc-Yta"/>
@@ -1518,11 +1518,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ChapmanLogo" translatesAutoresizingMaskIntoConstraints="NO" id="CQa-LZ-LGG">
-                                <rect key="frame" x="36" y="57" width="128" height="128"/>
+                                <rect key="frame" x="57" y="107" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Panther Bucks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXo-Si-cTf">
-                                <rect key="frame" x="36" y="193" width="128" height="21"/>
+                                <rect key="frame" x="43" y="215" width="128" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -1536,7 +1536,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2 points = 1 Panther $" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mou-GL-lVj">
-                                <rect key="frame" x="14" y="211" width="173" height="21"/>
+                                <rect key="frame" x="20" y="233" width="173" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -1550,7 +1550,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Must have at least 20 points to cash" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zkm-EI-z2Y">
-                                <rect key="frame" x="24" y="233" width="152" height="44"/>
+                                <rect key="frame" x="31" y="55" width="152" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="1" green="0.1277962072503197" blue="0.082858739513319901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1560,6 +1560,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="ButtonSelectForCash" destination="CQa-LZ-LGG" id="zLx-y2-fIA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qwC-qk-bdo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

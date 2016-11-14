@@ -17,6 +17,44 @@ class NewUserViewController: UIViewController {
     @IBOutlet weak var CAUserStudentID: UITextField!
     @IBOutlet weak var CAUserSchoolEmail: UITextField!
     
+    
+    
+    
+    //Takes in First Name
+    func getFirstName() -> String {
+        
+        let inputFirstName = self.CAUserFirstName.text
+        return inputFirstName!
+    }
+    
+    //Takes in Last Name
+    func getLastName() -> String {
+        
+        let inputLastName = self.CAUserLastName.text
+        return inputLastName!
+    }
+    
+    //Takes in User Password
+    func getUserPasword() -> String{
+        let inputPassword = self.CAUserPassword.text
+        return inputPassword!
+    }
+    
+    //Takes in User Email
+    func getUserEmail() -> String{
+        let inputEmail = self.CAUserSchoolEmail.text
+        return inputEmail!
+    }
+    
+    //Takes in Student ID
+    func getStudentID() -> Int{
+        let inputID:Int? = Int(self.CAUserStudentID.text!)
+        return inputID!
+    }
+    
+    
+    
+
     var list = ["Chapman","UCSB"]
     
     //Actual Picker
@@ -33,7 +71,7 @@ class NewUserViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    //PICKER FOR SCHOOL
+    //PICKER FOR SCHOOL STILL NOT WORKING
     func numberOfComponenetsInPickerView(pickerView: UIPickerView)-> Int{
         return 1
     }

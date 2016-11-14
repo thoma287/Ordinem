@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181920DA1DD98E380046A4D3 /* OrgNewsFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181920D91DD98E380046A4D3 /* OrgNewsFeed.swift */; };
 		18248D891DD79E100022A7D4 /* CreateEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18248D881DD79E100022A7D4 /* CreateEvent.swift */; };
 		18248D8B1DD7BF650022A7D4 /* OrgDirectLoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18248D8A1DD7BF650022A7D4 /* OrgDirectLoginScreen.swift */; };
 		18248D8D1DD8421E0022A7D4 /* QRScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18248D8C1DD8421E0022A7D4 /* QRScan.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		181920D91DD98E380046A4D3 /* OrgNewsFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrgNewsFeed.swift; sourceTree = "<group>"; };
 		18248D881DD79E100022A7D4 /* CreateEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEvent.swift; sourceTree = "<group>"; };
 		18248D8A1DD7BF650022A7D4 /* OrgDirectLoginScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrgDirectLoginScreen.swift; sourceTree = "<group>"; };
 		18248D8C1DD8421E0022A7D4 /* QRScan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScan.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		18B8308E1DD571190028651C = {
 			isa = PBXGroup;
 			children = (
+				181920D91DD98E380046A4D3 /* OrgNewsFeed.swift */,
 				18248D8A1DD7BF650022A7D4 /* OrgDirectLoginScreen.swift */,
 				18248D881DD79E100022A7D4 /* CreateEvent.swift */,
 				18B830991DD5711A0028651C /* Ordinem */,
@@ -117,6 +120,9 @@
 				18B8309A1DD5711A0028651C /* AppDelegate.swift */,
 				18B8309E1DD5711A0028651C /* Main.storyboard */,
 				18248D8C1DD8421E0022A7D4 /* QRScan.swift */,
+				255D40CA1DD5A3290050F177 /* NewUserViewController.swift */,
+				18EAD5121DD6D4E30024BA14 /* NewOrgSignUp.swift */,
+				18B8309C1DD5711A0028651C /* ViewController.swift */,
 				255D40CC1DD5A3300050F177 /* ViewControllers */,
 				18B830A41DD5711A0028651C /* Assets.xcassets */,
 				18B830A61DD5711A0028651C /* LaunchScreen.storyboard */,
@@ -147,9 +153,6 @@
 		255D40CC1DD5A3300050F177 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				255D40CA1DD5A3290050F177 /* NewUserViewController.swift */,
-				18EAD5121DD6D4E30024BA14 /* NewOrgSignUp.swift */,
-				18B8309C1DD5711A0028651C /* ViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18B8309D1DD5711A0028651C /* ViewController.swift in Sources */,
+				181920DA1DD98E380046A4D3 /* OrgNewsFeed.swift in Sources */,
 				18EAD5131DD6D4E30024BA14 /* NewOrgSignUp.swift in Sources */,
 				18248D891DD79E100022A7D4 /* CreateEvent.swift in Sources */,
 				18248D8B1DD7BF650022A7D4 /* OrgDirectLoginScreen.swift in Sources */,

@@ -10,6 +10,20 @@ import UIKit
 
 class CreateEvent: UIViewController, UITextFieldDelegate {
 
+    //ACTUAL IMAGE BEING CHANGED
+    @IBOutlet weak var ChooseImage: UIImageView!
+    //SELECT BUTTON TO CHANGE
+    @IBOutlet weak var SelectImage: UIButton!
+    
+    
+    @IBOutlet weak var LocationOfEvent: UITextField!
+    
+    
+    
+    
+    
+    
+    
     @IBAction func Cancel(_ sender: UIButton) {
         closeKeyBoard()
     }

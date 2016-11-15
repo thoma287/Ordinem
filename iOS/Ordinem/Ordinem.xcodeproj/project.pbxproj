@@ -45,12 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		181920D91DD98E380046A4D3 /* OrgNewsFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrgNewsFeed.swift; sourceTree = "<group>"; };
-		181920DB1DDA79E10046A4D3 /* UserProfileInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileInfo.swift; sourceTree = "<group>"; };
-		181920DF1DDA7DDC0046A4D3 /* CameraForUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraForUser.swift; sourceTree = "<group>"; };
+		181920D91DD98E380046A4D3 /* OrgNewsFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrgNewsFeed.swift; path = ../OrgNewsFeed.swift; sourceTree = "<group>"; };
+		181920DB1DDA79E10046A4D3 /* UserProfileInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfileInfo.swift; path = ../UserProfileInfo.swift; sourceTree = "<group>"; };
+		181920DF1DDA7DDC0046A4D3 /* CameraForUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraForUser.swift; path = ../CameraForUser.swift; sourceTree = "<group>"; };
 		181920E11DDA83680046A4D3 /* UserCashTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCashTable.swift; sourceTree = "<group>"; };
-		18248D881DD79E100022A7D4 /* CreateEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEvent.swift; sourceTree = "<group>"; };
-		18248D8A1DD7BF650022A7D4 /* OrgDirectLoginScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrgDirectLoginScreen.swift; sourceTree = "<group>"; };
+		18248D881DD79E100022A7D4 /* CreateEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateEvent.swift; path = ../CreateEvent.swift; sourceTree = "<group>"; };
+		18248D8A1DD7BF650022A7D4 /* OrgDirectLoginScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrgDirectLoginScreen.swift; path = ../OrgDirectLoginScreen.swift; sourceTree = "<group>"; };
 		18248D8C1DD8421E0022A7D4 /* QRScan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScan.swift; sourceTree = "<group>"; };
 		18248D8E1DD848290022A7D4 /* Controller */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Controller; sourceTree = "<group>"; };
 		18B830971DD5711A0028651C /* Ordinem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ordinem.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,11 +99,6 @@
 		18B8308E1DD571190028651C = {
 			isa = PBXGroup;
 			children = (
-				181920DF1DDA7DDC0046A4D3 /* CameraForUser.swift */,
-				181920DB1DDA79E10046A4D3 /* UserProfileInfo.swift */,
-				181920D91DD98E380046A4D3 /* OrgNewsFeed.swift */,
-				18248D8A1DD7BF650022A7D4 /* OrgDirectLoginScreen.swift */,
-				18248D881DD79E100022A7D4 /* CreateEvent.swift */,
 				18B830991DD5711A0028651C /* Ordinem */,
 				18B830B11DD5711A0028651C /* OrdinemTests */,
 				18B830BC1DD5711A0028651C /* OrdinemUITests */,
@@ -132,6 +127,11 @@
 				255D40CA1DD5A3290050F177 /* NewUserViewController.swift */,
 				18EAD5121DD6D4E30024BA14 /* NewOrgSignUp.swift */,
 				18B8309C1DD5711A0028651C /* ViewController.swift */,
+				181920DF1DDA7DDC0046A4D3 /* CameraForUser.swift */,
+				181920DB1DDA79E10046A4D3 /* UserProfileInfo.swift */,
+				181920D91DD98E380046A4D3 /* OrgNewsFeed.swift */,
+				18248D8A1DD7BF650022A7D4 /* OrgDirectLoginScreen.swift */,
+				18248D881DD79E100022A7D4 /* CreateEvent.swift */,
 				255D40CC1DD5A3300050F177 /* ViewControllers */,
 				18B830A41DD5711A0028651C /* Assets.xcassets */,
 				18B830A61DD5711A0028651C /* LaunchScreen.storyboard */,

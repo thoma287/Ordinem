@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewUserViewController: UIViewController {
+class NewUserViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     
     @IBOutlet weak var CAUserFirstName: UITextField!
@@ -52,49 +52,54 @@ class NewUserViewController: UIViewController {
         return inputID!
     }
     
-    
-    
-
-    var list = ["Chapman","UCSB"]
-    
-    //Actual Picker
-    @IBOutlet weak var usrCASchoolActualPicker: UIPickerView!
-    //Text field for picker
-    @IBOutlet weak var usrCASchoolPicker: UITextField!
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        usrCASchoolActualPicker.isHidden = true
+        usrCASchoolTextBox.text = list[0]
+
+    }
+
+    var list = ["Chapman","UCSB"]
+    
+    //Actual Picker
+    @IBOutlet var usrCASchoolActualPicker: UIPickerView! = UIPickerView()
+    //Text field for picker
+    @IBOutlet weak var usrCASchoolTextBox: UITextField!
+    
+
+
+    
     //PICKER FOR SCHOOL STILL NOT WORKING
-    func numberOfComponenetsInPickerView(pickerView: UIPickerView)-> Int{
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int{
         return 1
     }
     
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponenet component: Int)-> Int{
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
         return list.count
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
         self.view.endEditing(true)
         return list[row]
     }
     
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.usrCASchoolPicker.text = self.list[row]
-        self.usrCASchoolActualPicker.isHidden = true
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
+        usrCASchoolTextBox.text = list[row]
+        usrCASchoolActualPicker.isHidden = true
     }
     
-    func textFieldDidBeginEditing(textField: UITextField){
-        if textField == self.usrCASchoolPicker{
-            self.usrCASchoolActualPicker.isHidden = true
+    func textFieldDidBeginEditing(_ textField: UITextField) -> Bool{
+        if textField == self.usrCASchoolTextBox{
+            self.usrCASchoolActualPicker.isHidden = false
+            textField.endEditing(true)
+           
         }
-        
+        return false
     }
 }

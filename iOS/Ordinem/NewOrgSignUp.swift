@@ -58,7 +58,6 @@ class NewOrgSignUp: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        OrgSchool.delegate = self.OrgSchool as! UITextFieldDelegate?
         
         // Do any additional setup after loading the view.
     }

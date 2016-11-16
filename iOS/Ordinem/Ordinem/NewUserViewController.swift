@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewUserViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class NewUserViewController: UIViewController{
     
     
     @IBOutlet weak var CAUserFirstName: UITextField!
@@ -59,8 +59,10 @@ class NewUserViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         usrCASchoolActualPicker.isHidden = true
         usrCASchoolTextBox.text = list[0]
+        
 
     }
 
@@ -69,6 +71,7 @@ class NewUserViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     //Actual Picker
     @IBOutlet var usrCASchoolActualPicker: UIPickerView! = UIPickerView()
     //Text field for picker
+
     @IBOutlet weak var usrCASchoolTextBox: UITextField!
     
 
@@ -84,8 +87,7 @@ class NewUserViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
-        self.view.endEditing(true)
+
         return list[row]
     }
     
@@ -94,12 +96,11 @@ class NewUserViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         usrCASchoolActualPicker.isHidden = true
     }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) -> Bool{
-        if textField == self.usrCASchoolTextBox{
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool{
+        
             self.usrCASchoolActualPicker.isHidden = false
             textField.endEditing(true)
-           
-        }
-        return false
+        
+            return false
     }
 }

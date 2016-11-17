@@ -23,7 +23,15 @@ class NewOrgSignUp: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var OrgVerifyPassword: UITextField!
     
+    @IBOutlet weak var OrgSchoolID: UITextField!
     
+    @IBOutlet weak var OrgTypeOptions: UIPickerView!
+    
+    
+    func getOrgID() -> Int{
+        let oID:Int! = Int(self.OrgSchoolID.text!)
+        return oID
+    }
     //Gets Organization Name
     func getOrgName() -> String{
         let oName = self.OrgName.text
@@ -57,11 +65,12 @@ class NewOrgSignUp: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        OrgSchool.text = list[0]
         
         // Do any additional setup after loading the view.
     }
     
+     var list = ["Chapman","UCSB"]
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

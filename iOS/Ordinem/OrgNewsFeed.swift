@@ -92,6 +92,9 @@ class OrgNewsFeed: UITableViewController {
     
 }
 
+
+
+
 class OrgNewsFeedCell : UITableViewCell{
     
     

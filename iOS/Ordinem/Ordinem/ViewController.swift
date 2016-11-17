@@ -28,6 +28,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         pickerData = ["Chapman", "UCI", "USC", "UCSB", "UCSB", "UCR"]
     }
 
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -63,10 +64,24 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBOutlet weak var LoginPassword: UITextField!
     
+    
     @IBOutlet weak var LoginUserVsOrg: UISegmentedControl!
     
-    //CREATE USER ORGANIZATION ACCOUNT
+    @IBAction func LoginPressed(_ sender: UIButton) {
+        if LoginUserVsOrg.selectedSegmentIndex == 0 {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let newsFeedVC = storyboard.instantiateViewController(withIdentifier: "UserNewsFeed")
+            present(newsFeedVC, animated: true, completion: nil)        }
+        else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let newsFeedVC = storyboard.instantiateViewController(withIdentifier: "OrgNewsFeed")
+            present(newsFeedVC, animated: true, completion: nil)        }
+        
+        
+    }
     
+    
+
     
     
     

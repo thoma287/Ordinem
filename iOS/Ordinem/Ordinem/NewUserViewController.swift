@@ -16,16 +16,10 @@ class NewUserViewController: UIViewController{
     @IBOutlet weak var CAUserPassword: UITextField!
     @IBOutlet weak var CAUserStudentID: UITextField!
     @IBOutlet weak var CAUserSchoolEmail: UITextField!
+    @IBOutlet weak var CAUserVerifyPwd: UITextField!
     
+
     
-    
-    
-    //Takes in First Name
-    func getFirstName() -> String {
-        
-        let inputFirstName = self.CAUserFirstName.text
-        return inputFirstName!
-    }
     
     //Takes in Last Name
     func getLastName() -> String {
@@ -63,9 +57,53 @@ class NewUserViewController: UIViewController{
         usrCASchoolActualPicker.isHidden = true
         usrCASchoolTextBox.text = list[0]
         
-
+        
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        
+        let toolBar = UIToolbar()
+        
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.doneClicked))
+        
+        CAUserFirstName.inputAccessoryView = toolBar
+        CAUserLastName.inputAccessoryView = toolBar
+        CAUserStudentID.inputAccessoryView = toolBar
+        usrCASchoolTextBox.inputAccessoryView = toolBar
+        CAUserSchoolEmail.inputAccessoryView = toolBar
+        CAUserPassword.inputAccessoryView = toolBar
+        CAUserVerifyPwd.inputAccessoryView = toolBar
+        
+        
+        toolBar.setItems([flexibleSpace, doneButton], animated: false)
+        
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
-
+    func doneClicked(){
+        view.endEditing(true)
+    }
+    
+    
+    @IBOutlet weak var theScrollView: UIScrollView!
+    
+    func keyboardWillShow(notification:NSNotification){
+        //give room at the bottom of the scroll view, so it doesn't cover up anything the user needs to tap
+        var userInfo = notification.userInfo!
+        var keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+        
+        var contentInset:UIEdgeInsets = self.theScrollView.contentInset
+        contentInset.bottom = keyboardFrame.size.height
+        self.theScrollView.contentInset = contentInset
+    }
+    
+    func keyboardWillHide(notification:NSNotification){
+        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
+        self.theScrollView.contentInset = contentInset
+    }
+    
     var list = ["Chapman","UCSB"]
     
     //Actual Picker

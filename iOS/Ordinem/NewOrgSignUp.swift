@@ -64,11 +64,59 @@ class NewOrgSignUp: UIViewController, UITextViewDelegate {
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         OrgSchool.text = list[0]
         
+        
+        let toolBar = UIToolbar()
+ 
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.doneClicked))
+        
+        
+        
+        toolBar.setItems([doneButton], animated: false)
+        
+
+        OrgVerifyPassword.inputAccessoryView = toolBar
+        OrgSchool.inputAccessoryView = toolBar
+        OrgSchoolID.inputAccessoryView = toolBar
+        OrgName.inputAccessoryView = toolBar
+        OrgType.inputAccessoryView = toolBar
+        OrgEmail.inputAccessoryView = toolBar
+        OrgPassword.inputAccessoryView = toolBar
+        
         // Do any additional setup after loading the view.
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
+    
+    
+    
+    func doneClicked(){
+        view.endEditing(true)
+    }
+    
+    
+    @IBOutlet weak var theScrollView: UIScrollView!
+    
+    func keyboardWillShow(notification:NSNotification){
+        //give room at the bottom of the scroll view, so it doesn't cover up anything the user needs to tap
+        var userInfo = notification.userInfo!
+        var keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+        
+        var contentInset:UIEdgeInsets = self.theScrollView.contentInset
+        contentInset.bottom = keyboardFrame.size.height
+        self.theScrollView.contentInset = contentInset
+    }
+    
+    func keyboardWillHide(notification:NSNotification){
+        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
+        self.theScrollView.contentInset = contentInset
+    }
+    
     
      var list = ["Chapman","UCSB"]
     override func didReceiveMemoryWarning() {

@@ -64,7 +64,10 @@ class NewOrgSignUp: UIViewController, UITextViewDelegate {
     }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         OrgSchool.text = list[0]
+        
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
         
         
         let toolBar = UIToolbar()
@@ -74,8 +77,7 @@ class NewOrgSignUp: UIViewController, UITextViewDelegate {
         let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.doneClicked))
         
         
-        
-        toolBar.setItems([doneButton], animated: false)
+        toolBar.setItems([flexibleSpace, doneButton], animated: false)
         
 
         OrgVerifyPassword.inputAccessoryView = toolBar
@@ -85,6 +87,7 @@ class NewOrgSignUp: UIViewController, UITextViewDelegate {
         OrgType.inputAccessoryView = toolBar
         OrgEmail.inputAccessoryView = toolBar
         OrgPassword.inputAccessoryView = toolBar
+
         
         // Do any additional setup after loading the view.
         

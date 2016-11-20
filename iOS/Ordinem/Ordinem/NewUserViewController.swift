@@ -17,7 +17,7 @@ class NewUserViewController: UIViewController{
     @IBOutlet weak var CAUserStudentID: UITextField!
     @IBOutlet weak var CAUserSchoolEmail: UITextField!
     @IBOutlet weak var CAUserVerifyPwd: UITextField!
-    
+    @IBOutlet weak var usrCASchoolTextBox: UITextField!
 
     
     
@@ -54,7 +54,6 @@ class NewUserViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        usrCASchoolActualPicker.isHidden = true
         usrCASchoolTextBox.text = list[0]
         
         
@@ -106,39 +105,9 @@ class NewUserViewController: UIViewController{
     
     var list = ["Chapman","UCSB"]
     
-    //Actual Picker
-    @IBOutlet var usrCASchoolActualPicker: UIPickerView! = UIPickerView()
-    //Text field for picker
-
-    @IBOutlet weak var usrCASchoolTextBox: UITextField!
-    
-
 
     
-    //PICKER FOR SCHOOL STILL NOT WORKING
-    public func numberOfComponents(in pickerView: UIPickerView) -> Int{
-        return 1
-    }
-    
-    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
-        return list.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
 
-        return list[row]
-    }
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
-        usrCASchoolTextBox.text = list[row]
-        usrCASchoolActualPicker.isHidden = true
-    }
-    
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool{
-        
-            self.usrCASchoolActualPicker.isHidden = false
-            textField.endEditing(true)
-        
-            return false
-    }
+
 }

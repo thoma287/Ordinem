@@ -96,6 +96,7 @@ class NewUserViewController: UIViewController{
         var contentInset:UIEdgeInsets = self.theScrollView.contentInset
         contentInset.bottom = keyboardFrame.size.height
         self.theScrollView.contentInset = contentInset
+        
     }
     
     func keyboardWillHide(notification:NSNotification){
@@ -105,6 +106,30 @@ class NewUserViewController: UIViewController{
     
     var list = ["Chapman","UCSB"]
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == CAUserFirstName{
+            CAUserLastName.becomeFirstResponder()
+        }
+        else if textField == CAUserLastName{
+            CAUserStudentID.becomeFirstResponder()
+        }
+        else if textField == CAUserStudentID{
+            usrCASchoolTextBox.becomeFirstResponder()
+        }
+        else if textField == usrCASchoolTextBox{
+            CAUserSchoolEmail.becomeFirstResponder()
+        }
+        else if textField == CAUserSchoolEmail{
+            CAUserPassword.becomeFirstResponder()
+        }
+        else if textField == CAUserPassword{
+            CAUserVerifyPwd.becomeFirstResponder()
+        }
+        else{
+            CAUserVerifyPwd.resignFirstResponder()
+        }
+        return true
+    }
 
     
 

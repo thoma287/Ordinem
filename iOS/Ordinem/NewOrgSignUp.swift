@@ -11,6 +11,7 @@ import UIKit
 class NewOrgSignUp: UIViewController, UITextViewDelegate {
     
     
+    
     @IBOutlet weak var OrgName: UITextField!
 //Need Drop down box for type of Organization
     @IBOutlet weak var OrgType: UITextField!
@@ -145,7 +146,27 @@ class NewOrgSignUp: UIViewController, UITextViewDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        OrgSchool.resignFirstResponder()
+        if textField == OrgName{
+            OrgType.becomeFirstResponder()
+        }
+        else if textField == OrgType{
+            OrgSchool.becomeFirstResponder()
+        }
+        else if textField == OrgSchool{
+            OrgEmail.becomeFirstResponder()
+        }
+        else if textField == OrgEmail{
+            OrgSchoolID.becomeFirstResponder()
+        }
+        else if textField == OrgSchoolID{
+            OrgPassword.becomeFirstResponder()
+        }
+        else if textField == OrgPassword{
+            OrgVerifyPassword.becomeFirstResponder()
+        }
+        else{
+            OrgVerifyPassword.resignFirstResponder()
+        }
         return true
     }
     
@@ -158,6 +179,8 @@ class NewOrgSignUp: UIViewController, UITextViewDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         closekeyboard()
     }
+    
+    
     
     /*
      // MARK: - Navigation

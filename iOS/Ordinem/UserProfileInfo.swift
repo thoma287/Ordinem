@@ -96,9 +96,7 @@ class FutureRSVPDate : UITableViewCell{
 }
 
 class FutureRSVPCell : UITableViewCell{
-/*May not be necessary:
-    Should be able to make it so that when you hit the RSVP button it can automatically add itself into the profile.  Just thought I'd keep it here just in case though
-    */
+
 }
 
 class yourHistory : UITableViewCell{

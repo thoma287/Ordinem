@@ -77,6 +77,8 @@ UINavigationControllerDelegate {
     @IBOutlet weak var textBoxTypeOfData: UITextField!
     //TYPE OF EVENTS
     @IBOutlet weak var TypeofEvents: UIPickerView!
+    //Event Title
+    @IBOutlet weak var eventTitle: UITextField!
     
     var list_of_events = ["First","Second","Third"]
     
@@ -98,6 +100,22 @@ UINavigationControllerDelegate {
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.textBoxTypeOfData.text = self.list_of_events[row]
         self.TypeofEvents.isHidden = true
+    }
+    
+    
+    @IBAction func PublishButtonClicked(_ sender: Any) {
+        if (DateOfEvent.text! == "" && EndDateOfEvent.text! == "" && LocationOfEvent.text! == "" && eventTitle.text! == "" && TypeofEvents.dataSource == nil) {
+            let buttonAlert = UIAlertController(title: "Error", message: "All text fields must be required", preferredStyle: .alert)
+            buttonAlert.show(<#T##vc: UIViewController##UIViewController#>, sender: <#T##Any?#>)
+        }
+        else{
+            
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let newsFeedVC = storyboard.instantiateViewController(withIdentifier: "ESigAndConflictions")
+            present(newsFeedVC, animated: true, completion: nil)
+        }
+
     }
     
     

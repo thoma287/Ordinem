@@ -24,6 +24,7 @@
 		18B830A81DD5711A0028651C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B830A61DD5711A0028651C /* LaunchScreen.storyboard */; };
 		18B830B31DD5711A0028651C /* OrdinemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B830B21DD5711A0028651C /* OrdinemTests.swift */; };
 		18B830BE1DD5711A0028651C /* OrdinemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B830BD1DD5711A0028651C /* OrdinemUITests.swift */; };
+		18CED9FD1DE278B4008FBABA /* ESigAndConflictions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CED9FC1DE278B4008FBABA /* ESigAndConflictions.swift */; };
 		18EAD5131DD6D4E30024BA14 /* NewOrgSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAD5121DD6D4E30024BA14 /* NewOrgSignUp.swift */; };
 		255D40CB1DD5A3290050F177 /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255D40CA1DD5A3290050F177 /* NewUserViewController.swift */; };
 /* End PBXBuildFile section */
@@ -69,6 +70,7 @@
 		18B830B91DD5711A0028651C /* OrdinemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrdinemUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B830BD1DD5711A0028651C /* OrdinemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdinemUITests.swift; sourceTree = "<group>"; };
 		18B830BF1DD5711A0028651C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18CED9FC1DE278B4008FBABA /* ESigAndConflictions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESigAndConflictions.swift; sourceTree = "<group>"; };
 		18EAD5121DD6D4E30024BA14 /* NewOrgSignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewOrgSignUp.swift; path = ../NewOrgSignUp.swift; sourceTree = "<group>"; };
 		255D40CA1DD5A3290050F177 /* NewUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +103,7 @@
 		18B8308E1DD571190028651C = {
 			isa = PBXGroup;
 			children = (
+				18CED9FC1DE278B4008FBABA /* ESigAndConflictions.swift */,
 				182AE2DC1DDC4F140084C9F8 /* UserNewsFeed.swift */,
 				18B830991DD5711A0028651C /* Ordinem */,
 				18B830B11DD5711A0028651C /* OrdinemTests */,
@@ -315,6 +318,7 @@
 				18248D8B1DD7BF650022A7D4 /* OrgDirectLoginScreen.swift in Sources */,
 				18B830A31DD5711A0028651C /* Ordinem.xcdatamodeld in Sources */,
 				181920DC1DDA79E10046A4D3 /* UserProfileInfo.swift in Sources */,
+				18CED9FD1DE278B4008FBABA /* ESigAndConflictions.swift in Sources */,
 				181920E01DDA7DDC0046A4D3 /* CameraForUser.swift in Sources */,
 				18B8309B1DD5711A0028651C /* AppDelegate.swift in Sources */,
 				255D40CB1DD5A3290050F177 /* NewUserViewController.swift in Sources */,

@@ -1,20 +1,59 @@
 //
-//  UserProfileInfo.swift
+//  ESigAndConflictions.swift
 //  Ordinem
 //
-//  Created by Drew Thomas on 11/14/16.
+//  Created by Drew Thomas on 11/20/16.
 //  Copyright © 2016 Ordinem. All rights reserved.
 //
 
 import UIKit
 
-class UserProfileInfo: UITableViewController {
+class ESigAndConflictions: UITableViewController {
 
     
+    @IBOutlet weak var scrollableView: UIScrollView!
     
+    @IBOutlet weak var ESig: UITextField!
+    
+    @IBAction func SubmitButton(_ sender: Any) {
+    }
+    
+    func doneClicked(){
+        view.endEditing(true)
+    }
+    
+    func keyboardWillShow(notification:NSNotification){
+        //give room at the bottom of the scroll view, so it doesn't cover up anything the user needs to tap
+        var userInfo = notification.userInfo!
+        var keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+        
+        var contentInset:UIEdgeInsets = self.scrollableView.contentInset
+        contentInset.bottom = keyboardFrame.size.height
+        self.scrollableView.contentInset = contentInset
+        
+    }
+    
+    func keyboardWillHide(notification:NSNotification){
+        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
+        self.scrollableView.contentInset = contentInset
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        
+        let toolBar = UIToolbar()
+        
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.doneClicked))
+        
+        toolBar.setItems([flexibleSpace, doneButton], animated: false)
+        
+        ESig.inputAccessoryView = toolBar
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -40,7 +79,7 @@ class UserProfileInfo: UITableViewController {
         return 0
     }
 
-    
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
@@ -48,15 +87,17 @@ class UserProfileInfo: UITableViewController {
 
         return cell
     }
-    
+    */
 
-  
+    /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
+    */
 
+    /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -66,61 +107,31 @@ class UserProfileInfo: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
+    */
 
+    /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
 
     }
+    */
 
+    /*
     // Override to support conditional rearranging of the table view.
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
     }
-       // MARK: - Navigation
+    */
+
+    /*
+    // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-
-
-}
-
-
-class FutureRSVPDate : UITableViewCell{
-    
-    @IBOutlet weak var FutureRsvpDate: UILabel!
-    
-}
-
-class FutureRSVPCell : UITableViewCell{
-/*May not be necessary:
-    Should be able to make it so that when you hit the RSVP button it can automatically add itself into the profile.  Just thought I'd keep it here just in case though
     */
+
 }
-
-class yourHistory : UITableViewCell{
-    /*Just in Case we actually need to 
-     associate this.. don't think we would though*/
-    @IBOutlet weak var YourHistorylbl: UILabel!
-    
-    
-}
-
-class pastHistoryDate : UITableViewCell{
-    @IBOutlet weak var pastHistoryDate1: UILabel!
-    
-}
-class pastHistoryCell : UITableViewCell{
-    /*May not be necessary:
-     Should be able to make it so that when you hit the RSVP button it can automatically add itself into the profile.  Just thought I'd keep it here just in case though
-     */
-    
-    
-    
-}
-
-
-

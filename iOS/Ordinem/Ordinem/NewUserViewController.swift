@@ -95,6 +95,8 @@ class NewUserViewController: UIViewController, UIPickerViewDelegate{
         
         let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.doneClicked))
         
+        toolBar.setItems([flexibleSpace, doneButton], animated: false)
+        
         CAUserFirstName.inputAccessoryView = toolBar
         CAUserLastName.inputAccessoryView = toolBar
         CAUserStudentID.inputAccessoryView = toolBar
@@ -103,8 +105,6 @@ class NewUserViewController: UIViewController, UIPickerViewDelegate{
         CAUserPassword.inputAccessoryView = toolBar
         CAUserVerifyPwd.inputAccessoryView = toolBar
         
-        
-        toolBar.setItems([flexibleSpace, doneButton], animated: false)
         
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: nil)

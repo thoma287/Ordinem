@@ -49,5 +49,4 @@ class RewardTableCell : UITableViewCell{
     @IBOutlet weak var PointsEnteredinStepper: UILabel!
     @IBOutlet weak var pointStepper: UIStepper!
     
-    
-}
+    }

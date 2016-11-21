@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewUserViewController: UIViewController{
+class NewUserViewController: UIViewController, UIPickerViewDelegate{
     
     
     @IBOutlet weak var CAUserFirstName: UITextField!
@@ -20,6 +20,11 @@ class NewUserViewController: UIViewController{
     @IBOutlet weak var usrCASchoolTextBox: UITextField!
 
     
+    
+    
+    var pickerView = UIPickerView()
+    
+
     
     //Takes in Last Name
     func getLastName() -> String {
@@ -50,11 +55,36 @@ class NewUserViewController: UIViewController{
         super.didReceiveMemoryWarning()
     }
     
+    var list = ["Chapman","UCSB"]
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    private func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return list.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return list[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        usrCASchoolTextBox.text = list[row]
+    }
+    
+
+    
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        usrCASchoolTextBox.text = list[0]
+        
+        let pickerView = UIPickerView()
+        
+        pickerView.delegate = self
+        
+        usrCASchoolTextBox.inputView = pickerView
         
         
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
@@ -80,6 +110,7 @@ class NewUserViewController: UIViewController{
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
+    
     func doneClicked(){
         view.endEditing(true)
     }
@@ -104,7 +135,7 @@ class NewUserViewController: UIViewController{
         self.theScrollView.contentInset = contentInset
     }
     
-    var list = ["Chapman","UCSB"]
+
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == CAUserFirstName{

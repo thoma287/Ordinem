@@ -9,12 +9,14 @@
 import UIKit
 
 class UserNewsFeed: UITableViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
 
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -14,11 +14,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var SchoolLoginPicker: UIPickerView!
     @IBOutlet weak var OrgSignUpButton: UIButton! //ORG SIGN UP
     
+
+    
     var pickerData: [String] = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         
+        //TAB BAR FOR KEYBOARD
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
         
         let toolBar = UIToolbar()

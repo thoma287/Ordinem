@@ -37,3 +37,17 @@ class UserCashTable: UIViewController {
     */
 
 }
+
+class RewardTableCell : UITableViewCell{
+    
+    @IBOutlet weak var CashButton: UIButton!
+    
+    @IBOutlet weak var Description: UILabel!
+    @IBOutlet weak var PointsEnteredinStepperCompareToAwards: UILabel!
+    @IBOutlet weak var rewardConversionFromPoints: UILabel!
+    @IBOutlet weak var minimumPoints: UILabel!
+    @IBOutlet weak var PointsEnteredinStepper: UILabel!
+    @IBOutlet weak var pointStepper: UIStepper!
+    
+    
+}

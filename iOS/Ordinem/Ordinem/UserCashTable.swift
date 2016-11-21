@@ -10,7 +10,6 @@ import UIKit
 
 class UserCashTable: UIViewController {
 
-    @IBOutlet weak var ButtonSelectForCash: UIImageView!
     
     
     
@@ -48,5 +47,8 @@ class RewardTableCell : UITableViewCell{
     @IBOutlet weak var minimumPoints: UILabel!
     @IBOutlet weak var PointsEnteredinStepper: UILabel!
     @IBOutlet weak var pointStepper: UIStepper!
+    
+    
+    
     
     }

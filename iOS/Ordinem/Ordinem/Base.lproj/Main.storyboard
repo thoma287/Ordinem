@@ -568,6 +568,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfx-It-97e">
                                         <rect key="frame" x="147" y="72" width="89" height="30"/>
                                         <state key="normal" title="Select Image"/>
+                                        <connections>
+                                            <action selector="SelectImageButtonSelected:" destination="hkk-HH-JiH" eventType="touchUpInside" id="3rf-oD-Tuc"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnn-6d-wry">
                                         <rect key="frame" x="216" y="455" width="74" height="30"/>
@@ -647,6 +650,11 @@
                             <constraint firstItem="2ki-aJ-lSJ" firstAttribute="top" secondItem="IFs-s7-t2f" secondAttribute="top" id="imk-rF-GL5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ChooseImage" destination="Dbw-9v-1uM" id="sIg-3b-nAA"/>
+                        <outlet property="LocationOfEvent" destination="Sfb-1a-hQB" id="DB6-qX-RGK"/>
+                        <outlet property="SelectImage" destination="Vfx-It-97e" id="PbL-kV-1qT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LVT-xl-Cl7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationBar contentMode="scaleToFill" id="d7w-m8-nby">
@@ -675,7 +683,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To be added" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZd-Hu-Qpb">
-                                        <rect key="frame" x="109" y="104" width="103" height="21"/>
+                                        <rect key="frame" x="109" y="30" width="103" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="103" id="CME-zE-gqo"/>
                                         </constraints>
@@ -687,8 +695,8 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="DZd-Hu-Qpb" secondAttribute="trailing" constant="108" id="5Q9-Qr-p39"/>
                                     <constraint firstItem="DZd-Hu-Qpb" firstAttribute="centerX" secondItem="CG4-Qy-PSD" secondAttribute="centerX" id="7Fn-bw-WXg"/>
-                                    <constraint firstAttribute="bottom" secondItem="DZd-Hu-Qpb" secondAttribute="bottom" constant="443" id="D37-NZ-U5B"/>
-                                    <constraint firstItem="DZd-Hu-Qpb" firstAttribute="top" secondItem="CG4-Qy-PSD" secondAttribute="top" constant="104" id="nef-FU-xzp"/>
+                                    <constraint firstAttribute="bottom" secondItem="DZd-Hu-Qpb" secondAttribute="bottom" constant="517" id="D37-NZ-U5B"/>
+                                    <constraint firstItem="DZd-Hu-Qpb" firstAttribute="top" secondItem="CG4-Qy-PSD" secondAttribute="top" constant="30" id="nef-FU-xzp"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -1816,6 +1824,7 @@
                         <outlet property="buttonImage" destination="k13-yo-j2k" id="vJo-rW-ecS"/>
                         <outlet property="closureTimeDate" destination="qDh-c4-xbb" id="zYW-0O-EwZ"/>
                         <outlet property="image" destination="ahf-kN-Wtt" id="g8m-d1-dh4"/>
+                        <outlet property="imageReward" destination="ahf-kN-Wtt" id="BIk-9o-4hq"/>
                         <outlet property="incrementalValue" destination="cL5-Yu-eof" id="rPV-ia-NKn"/>
                         <outlet property="minimumPts" destination="yy5-6K-nXJ" id="D9s-SO-99z"/>
                         <outlet property="pickupLocation" destination="5Dd-4w-pvJ" id="2fN-wq-ekB"/>

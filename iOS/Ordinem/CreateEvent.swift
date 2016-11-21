@@ -8,12 +8,45 @@
 
 import UIKit
 
-class CreateEvent: UIViewController, UITextFieldDelegate {
+class CreateEvent: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate,
+UINavigationControllerDelegate {
 
     //ACTUAL IMAGE BEING CHANGED
     @IBOutlet weak var ChooseImage: UIImageView!
     //SELECT BUTTON TO CHANGE
     @IBOutlet weak var SelectImage: UIButton!
+    
+
+
+    @IBAction func SelectImageButtonSelected(_ sender: Any) {
+        
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary;
+            imagePicker.allowsEditing = true
+            self.present(imagePicker, animated: true, completion: nil)
+            
+        }
+    }
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        ChooseImage.image = image
+        self.dismiss(animated: true, completion: nil);
+    }
+    
+    @IBAction func saveButt(sender: AnyObject) {
+        let imageData = UIImageJPEGRepresentation(ChooseImage.image!, 0.6)
+        let compressedJPGImage = UIImage(data: imageData!)
+        UIImageWriteToSavedPhotosAlbum(compressedJPGImage!, nil, nil, nil)
+        
+        let alert = UIAlertController(title: "Photo Added!", message: "Your photo has been added to the event", preferredStyle: .alert)
+        alert.show(<#T##vc: UIViewController##UIViewController#>, sender: <#T##Any?#>)
+    }
+    
+    
+    
+    
+    
     
     
     @IBOutlet weak var LocationOfEvent: UITextField!

@@ -8,13 +8,37 @@
 
 import UIKit
 
-class AwardTableTemplateViewController: UIViewController {
+class AwardTableTemplateViewController: UIViewController, UIImagePickerControllerDelegate,
+UINavigationControllerDelegate {
 
-    @IBOutlet weak var image: UIImageView!
+
+    @IBOutlet weak var imageReward: UIImageView!
     @IBOutlet weak var buttonImage: UIButton!
     @IBAction func buttonImageTapped(_ sender: Any) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary;
+            imagePicker.allowsEditing = true
+            self.present(imagePicker, animated: true, completion: nil)
+            
+        
+    }
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        imageReward.image = image
+        self.dismiss(animated: true, completion: nil);
     }
     
+    func saveButt(sender: AnyObject) {
+        let imageData = UIImageJPEGRepresentation(imageReward.image!, 0.6)
+        let compressedJPGImage = UIImage(data: imageData!)
+        UIImageWriteToSavedPhotosAlbum(compressedJPGImage!, nil, nil, nil)
+        
+        let alert = UIAlertController(title: "Photo Added!", message: "Your photo has been added to the event", preferredStyle: .alert)
+        alert.show(<#T##vc: UIViewController##UIViewController#>, sender: <#T##Any?#>)
+    }
+    }
+
     @IBOutlet weak var AwardTitle: UITextField!
     @IBOutlet weak var minimumPts: UITextField!
     @IBOutlet weak var incrementalValue: UITextField!

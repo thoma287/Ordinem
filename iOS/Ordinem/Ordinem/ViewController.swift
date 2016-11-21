@@ -104,7 +104,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var LoginUserVsOrg: UISegmentedControl!
     
     @IBAction func LoginPressed(_ sender: UIButton) {
-        if LoginUserVsOrg.selectedSegmentIndex == 0 {
+        
+        if (LoginUserVsOrg.selectedSegmentIndex == 1 && LoginSchoolEmail.text == "a" && LoginPassword.text == "a")
+        {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let adminReward = storyboard.instantiateViewController(withIdentifier: "AwardTableTemplateViewController")
+            present(adminReward, animated: true, completion: nil)
+        }
+        else if LoginUserVsOrg.selectedSegmentIndex == 0 {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let newsFeedVC = storyboard.instantiateViewController(withIdentifier: "UserNewsFeed")
             present(newsFeedVC, animated: true, completion: nil)        }

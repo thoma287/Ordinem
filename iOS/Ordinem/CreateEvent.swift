@@ -40,7 +40,7 @@ UINavigationControllerDelegate {
         UIImageWriteToSavedPhotosAlbum(compressedJPGImage!, nil, nil, nil)
         
         let alert = UIAlertController(title: "Photo Added!", message: "Your photo has been added to the event", preferredStyle: .alert)
-        alert.show(<#T##vc: UIViewController##UIViewController#>, sender: <#T##Any?#>)
+        self.present(alert, animated: true, completion: nil)
     }
     
     
@@ -105,8 +105,12 @@ UINavigationControllerDelegate {
     
     @IBAction func PublishButtonClicked(_ sender: Any) {
         if (DateOfEvent.text! == "" && EndDateOfEvent.text! == "" && LocationOfEvent.text! == "" && eventTitle.text! == "" && TypeofEvents.dataSource == nil) {
-            let buttonAlert = UIAlertController(title: "Error", message: "All text fields must be required", preferredStyle: .alert)
-            buttonAlert.show(<#T##vc: UIViewController##UIViewController#>, sender: <#T##Any?#>)
+            
+            //getting an error
+           /*
+             let buttonAlert = UIAlertController(title: "Error", message: "All text fields must be required", preferredStyle: .alert)
+             self.present(buttonAlert, animated: true, completion: nil)
+             */
         }
         else{
             

@@ -34,9 +34,12 @@ UINavigationControllerDelegate {
         let compressedJPGImage = UIImage(data: imageData!)
         UIImageWriteToSavedPhotosAlbum(compressedJPGImage!, nil, nil, nil)
         
-        let alert = UIAlertController(title: "Photo Added!", message: "Your photo has been added to the event", preferredStyle: .alert)
-        alert.show(<#T##vc: UIViewController##UIViewController#>, sender: <#T##Any?#>)
-    }
+        //Producing error
+        /*
+         let alert = UIAlertController(title: "Photo Added!", message: "Your photo has been added to the event", preferredStyle: .alert)
+         self.present(alert, animated: true, completion: nil)
+         */
+        }
     }
 
     @IBOutlet weak var AwardTitle: UITextField!

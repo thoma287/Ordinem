@@ -26,6 +26,7 @@
 		18B830BE1DD5711A0028651C /* OrdinemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B830BD1DD5711A0028651C /* OrdinemUITests.swift */; };
 		18CED9FD1DE278B4008FBABA /* ESigAndConflictions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CED9FC1DE278B4008FBABA /* ESigAndConflictions.swift */; };
 		18CED9FF1DE2C5E5008FBABA /* AwardTableTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CED9FE1DE2C5E5008FBABA /* AwardTableTemplateViewController.swift */; };
+		18CEDA011DE3D189008FBABA /* PointCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEDA001DE3D189008FBABA /* PointCalculator.swift */; };
 		18EAD5131DD6D4E30024BA14 /* NewOrgSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAD5121DD6D4E30024BA14 /* NewOrgSignUp.swift */; };
 		255D40CB1DD5A3290050F177 /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255D40CA1DD5A3290050F177 /* NewUserViewController.swift */; };
 /* End PBXBuildFile section */
@@ -73,6 +74,7 @@
 		18B830BF1DD5711A0028651C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18CED9FC1DE278B4008FBABA /* ESigAndConflictions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESigAndConflictions.swift; sourceTree = "<group>"; };
 		18CED9FE1DE2C5E5008FBABA /* AwardTableTemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwardTableTemplateViewController.swift; sourceTree = "<group>"; };
+		18CEDA001DE3D189008FBABA /* PointCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointCalculator.swift; sourceTree = "<group>"; };
 		18EAD5121DD6D4E30024BA14 /* NewOrgSignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewOrgSignUp.swift; path = ../NewOrgSignUp.swift; sourceTree = "<group>"; };
 		255D40CA1DD5A3290050F177 /* NewUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +107,7 @@
 		18B8308E1DD571190028651C = {
 			isa = PBXGroup;
 			children = (
+				18CEDA001DE3D189008FBABA /* PointCalculator.swift */,
 				18CED9FE1DE2C5E5008FBABA /* AwardTableTemplateViewController.swift */,
 				18CED9FC1DE278B4008FBABA /* ESigAndConflictions.swift */,
 				182AE2DC1DDC4F140084C9F8 /* UserNewsFeed.swift */,
@@ -317,6 +320,7 @@
 				18B8309D1DD5711A0028651C /* ViewController.swift in Sources */,
 				181920DA1DD98E380046A4D3 /* OrgNewsFeed.swift in Sources */,
 				18EAD5131DD6D4E30024BA14 /* NewOrgSignUp.swift in Sources */,
+				18CEDA011DE3D189008FBABA /* PointCalculator.swift in Sources */,
 				18248D891DD79E100022A7D4 /* CreateEvent.swift in Sources */,
 				18248D8B1DD7BF650022A7D4 /* OrgDirectLoginScreen.swift in Sources */,
 				18B830A31DD5711A0028651C /* Ordinem.xcdatamodeld in Sources */,

@@ -16,6 +16,7 @@
 		18248D8D1DD8421E0022A7D4 /* QRScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18248D8C1DD8421E0022A7D4 /* QRScan.swift */; };
 		18248D8F1DD848290022A7D4 /* Controller in Resources */ = {isa = PBXBuildFile; fileRef = 18248D8E1DD848290022A7D4 /* Controller */; };
 		182AE2DD1DDC4F140084C9F8 /* UserNewsFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182AE2DC1DDC4F140084C9F8 /* UserNewsFeed.swift */; };
+		1866858F1DE550BE001F1AF0 /* BillingInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1866858E1DE550BE001F1AF0 /* BillingInformation.swift */; };
 		18B8309B1DD5711A0028651C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B8309A1DD5711A0028651C /* AppDelegate.swift */; };
 		18B8309D1DD5711A0028651C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B8309C1DD5711A0028651C /* ViewController.swift */; };
 		18B830A01DD5711A0028651C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B8309E1DD5711A0028651C /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 		18CED9FF1DE2C5E5008FBABA /* AwardTableTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CED9FE1DE2C5E5008FBABA /* AwardTableTemplateViewController.swift */; };
 		18CEDA011DE3D189008FBABA /* PointCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEDA001DE3D189008FBABA /* PointCalculator.swift */; };
 		18EAD5131DD6D4E30024BA14 /* NewOrgSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAD5121DD6D4E30024BA14 /* NewOrgSignUp.swift */; };
+		18FD01551DE556C100071850 /* Stripe-server in Resources */ = {isa = PBXBuildFile; fileRef = 18FD01541DE556C100071850 /* Stripe-server */; };
 		255D40CB1DD5A3290050F177 /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255D40CA1DD5A3290050F177 /* NewUserViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,7 @@
 		18248D8C1DD8421E0022A7D4 /* QRScan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScan.swift; sourceTree = "<group>"; };
 		18248D8E1DD848290022A7D4 /* Controller */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Controller; sourceTree = "<group>"; };
 		182AE2DC1DDC4F140084C9F8 /* UserNewsFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNewsFeed.swift; sourceTree = "<group>"; };
+		1866858E1DE550BE001F1AF0 /* BillingInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillingInformation.swift; sourceTree = "<group>"; };
 		18B830971DD5711A0028651C /* Ordinem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ordinem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B8309A1DD5711A0028651C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18B8309C1DD5711A0028651C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +79,7 @@
 		18CED9FE1DE2C5E5008FBABA /* AwardTableTemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwardTableTemplateViewController.swift; sourceTree = "<group>"; };
 		18CEDA001DE3D189008FBABA /* PointCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointCalculator.swift; sourceTree = "<group>"; };
 		18EAD5121DD6D4E30024BA14 /* NewOrgSignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewOrgSignUp.swift; path = ../NewOrgSignUp.swift; sourceTree = "<group>"; };
+		18FD01541DE556C100071850 /* Stripe-server */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Stripe-server"; sourceTree = "<group>"; };
 		255D40CA1DD5A3290050F177 /* NewUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,10 +111,12 @@
 		18B8308E1DD571190028651C = {
 			isa = PBXGroup;
 			children = (
+				1866858E1DE550BE001F1AF0 /* BillingInformation.swift */,
 				18CEDA001DE3D189008FBABA /* PointCalculator.swift */,
 				18CED9FE1DE2C5E5008FBABA /* AwardTableTemplateViewController.swift */,
 				18CED9FC1DE278B4008FBABA /* ESigAndConflictions.swift */,
 				182AE2DC1DDC4F140084C9F8 /* UserNewsFeed.swift */,
+				18FD01541DE556C100071850 /* Stripe-server */,
 				18B830991DD5711A0028651C /* Ordinem */,
 				18B830B11DD5711A0028651C /* OrdinemTests */,
 				18B830BC1DD5711A0028651C /* OrdinemUITests */,
@@ -291,6 +297,7 @@
 				18B830A81DD5711A0028651C /* LaunchScreen.storyboard in Resources */,
 				18B830A51DD5711A0028651C /* Assets.xcassets in Resources */,
 				18248D8F1DD848290022A7D4 /* Controller in Resources */,
+				18FD01551DE556C100071850 /* Stripe-server in Resources */,
 				18B830A01DD5711A0028651C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				181920E21DDA83680046A4D3 /* UserCashTable.swift in Sources */,
+				1866858F1DE550BE001F1AF0 /* BillingInformation.swift in Sources */,
 				18B8309D1DD5711A0028651C /* ViewController.swift in Sources */,
 				181920DA1DD98E380046A4D3 /* OrgNewsFeed.swift in Sources */,
 				18EAD5131DD6D4E30024BA14 /* NewOrgSignUp.swift in Sources */,

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "45F3DE9B8F6C39B90B6DEBFAB202102055BCF6BB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "45F3DE9B8F6C39B90B6DEBFAB202102055BCF6BB" : 9223372036854775807,
+    "A5C151FC3F18980DA2906AAA3DE9140767EF2310" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F3A10596-30E0-46F8-8945-669D2577118B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "45F3DE9B8F6C39B90B6DEBFAB202102055BCF6BB" : "Ordinem\/",
+    "A5C151FC3F18980DA2906AAA3DE9140767EF2310" : "Ordinem\/iOS\/Ordinem\/Ordinem\/Controller\/Stripe-server\/stripe-ios\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Ordinem",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "iOS\/Ordinem\/Ordinem.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/thoma287\/Ordinem.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "45F3DE9B8F6C39B90B6DEBFAB202102055BCF6BB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/stripe\/stripe-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A5C151FC3F18980DA2906AAA3DE9140767EF2310"
+    }
+  ]
+}

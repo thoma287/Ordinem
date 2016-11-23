@@ -94,14 +94,18 @@ class NewOrgSignUp: UIViewController, UITextViewDelegate, UIPickerViewDataSource
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 0{
-            OrgSchool.text = list[row]}
-        else{OrgType.text = types[row]}
+            OrgSchool.text = list[row]
+        }
+        else{
+            OrgType.text = types[row]
+        }
         
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView.tag == 0{
-            return list[row]}
+            return list[row]
+        }
         else{
             return types[row]
         }

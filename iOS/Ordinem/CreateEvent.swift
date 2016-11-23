@@ -62,28 +62,7 @@ UINavigationControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     //TYPE OF EVENTS
 
     @IBOutlet weak var eventTitle: UITextField!
-    
-    var list_of_events = ["First","Second","Third"]
-    
-    
-    //PICKER VIEW STUFF FOR EVENTS
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int{
-        return 1
-    }
-    
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component : Int) -> Int{
-        return list_of_events.count
-    }
-    
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String!{
-        self.view.endEditing(true)
-        return list_of_events[row]
-    }
-    
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.textBoxTypeOfData.text = self.list_of_events[row]
-        
-    }
+
     
     
     @IBAction func PublishButtonClicked(_ sender: Any) {
@@ -120,10 +99,9 @@ UINavigationControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
     
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    {
         textBoxTypeOfData.text = list[row]
-        
-        
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {

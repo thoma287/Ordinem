@@ -36,7 +36,7 @@ UINavigationControllerDelegate {
     }
     
     @IBAction func calculateClicked(_ sender: Any) {
-        let total = Double(getPoints()*attToInt()*0.05)
+        let total = Double(getPoints()*attToInt()*0.05*1.05)
         projectedCost.text = String(total)
     }
 

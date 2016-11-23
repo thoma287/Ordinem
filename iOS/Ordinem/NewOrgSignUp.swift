@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewOrgSignUp: UIViewController, UITextViewDelegate {
+class NewOrgSignUp: UIViewController, UITextViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
     
     
@@ -64,9 +64,64 @@ class NewOrgSignUp: UIViewController, UITextViewDelegate {
         }
     }
     
+    
+    
+    var list = ["Chapman"]
+    var picker1 = UIPickerView()
+    
+    var types = ["Academic/Professional", "Civic Engagement","Diversity/ Cultural","Greek","Honor Society","Sport", "Leisure", "Recreational","Religious/Spiritual"]
+    
+    var picker2 = UIPickerView()
+    
+
+    
+    @available(iOS 2.0, *)
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int{
+        return 1
+    }
+    
+    @available(iOS 2.0, *)
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
+        if pickerView.tag == 0{
+            return list.count
+        }
+        else{
+            return types.count
+        }
+    }
+    
+    
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if pickerView.tag == 0{
+            OrgSchool.text = list[row]}
+        else{OrgType.text = types[row]}
+        
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if pickerView.tag == 0{
+            return list[row]}
+        else{
+            return types[row]
+        }
+    }
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        OrgSchool.text = list[0]
+        
+        picker1.tag = 0
+        picker2.tag = 1
+        
+        picker1.delegate = self
+        picker1.dataSource = self
+        OrgSchool.inputView = picker1
+
+        picker2.delegate = self
+        picker2.dataSource = self
+        OrgType.inputView = picker2
         
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
         
@@ -122,7 +177,6 @@ class NewOrgSignUp: UIViewController, UITextViewDelegate {
     }
     
     
-     var list = ["Chapman","UCSB"]
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -134,7 +188,7 @@ class NewOrgSignUp: UIViewController, UITextViewDelegate {
         formatter.dateStyle = .full
         OrgSchool.text = formatter.string(from: sender.date)
         
-        print("Try this at home")
+        
     }
     
     private func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -142,7 +196,7 @@ class NewOrgSignUp: UIViewController, UITextViewDelegate {
         textField.inputView = datePicker
         datePicker.addTarget(self, action: #selector(datePickerChanged(sender:)), for: .valueChanged)
         
-        print("This Worked")
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -165,7 +219,7 @@ class NewOrgSignUp: UIViewController, UITextViewDelegate {
             OrgVerifyPassword.becomeFirstResponder()
         }
         else{
-            OrgVerifyPassword.resignFirstResponder()
+            self.closekeyboard()
         }
         return true
     }

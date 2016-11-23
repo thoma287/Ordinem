@@ -9,7 +9,7 @@
 import UIKit
 
 class AwardTableTemplateViewController: UIViewController, UIImagePickerControllerDelegate,
-UINavigationControllerDelegate {
+UINavigationControllerDelegate, UITextFieldDelegate {
 
 
     @IBOutlet weak var imageReward: UIImageView!
@@ -44,7 +44,7 @@ UINavigationControllerDelegate {
 
     @IBOutlet weak var AwardTitle: UITextField!
     @IBOutlet weak var minimumPts: UITextField!
-    @IBOutlet weak var incrementalValue: UITextField!
+    @IBOutlet weak var numberBeingOffered: UITextField!
     @IBOutlet weak var pickupLocation: UITextField!
     @IBOutlet weak var closureTimeDate: UITextField!
     @IBOutlet weak var RaffleVsWin: UISegmentedControl!
@@ -56,9 +56,9 @@ UINavigationControllerDelegate {
             minimumPts.becomeFirstResponder()
         }
         else if textField == minimumPts{
-            incrementalValue.becomeFirstResponder()
+            numberBeingOffered.becomeFirstResponder()
         }
-        else if textField == incrementalValue{
+        else if textField == numberBeingOffered{
             pickupLocation.becomeFirstResponder()
         }
         else if textField == pickupLocation{
@@ -67,8 +67,10 @@ UINavigationControllerDelegate {
         else{
             closureTimeDate.resignFirstResponder()
         }
-        return true
         
+        closureTimeDate.resignFirstResponder()
+        
+        return true
     }
 
     
@@ -86,7 +88,7 @@ UINavigationControllerDelegate {
         
         AwardTitle.inputAccessoryView = toolBar
         minimumPts.inputAccessoryView = toolBar
-        incrementalValue.inputAccessoryView = toolBar
+        numberBeingOffered.inputAccessoryView = toolBar
         pickupLocation.inputAccessoryView = toolBar
         closureTimeDate.inputAccessoryView = toolBar
         
@@ -98,7 +100,49 @@ UINavigationControllerDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
         // Do any additional setup after loading the view.
+        
+        closureTimeDate.delegate = self
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: TextField Delegate
+    func datePickerChanged(sender: UIDatePicker) {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .full
+        closureTimeDate.text = formatter.string(from: sender.date)
+        
+        
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        let datePicker = UIDatePicker()
+        textField.inputView = datePicker
+        datePicker.addTarget(self, action: #selector(datePickerChanged(sender:)), for: .valueChanged)
+        
+        
+    }
+    
+
+    
+    
+    func closekeyboard() {
+        self.view.endEditing(true)
+    }
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        closekeyboard()
+    }
+
+    
+    
+    
+    
+    
     func doneClicked(){
         view.endEditing(true)
     }
@@ -120,18 +164,6 @@ UINavigationControllerDelegate {
     }
     
     
-    func closekeyboard() {
-        self.view.endEditing(true)
-    }
-    
-    // MARK: Touch Events
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        closekeyboard()
-    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
 
     /*

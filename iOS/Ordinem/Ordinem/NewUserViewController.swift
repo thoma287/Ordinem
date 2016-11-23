@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewUserViewController: UIViewController, UIPickerViewDelegate{
+class NewUserViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
     
     
     @IBOutlet weak var CAUserFirstName: UITextField!
@@ -18,12 +18,6 @@ class NewUserViewController: UIViewController, UIPickerViewDelegate{
     @IBOutlet weak var CAUserSchoolEmail: UITextField!
     @IBOutlet weak var CAUserVerifyPwd: UITextField!
     @IBOutlet weak var usrCASchoolTextBox: UITextField!
-
-    
-    
-    
-    var pickerView = UIPickerView()
-    
 
     
     //Takes in Last Name
@@ -55,23 +49,34 @@ class NewUserViewController: UIViewController, UIPickerViewDelegate{
         super.didReceiveMemoryWarning()
     }
     
-    var list = ["Chapman","UCSB"]
+    var list = ["Chapman"]
+    var picker = UIPickerView()
+
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    @available(iOS 2.0, *)
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int{
         return 1
     }
     
-    private func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    
+    @available(iOS 2.0, *)
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
         return list.count
+    }
+    
+
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        usrCASchoolTextBox.text = list[row]
+        
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return list[row]
     }
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        usrCASchoolTextBox.text = list[row]
-    }
+
     
 
     
@@ -80,11 +85,9 @@ class NewUserViewController: UIViewController, UIPickerViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let pickerView = UIPickerView()
-        
-        pickerView.delegate = self
-        
-        usrCASchoolTextBox.inputView = pickerView
+        picker.delegate = self
+        picker.dataSource = self
+        usrCASchoolTextBox.inputView = picker
         
         
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)

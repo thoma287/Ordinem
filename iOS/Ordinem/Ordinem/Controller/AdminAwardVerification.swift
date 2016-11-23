@@ -16,6 +16,30 @@ class AdminAwardVerification: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBOutlet weak var eSignature: UITextField!
+    @IBOutlet weak var password: UITextField!
+    
+    
+    @IBAction func submitButtonPressed(_ sender: Any) {
+        
+        let adminVerification = LoginController()
+        let submissionConfirmed = VerificationController()
+        
+        let pwd = adminVerification.password
+        
+        submissionConfirmed.password = password.text!
+        if(pwd == submissionConfirmed.password){
+            submissionConfirmed.esig = eSignature.text!
+        }
+        else{
+            let alert = UIAlertController(title: "Error", message: "Password incorrect", preferredStyle: .alert)
+            self.present(alert, animated: true, completion: nil)
+        }
+
+        
+        
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

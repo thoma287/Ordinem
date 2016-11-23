@@ -34,11 +34,9 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         let compressedJPGImage = UIImage(data: imageData!)
         UIImageWriteToSavedPhotosAlbum(compressedJPGImage!, nil, nil, nil)
         
-        //Producing error
-        /*
          let alert = UIAlertController(title: "Photo Added!", message: "Your photo has been added to the event", preferredStyle: .alert)
          self.present(alert, animated: true, completion: nil)
-         */
+        
         }
     }
 
@@ -50,6 +48,23 @@ UINavigationControllerDelegate, UITextFieldDelegate {
     @IBOutlet weak var RaffleVsWin: UISegmentedControl!
     
     @IBOutlet weak var theScrollView: UIScrollView!
+    
+    
+    
+    @IBAction func nextButtonTapped(_ sender: UIButton) {
+        let award = AdminAwardController()
+        
+        award.image = imageReward
+        award.name = AwardTitle.text!
+        award.points = Int(minimumPts.text!)!
+        award.total = Int(numberBeingOffered.text!)!
+        award.location = pickupLocation.text!
+        //Damn dates
+        //award.dateClose = DateFormatter(closureTimeDate.text!)!
+        award.raffleVAWin = RaffleVsWin.selectedSegmentIndex
+        
+    }
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == AwardTitle{

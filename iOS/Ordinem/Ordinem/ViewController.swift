@@ -106,6 +106,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBAction func LoginPressed(_ sender: UIButton) {
         
+        let login = LoginController()
+        
+        login.school = SchoolLoginPicker.textInputContextIdentifier!
+        login.email = LoginSchoolEmail.text!
+        login.password = LoginPassword.text!
+        login.type = LoginUserVsOrg.selectedSegmentIndex
+        
+        
         if (LoginUserVsOrg.selectedSegmentIndex == 1 && LoginSchoolEmail.text == "a" && LoginPassword.text == "a")
         {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)

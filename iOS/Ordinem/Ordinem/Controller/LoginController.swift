@@ -10,26 +10,51 @@ import UIKit
 
 class LoginController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    private var _school = ""
+    private var _email = ""
+    private var _password = ""
+    private var _type = Int(0)
+    
+    var school : String{
+        get{
+            return _school
+        }
+        set{
+            _school = newValue
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    var email : String{
+        get{
+            return _email
+        }
+        set{
+            _email = newValue
+        }
+    }
+    
+    var password : String{
+        get{
+            return _password
+        }
+        set{
+            _password = newValue
+        }
+    }
+    
+    var type : Int{
+        get{
+            return _type
+        }
+        set{
+            _type = newValue
+        }
+    }
+    
+    func getTodos() -> String{
+        return "\(school) \(email) \(password) \(type)"
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

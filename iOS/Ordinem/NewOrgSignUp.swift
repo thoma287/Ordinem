@@ -31,6 +31,14 @@ class NewOrgSignUp: UIViewController, UITextViewDelegate, UIPickerViewDataSource
     
     @IBAction func signUpButton(_ sender: UIButton) {
         
+        if (OrgName.text! == "" || OrgType.text! == "" || OrgSchool.text! == "" || OrgEmail.text! == "" || OrgPassword.text! == "" || OrgVerifyPassword.text! == "" || OrgSchoolID.text! == ""){
+            
+            let alert = UIAlertController(title: "Error", message: "All text fields must be entered", preferredStyle: .alert)
+            self.present(alert, animated: true, completion: nil)
+            
+        }
+        else{
+        
         let connect = OrgController()
         
         connect.name = OrgName.text!
@@ -40,7 +48,7 @@ class NewOrgSignUp: UIViewController, UITextViewDelegate, UIPickerViewDataSource
         connect.id = Int(OrgSchoolID.text!)!
         connect.password = OrgPassword.text!
         connect.vPassword = OrgVerifyPassword.text!
-        
+        }
     }
     
     func thatName() -> String{

@@ -85,8 +85,8 @@ UINavigationControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
             let r = event.name
             event.name = r
             //TODO: Need this to be called as a DateFormatter
-            //event.sTime = DateOfEvent.text!
-            //event.eTime = EndDateOfEvent.text!
+            //event.sTime = DateFormatter.localizedString(from: DateOfEvent, dateStyle: <#T##DateFormatter.Style#>, timeStyle: <#T##DateFormatter.Style#>)
+            //event.eTime = DateFormatter(coder: EndDateOfEvent.text!)!
             event.location = LocationOfEvent.text!
             event.title = eventTitle.text!
             event.type = textBoxTypeOfData.text!

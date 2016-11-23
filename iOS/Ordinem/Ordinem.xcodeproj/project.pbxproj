@@ -30,6 +30,9 @@
 		18CEDA011DE3D189008FBABA /* PointCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEDA001DE3D189008FBABA /* PointCalculator.swift */; };
 		18EAD5131DD6D4E30024BA14 /* NewOrgSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAD5121DD6D4E30024BA14 /* NewOrgSignUp.swift */; };
 		18FD01551DE556C100071850 /* Stripe-server in Resources */ = {isa = PBXBuildFile; fileRef = 18FD01541DE556C100071850 /* Stripe-server */; };
+		18FD01621DE56AA600071850 /* OrgController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FD01611DE56AA600071850 /* OrgController.swift */; };
+		18FD01641DE56D9300071850 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FD01631DE56D9300071850 /* UserController.swift */; };
+		18FD01661DE571F600071850 /* NewEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FD01651DE571F600071850 /* NewEventController.swift */; };
 		255D40CB1DD5A3290050F177 /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255D40CA1DD5A3290050F177 /* NewUserViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,8 +62,8 @@
 		18248D8A1DD7BF650022A7D4 /* OrgDirectLoginScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrgDirectLoginScreen.swift; path = ../OrgDirectLoginScreen.swift; sourceTree = "<group>"; };
 		18248D8C1DD8421E0022A7D4 /* QRScan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScan.swift; sourceTree = "<group>"; };
 		18248D8E1DD848290022A7D4 /* Controller */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Controller; sourceTree = "<group>"; };
-		182AE2DC1DDC4F140084C9F8 /* UserNewsFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNewsFeed.swift; sourceTree = "<group>"; };
-		1866858E1DE550BE001F1AF0 /* BillingInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillingInformation.swift; sourceTree = "<group>"; };
+		182AE2DC1DDC4F140084C9F8 /* UserNewsFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserNewsFeed.swift; path = ../UserNewsFeed.swift; sourceTree = "<group>"; };
+		1866858E1DE550BE001F1AF0 /* BillingInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BillingInformation.swift; path = ../BillingInformation.swift; sourceTree = "<group>"; };
 		18B830971DD5711A0028651C /* Ordinem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ordinem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B8309A1DD5711A0028651C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18B8309C1DD5711A0028651C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,11 +78,14 @@
 		18B830B91DD5711A0028651C /* OrdinemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrdinemUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B830BD1DD5711A0028651C /* OrdinemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdinemUITests.swift; sourceTree = "<group>"; };
 		18B830BF1DD5711A0028651C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		18CED9FC1DE278B4008FBABA /* ESigAndConflictions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESigAndConflictions.swift; sourceTree = "<group>"; };
-		18CED9FE1DE2C5E5008FBABA /* AwardTableTemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwardTableTemplateViewController.swift; sourceTree = "<group>"; };
-		18CEDA001DE3D189008FBABA /* PointCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointCalculator.swift; sourceTree = "<group>"; };
+		18CED9FC1DE278B4008FBABA /* ESigAndConflictions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ESigAndConflictions.swift; path = ../ESigAndConflictions.swift; sourceTree = "<group>"; };
+		18CED9FE1DE2C5E5008FBABA /* AwardTableTemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AwardTableTemplateViewController.swift; path = ../AwardTableTemplateViewController.swift; sourceTree = "<group>"; };
+		18CEDA001DE3D189008FBABA /* PointCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PointCalculator.swift; path = ../PointCalculator.swift; sourceTree = "<group>"; };
 		18EAD5121DD6D4E30024BA14 /* NewOrgSignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewOrgSignUp.swift; path = ../NewOrgSignUp.swift; sourceTree = "<group>"; };
 		18FD01541DE556C100071850 /* Stripe-server */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Stripe-server"; sourceTree = "<group>"; };
+		18FD01611DE56AA600071850 /* OrgController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrgController.swift; path = Ordinem/Controller/OrgController.swift; sourceTree = "<group>"; };
+		18FD01631DE56D9300071850 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserController.swift; path = Ordinem/Controller/UserController.swift; sourceTree = "<group>"; };
+		18FD01651DE571F600071850 /* NewEventController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewEventController.swift; path = Ordinem/Controller/NewEventController.swift; sourceTree = "<group>"; };
 		255D40CA1DD5A3290050F177 /* NewUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,11 +117,7 @@
 		18B8308E1DD571190028651C = {
 			isa = PBXGroup;
 			children = (
-				1866858E1DE550BE001F1AF0 /* BillingInformation.swift */,
-				18CEDA001DE3D189008FBABA /* PointCalculator.swift */,
-				18CED9FE1DE2C5E5008FBABA /* AwardTableTemplateViewController.swift */,
-				18CED9FC1DE278B4008FBABA /* ESigAndConflictions.swift */,
-				182AE2DC1DDC4F140084C9F8 /* UserNewsFeed.swift */,
+				18FD01561DE569A200071850 /* Controller */,
 				18FD01541DE556C100071850 /* Stripe-server */,
 				18B830991DD5711A0028651C /* Ordinem */,
 				18B830B11DD5711A0028651C /* OrdinemTests */,
@@ -137,6 +139,11 @@
 		18B830991DD5711A0028651C /* Ordinem */ = {
 			isa = PBXGroup;
 			children = (
+				1866858E1DE550BE001F1AF0 /* BillingInformation.swift */,
+				18CEDA001DE3D189008FBABA /* PointCalculator.swift */,
+				18CED9FE1DE2C5E5008FBABA /* AwardTableTemplateViewController.swift */,
+				18CED9FC1DE278B4008FBABA /* ESigAndConflictions.swift */,
+				182AE2DC1DDC4F140084C9F8 /* UserNewsFeed.swift */,
 				18248D8E1DD848290022A7D4 /* Controller */,
 				18B8309A1DD5711A0028651C /* AppDelegate.swift */,
 				18B8309E1DD5711A0028651C /* Main.storyboard */,
@@ -175,6 +182,16 @@
 				18B830BF1DD5711A0028651C /* Info.plist */,
 			);
 			path = OrdinemUITests;
+			sourceTree = "<group>";
+		};
+		18FD01561DE569A200071850 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18FD01611DE56AA600071850 /* OrgController.swift */,
+				18FD01631DE56D9300071850 /* UserController.swift */,
+				18FD01651DE571F600071850 /* NewEventController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		255D40CC1DD5A3300050F177 /* ViewControllers */ = {
@@ -323,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18FD01641DE56D9300071850 /* UserController.swift in Sources */,
 				181920E21DDA83680046A4D3 /* UserCashTable.swift in Sources */,
 				1866858F1DE550BE001F1AF0 /* BillingInformation.swift in Sources */,
 				18B8309D1DD5711A0028651C /* ViewController.swift in Sources */,
@@ -337,6 +355,8 @@
 				181920E01DDA7DDC0046A4D3 /* CameraForUser.swift in Sources */,
 				18B8309B1DD5711A0028651C /* AppDelegate.swift in Sources */,
 				255D40CB1DD5A3290050F177 /* NewUserViewController.swift in Sources */,
+				18FD01661DE571F600071850 /* NewEventController.swift in Sources */,
+				18FD01621DE56AA600071850 /* OrgController.swift in Sources */,
 				18CED9FF1DE2C5E5008FBABA /* AwardTableTemplateViewController.swift in Sources */,
 				182AE2DD1DDC4F140084C9F8 /* UserNewsFeed.swift in Sources */,
 				18248D8D1DD8421E0022A7D4 /* QRScan.swift in Sources */,

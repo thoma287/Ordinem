@@ -20,6 +20,19 @@ class NewUserViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     @IBOutlet weak var usrCASchoolTextBox: UITextField!
 
     
+    @IBAction func signUpPressed(_ sender: UIButton) {
+        let connect = UserController()
+        
+        connect.name = CAUserFirstName.text!
+        connect.lastName = CAUserLastName.text!
+        connect.school = usrCASchoolTextBox.text!
+        connect.email = CAUserSchoolEmail.text!
+        connect.id = Int(CAUserStudentID.text!)!
+        connect.password = CAUserPassword.text!
+        connect.vPassword = CAUserVerifyPwd.text!
+    }
+    
+    
     //Takes in Last Name
     func getLastName() -> String {
         

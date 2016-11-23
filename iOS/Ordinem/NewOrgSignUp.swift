@@ -29,6 +29,27 @@ class NewOrgSignUp: UIViewController, UITextViewDelegate, UIPickerViewDataSource
     @IBOutlet weak var OrgTypeOptions: UIPickerView!
     
     
+    @IBAction func signUpButton(_ sender: UIButton) {
+        
+        let connect = OrgController()
+        
+        connect.name = OrgName.text!
+        connect.type = OrgType.text!
+        connect.school = OrgSchool.text!
+        connect.email = OrgEmail.text!
+        connect.id = Int(OrgSchoolID.text!)!
+        connect.password = OrgPassword.text!
+        connect.vPassword = OrgVerifyPassword.text!
+        
+    }
+    
+    func thatName() -> String{
+        let f = OrgController()
+        return f.name
+    }
+
+    
+    
     func getOrgID() -> Int{
         let oID:Int! = Int(self.OrgSchoolID.text!)
         return oID
@@ -237,6 +258,9 @@ class NewOrgSignUp: UIViewController, UITextViewDelegate, UIPickerViewDataSource
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         closekeyboard()
     }
+    
+
+
     
     
     

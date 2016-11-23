@@ -79,6 +79,19 @@ UINavigationControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let newsFeedVC = storyboard.instantiateViewController(withIdentifier: "ESigAndConflictions")
             present(newsFeedVC, animated: true, completion: nil)
+            
+            let event = NewEventController()
+            
+            let r = event.name
+            event.name = r
+            //TODO: Need this to be called as a DateFormatter
+            //event.sTime = DateOfEvent.text!
+            //event.eTime = EndDateOfEvent.text!
+            event.location = LocationOfEvent.text!
+            event.title = eventTitle.text!
+            event.type = textBoxTypeOfData.text!
+            event.points = Int(PointStepperLabel.text!)!
+            
         }
 
     }

@@ -21,6 +21,15 @@ class NewUserViewController: UIViewController, UIPickerViewDataSource, UIPickerV
 
     
     @IBAction func signUpPressed(_ sender: UIButton) {
+        
+        if(CAUserFirstName.text! == "" || CAUserLastName.text! == "" || CAUserPassword.text! == "" || CAUserStudentID.text! == "" || CAUserSchoolEmail.text! == "" || CAUserVerifyPwd.text! == "" || usrCASchoolTextBox.text! == ""){
+            
+            let alert = UIAlertController(title: "Error", message: "All text fields must be filled", preferredStyle: .alert)
+            self.present(alert, animated: true, completion: nil)
+            
+        }
+        
+        else{
         let connect = UserController()
         
         connect.name = CAUserFirstName.text!
@@ -30,6 +39,7 @@ class NewUserViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         connect.id = Int(CAUserStudentID.text!)!
         connect.password = CAUserPassword.text!
         connect.vPassword = CAUserVerifyPwd.text!
+        }
     }
     
     

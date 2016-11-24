@@ -42,13 +42,78 @@ class RewardTableCell : UITableViewCell{
     @IBOutlet weak var CashButton: UIButton!
     
     @IBOutlet weak var Description: UILabel!
-    @IBOutlet weak var PointsEnteredinStepperCompareToAwards: UILabel!
     @IBOutlet weak var rewardConversionFromPoints: UILabel!
     @IBOutlet weak var minimumPoints: UILabel!
     @IBOutlet weak var PointsEnteredinStepper: UILabel!
     @IBOutlet weak var pointStepper: UIStepper!
-    
+    @IBOutlet weak var bucksImage: UIImageView!
     
     
     
     }
+
+
+class RewardRaffle : UITableViewCell{
+    
+    
+    @IBOutlet weak var raffleRaffle: UILabel!
+    @IBOutlet weak var raffleImage: UIImageView!
+    @IBOutlet weak var raffleName: UILabel!
+    @IBOutlet weak var raffleEntryPoints: UILabel!
+    @IBOutlet weak var raffleNumOfEntries: UILabel!
+    @IBOutlet weak var raffleStepper: UIStepper!
+    @IBOutlet weak var rafflePointCost: UILabel!
+    
+    @IBAction func cashButtonPressed(_ sender: Any) {
+    }
+    
+    
+    
+    
+}
+
+
+class RewardAutoWin : UITableViewCell{
+    
+    
+    @IBOutlet weak var autoWinautoWin: UILabel!
+    @IBOutlet weak var autoWinImage: UIImageView!
+    @IBOutlet weak var autoWinName: UILabel!
+    @IBOutlet weak var autoWinEntryPoints: UILabel!
+    @IBOutlet weak var amountOffered: UILabel!
+    
+    @IBAction func claimButtonPressed(_ sender: Any) {
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

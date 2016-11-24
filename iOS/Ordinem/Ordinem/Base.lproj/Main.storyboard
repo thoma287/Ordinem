@@ -431,7 +431,7 @@
                                 <items>
                                     <navigationItem title="Add New Event" id="24N-rv-VMu">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="qhq-WZ-8Qt"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Publish" id="yzt-fa-xvf">
+                                        <barButtonItem key="rightBarButtonItem" title="Next" id="yzt-fa-xvf">
                                             <connections>
                                                 <action selector="PublishButtonClicked:" destination="hkk-HH-JiH" id="Bfl-Kk-vTr"/>
                                                 <segue destination="ROi-m7-tdg" kind="show" id="UzR-l1-Yxr"/>
@@ -2231,11 +2231,13 @@
                                             <outlet property="CashButton" destination="vJE-zk-uqt" id="gsc-zj-AlN"/>
                                             <outlet property="Description" destination="NpF-p1-xTf" id="iCR-uk-bgU"/>
                                             <outlet property="PointsEnteredinStepper" destination="dvk-D1-kes" id="Fx2-ei-fxQ"/>
+                                            <outlet property="bucksImage" destination="gli-AM-9xT" id="B0V-YH-Q9J"/>
                                             <outlet property="minimumPoints" destination="pdd-WV-rIJ" id="ppK-JF-ehj"/>
                                             <outlet property="pointStepper" destination="nxz-0c-UZ7" id="if2-Zn-4SJ"/>
+                                            <outlet property="rewardConversionFromPoints" destination="gxa-ka-KDi" id="Ie8-fe-xEM"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Raffle" rowHeight="105" id="AKc-5J-5x7">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Raffle" rowHeight="105" id="AKc-5J-5x7" customClass="RewardRaffle" customModule="Ordinem" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="133" width="320" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AKc-5J-5x7" id="cnK-GX-mrc">
@@ -2311,6 +2313,9 @@
                                                     <rect key="frame" x="276" y="3" width="37" height="32"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <state key="normal" title="Cash"/>
+                                                    <connections>
+                                                        <action selector="cashButtonPressed:" destination="AKc-5J-5x7" eventType="touchUpInside" id="Tr7-9m-Fo3"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beats" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1V-GQ-Fbq">
                                                     <rect key="frame" x="137.5" y="8" width="45.5" height="20.5"/>
@@ -2340,8 +2345,17 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="noo-pr-M3Y" secondAttribute="bottom" constant="2" id="z6u-hi-qx7"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="raffleEntryPoints" destination="7zk-TO-LNN" id="vgD-IE-Lzv"/>
+                                            <outlet property="raffleImage" destination="CJi-oJ-MgZ" id="6MB-PS-THz"/>
+                                            <outlet property="raffleName" destination="Q1V-GQ-Fbq" id="bMg-t8-zLl"/>
+                                            <outlet property="raffleNumOfEntries" destination="BmF-iE-q33" id="vYg-XP-uTB"/>
+                                            <outlet property="rafflePointCost" destination="IqL-Lu-yKW" id="GeS-vZ-Rke"/>
+                                            <outlet property="raffleRaffle" destination="35m-lx-NRf" id="xGc-dU-XEk"/>
+                                            <outlet property="raffleStepper" destination="noo-pr-M3Y" id="8DA-7a-FqX"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AutoWin" rowHeight="105" id="Kzx-Xk-6Og">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AutoWin" rowHeight="105" id="Kzx-Xk-6Og" customClass="RewardAutoWin" customModule="Ordinem" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="238" width="320" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kzx-Xk-6Og" id="Qqd-DS-21s">
@@ -2408,6 +2422,9 @@
                                                     <rect key="frame" x="272" y="3" width="41" height="32"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <state key="normal" title="Claim"/>
+                                                    <connections>
+                                                        <action selector="claimButtonPressed:" destination="Kzx-Xk-6Og" eventType="touchUpInside" id="Gac-QF-k6v"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beats" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pd7-lD-z5Z">
                                                     <rect key="frame" x="137.5" y="8" width="45.5" height="20.5"/>
@@ -2438,6 +2455,13 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="1VH-dq-hCt" secondAttribute="bottom" constant="2" id="tuG-NC-qi4"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="amountOffered" destination="1VH-dq-hCt" id="x6d-fm-lB8"/>
+                                            <outlet property="autoWinEntryPoints" destination="eC6-OB-MXd" id="dHU-eV-zLI"/>
+                                            <outlet property="autoWinImage" destination="2Vu-Dl-X6K" id="vmw-ab-Yyj"/>
+                                            <outlet property="autoWinName" destination="Pd7-lD-z5Z" id="Tpl-8V-S3u"/>
+                                            <outlet property="autoWinautoWin" destination="5CS-LD-8KC" id="JdR-hp-7ao"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

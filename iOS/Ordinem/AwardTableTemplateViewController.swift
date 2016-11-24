@@ -52,6 +52,16 @@ UINavigationControllerDelegate, UITextFieldDelegate {
     
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
+        
+        if(AwardTitle.text == "" || minimumPts.text == "" || numberBeingOffered.text == "" || pickupLocation.text == "" || closureTimeDate.text == ""){
+            let alert = UIAlertController(title: "Error", message: "All text fields must be entered", preferredStyle: .alert)
+            self.present(alert, animated: true, completion: nil)
+
+            
+        }
+        else{
+        
+        if(RaffleVsWin.selectedSegmentIndex == 0){
         let award = AdminAwardController()
         
         award.image = imageReward
@@ -62,9 +72,34 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         //Damn dates
         //award.dateClose = DateFormatter(closureTimeDate.text!)!
         award.raffleVAWin = RaffleVsWin.selectedSegmentIndex
-        
+        }
+        else{
+            let award = AdminRaffleController()
+            
+            award.image = imageReward
+            award.name = AwardTitle.text!
+            award.points = Int(minimumPts.text!)!
+            award.total = Int(numberBeingOffered.text!)!
+            award.location = pickupLocation.text!
+            //Damn dates
+            //award.dateClose = DateFormatter(closureTimeDate.text!)!
+            award.raffleVAWin = RaffleVsWin.selectedSegmentIndex
+            }
+        }
     }
     
+    func saved(){
+        let award = AdminAwardController()
+        
+        award.image = imageReward
+        award.name = AwardTitle.text!
+        award.points = Int(minimumPts.text!)!
+        award.total = Int(numberBeingOffered.text!)!
+        award.location = pickupLocation.text!
+        //Damn dates
+        //award.dateClose = DateFormatter(closureTimeDate.text!)!
+        award.raffleVAWin = RaffleVsWin.selectedSegmentIndex
+    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == AwardTitle{
@@ -129,21 +164,14 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         let formatter = DateFormatter()
         formatter.dateStyle = .full
         closureTimeDate.text = formatter.string(from: sender.date)
-        
-        
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         let datePicker = UIDatePicker()
         textField.inputView = datePicker
         datePicker.addTarget(self, action: #selector(datePickerChanged(sender:)), for: .valueChanged)
-        
-        
     }
-    
 
-    
-    
     func closekeyboard() {
         self.view.endEditing(true)
     }

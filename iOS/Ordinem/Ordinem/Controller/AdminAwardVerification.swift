@@ -25,11 +25,16 @@ class AdminAwardVerification: UIViewController {
         let adminVerification = LoginController()
         let submissionConfirmed = VerificationController()
         
+        
         let pwd = adminVerification.password
         
         submissionConfirmed.password = password.text!
         if(pwd == submissionConfirmed.password){
+            
             submissionConfirmed.esig = eSignature.text!
+            let award = AwardTableTemplateViewController()
+            award.saved()
+        
         }
         else{
             let alert = UIAlertController(title: "Error", message: "Password incorrect", preferredStyle: .alert)

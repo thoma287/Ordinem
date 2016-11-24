@@ -66,13 +66,11 @@ UINavigationControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
     
     @IBAction func PublishButtonClicked(_ sender: Any) {
-        if (DateOfEvent.text! == "" && EndDateOfEvent.text! == "" && LocationOfEvent.text! == "" && eventTitle.text! == "") {
+        if (DateOfEvent.text! == "" || EndDateOfEvent.text! == "" || LocationOfEvent.text! == "" || eventTitle.text! == "" || textBoxTypeOfData.text! == "") {
             
-            //getting an error
-           /*
-             let buttonAlert = UIAlertController(title: "Error", message: "All text fields must be required", preferredStyle: .alert)
-             self.present(buttonAlert, animated: true, completion: nil)
-             */
+            let alert = UIAlertController(title: "Error", message: "All text fields must be filled", preferredStyle: .alert)
+            self.present(alert, animated: true, completion: nil)
+
         }
         else{
             

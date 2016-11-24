@@ -33,7 +33,7 @@ class NewOrgSignUp: UIViewController, UITextViewDelegate, UIPickerViewDataSource
         
         if (OrgName.text! == "" || OrgType.text! == "" || OrgSchool.text! == "" || OrgEmail.text! == "" || OrgPassword.text! == "" || OrgVerifyPassword.text! == "" || OrgSchoolID.text! == ""){
             
-            let alert = UIAlertController(title: "Error", message: "All text fields must be entered", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Error", message: "All text fields must be filled", preferredStyle: .alert)
             self.present(alert, animated: true, completion: nil)
             
         }

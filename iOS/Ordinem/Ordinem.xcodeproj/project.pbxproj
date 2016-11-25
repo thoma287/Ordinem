@@ -29,6 +29,7 @@
 		18C5AF131DE62EAE0051989B /* AdminAwardVerification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C5AF121DE62EAE0051989B /* AdminAwardVerification.swift */; };
 		18C5AF151DE630680051989B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C5AF141DE630680051989B /* LoginController.swift */; };
 		18C5AF171DE64D3D0051989B /* VerificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C5AF161DE64D3D0051989B /* VerificationController.swift */; };
+		18C5AF191DE78B8A0051989B /* PointCalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C5AF181DE78B8A0051989B /* PointCalculatorController.swift */; };
 		18CED9FD1DE278B4008FBABA /* ESigAndConflictions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CED9FC1DE278B4008FBABA /* ESigAndConflictions.swift */; };
 		18CED9FF1DE2C5E5008FBABA /* AwardTableTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CED9FE1DE2C5E5008FBABA /* AwardTableTemplateViewController.swift */; };
 		18CEDA011DE3D189008FBABA /* PointCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEDA001DE3D189008FBABA /* PointCalculator.swift */; };
@@ -86,6 +87,7 @@
 		18C5AF121DE62EAE0051989B /* AdminAwardVerification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdminAwardVerification.swift; path = Ordinem/Controller/AdminAwardVerification.swift; sourceTree = "<group>"; };
 		18C5AF141DE630680051989B /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginController.swift; path = Ordinem/Controller/LoginController.swift; sourceTree = "<group>"; };
 		18C5AF161DE64D3D0051989B /* VerificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VerificationController.swift; path = Ordinem/Controller/VerificationController.swift; sourceTree = "<group>"; };
+		18C5AF181DE78B8A0051989B /* PointCalculatorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PointCalculatorController.swift; path = Ordinem/Controller/PointCalculatorController.swift; sourceTree = "<group>"; };
 		18CED9FC1DE278B4008FBABA /* ESigAndConflictions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ESigAndConflictions.swift; path = ../ESigAndConflictions.swift; sourceTree = "<group>"; };
 		18CED9FE1DE2C5E5008FBABA /* AwardTableTemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AwardTableTemplateViewController.swift; path = ../AwardTableTemplateViewController.swift; sourceTree = "<group>"; };
 		18CEDA001DE3D189008FBABA /* PointCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PointCalculator.swift; path = ../PointCalculator.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 		18B8308E1DD571190028651C = {
 			isa = PBXGroup;
 			children = (
+				18C5AF181DE78B8A0051989B /* PointCalculatorController.swift */,
 				18FD01561DE569A200071850 /* Controller */,
 				18FD01541DE556C100071850 /* Stripe-server */,
 				18B830991DD5711A0028651C /* Ordinem */,
@@ -369,6 +372,7 @@
 				181920DC1DDA79E10046A4D3 /* UserProfileInfo.swift in Sources */,
 				18CED9FD1DE278B4008FBABA /* ESigAndConflictions.swift in Sources */,
 				181920E01DDA7DDC0046A4D3 /* CameraForUser.swift in Sources */,
+				18C5AF191DE78B8A0051989B /* PointCalculatorController.swift in Sources */,
 				18B8309B1DD5711A0028651C /* AppDelegate.swift in Sources */,
 				255D40CB1DD5A3290050F177 /* NewUserViewController.swift in Sources */,
 				18FD01661DE571F600071850 /* NewEventController.swift in Sources */,

@@ -96,6 +96,14 @@ UINavigationControllerDelegate {
         let contentInset:UIEdgeInsets = UIEdgeInsets.zero
         self.theScrollView.contentInset = contentInset
     }
+    
+    @IBAction func nextButtonClicked(_ sender: Any) {
+        
+        let points = PointCalculatorController()
+        
+        points.points = Int(countPlaceHolder.text!)!
+    }
+    
     /*
     // MARK: - Navigation
 

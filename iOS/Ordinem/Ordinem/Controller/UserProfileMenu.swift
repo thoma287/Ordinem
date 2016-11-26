@@ -12,7 +12,7 @@ class UserProfileMenu: UITableViewController, UISplitViewControllerDelegate {
 
     var array : NSMutableArray! = NSMutableArray()
     
-    let menuItems : [String] = ["Profile", "Circle", "Subscriptions", "Settings", "Past Events"]
+    let menuItems : [String] = ["Profile", "Circle", "Subscriptions", "Edit Profile", "Past Events"]
     
     override func viewDidLoad() {
         self.array.addObjects(from: menuItems)

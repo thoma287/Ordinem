@@ -19,6 +19,11 @@
 		182F070C1DE8C7C300B2428E /* UserProfileMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F070B1DE8C7C300B2428E /* UserProfileMenu.swift */; };
 		182F070E1DE8E17D00B2428E /* SubscriptionDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F070D1DE8E17D00B2428E /* SubscriptionDetails.swift */; };
 		182F07101DE8E29100B2428E /* SubscriptionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F070F1DE8E29100B2428E /* SubscriptionList.swift */; };
+		182F07121DEB823000B2428E /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F07111DEB823000B2428E /* UserProfile.swift */; };
+		182F07141DEB833300B2428E /* OrgProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F07131DEB833300B2428E /* OrgProfile.swift */; };
+		182F07161DEB83B500B2428E /* OrgProfileDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F07151DEB83B500B2428E /* OrgProfileDetails.swift */; };
+		182F07181DEB86DB00B2428E /* CircleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F07171DEB86DB00B2428E /* CircleList.swift */; };
+		182F071A1DEB875E00B2428E /* CircleProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F07191DEB875E00B2428E /* CircleProfile.swift */; };
 		1866858F1DE550BE001F1AF0 /* BillingInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1866858E1DE550BE001F1AF0 /* BillingInformation.swift */; };
 		18B8309B1DD5711A0028651C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B8309A1DD5711A0028651C /* AppDelegate.swift */; };
 		18B8309D1DD5711A0028651C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B8309C1DD5711A0028651C /* ViewController.swift */; };
@@ -74,6 +79,11 @@
 		182F070B1DE8C7C300B2428E /* UserProfileMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfileMenu.swift; path = Ordinem/Controller/UserProfileMenu.swift; sourceTree = "<group>"; };
 		182F070D1DE8E17D00B2428E /* SubscriptionDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscriptionDetails.swift; path = Ordinem/Controller/SubscriptionDetails.swift; sourceTree = "<group>"; };
 		182F070F1DE8E29100B2428E /* SubscriptionList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscriptionList.swift; path = Ordinem/Controller/SubscriptionList.swift; sourceTree = "<group>"; };
+		182F07111DEB823000B2428E /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		182F07131DEB833300B2428E /* OrgProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrgProfile.swift; sourceTree = "<group>"; };
+		182F07151DEB83B500B2428E /* OrgProfileDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrgProfileDetails.swift; sourceTree = "<group>"; };
+		182F07171DEB86DB00B2428E /* CircleList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleList.swift; sourceTree = "<group>"; };
+		182F07191DEB875E00B2428E /* CircleProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleProfile.swift; sourceTree = "<group>"; };
 		1866858E1DE550BE001F1AF0 /* BillingInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BillingInformation.swift; path = ../BillingInformation.swift; sourceTree = "<group>"; };
 		18B830971DD5711A0028651C /* Ordinem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ordinem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B8309A1DD5711A0028651C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +143,11 @@
 		18B8308E1DD571190028651C = {
 			isa = PBXGroup;
 			children = (
+				182F07111DEB823000B2428E /* UserProfile.swift */,
+				182F07131DEB833300B2428E /* OrgProfile.swift */,
+				182F07151DEB83B500B2428E /* OrgProfileDetails.swift */,
+				182F07171DEB86DB00B2428E /* CircleList.swift */,
+				182F07191DEB875E00B2428E /* CircleProfile.swift */,
 				182F070F1DE8E29100B2428E /* SubscriptionList.swift */,
 				182F070D1DE8E17D00B2428E /* SubscriptionDetails.swift */,
 				182F070B1DE8C7C300B2428E /* UserProfileMenu.swift */,
@@ -368,10 +383,12 @@
 				181920E21DDA83680046A4D3 /* UserCashTable.swift in Sources */,
 				182F07101DE8E29100B2428E /* SubscriptionList.swift in Sources */,
 				18C5AF131DE62EAE0051989B /* AdminAwardVerification.swift in Sources */,
+				182F07161DEB83B500B2428E /* OrgProfileDetails.swift in Sources */,
 				182F070C1DE8C7C300B2428E /* UserProfileMenu.swift in Sources */,
 				1866858F1DE550BE001F1AF0 /* BillingInformation.swift in Sources */,
 				18C5AF111DE621720051989B /* AdminAwardController.swift in Sources */,
 				18B8309D1DD5711A0028651C /* ViewController.swift in Sources */,
+				182F07121DEB823000B2428E /* UserProfile.swift in Sources */,
 				18C5AF171DE64D3D0051989B /* VerificationController.swift in Sources */,
 				181920DA1DD98E380046A4D3 /* OrgNewsFeed.swift in Sources */,
 				18EAD5131DD6D4E30024BA14 /* NewOrgSignUp.swift in Sources */,
@@ -387,10 +404,13 @@
 				18B8309B1DD5711A0028651C /* AppDelegate.swift in Sources */,
 				255D40CB1DD5A3290050F177 /* NewUserViewController.swift in Sources */,
 				18FD01661DE571F600071850 /* NewEventController.swift in Sources */,
+				182F071A1DEB875E00B2428E /* CircleProfile.swift in Sources */,
+				182F07181DEB86DB00B2428E /* CircleList.swift in Sources */,
 				18FD01621DE56AA600071850 /* OrgController.swift in Sources */,
 				18CED9FF1DE2C5E5008FBABA /* AwardTableTemplateViewController.swift in Sources */,
 				182F070E1DE8E17D00B2428E /* SubscriptionDetails.swift in Sources */,
 				182AE2DD1DDC4F140084C9F8 /* UserNewsFeed.swift in Sources */,
+				182F07141DEB833300B2428E /* OrgProfile.swift in Sources */,
 				18248D8D1DD8421E0022A7D4 /* QRScan.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -236,7 +236,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserNewsFeedDate" id="fwe-y8-EuD" customClass="UserHeaderDateNewsFeed" customModule="Ordinem" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserNewsFeedDate" id="fwe-y8-EuD" customClass="FutureRSVPCell" customModule="Ordinem" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fwe-y8-EuD" id="rlr-ET-qYp">
@@ -261,7 +261,7 @@
                                     <outlet property="HeaderDate4UserNewsFeed" destination="Pbv-WK-2gU" id="tzR-AJ-0AM"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserNewsFeedEvent" rowHeight="94" id="ppW-D1-Bkr" customClass="UserTemplateCell4NewsFeed" customModule="Ordinem" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserNewsFeedEvent" rowHeight="94" id="ppW-D1-Bkr" customClass="OrgNewsFeedCell" customModule="Ordinem" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="116" width="320" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ppW-D1-Bkr" id="3aB-rC-5eL">
@@ -695,6 +695,7 @@
                         <outlet property="PointStepper" destination="YN1-a3-m6q" id="4mU-o7-BHt"/>
                         <outlet property="PointStepperLabel" destination="xIQ-Zd-Sdi" id="r6G-Ix-Fcg"/>
                         <outlet property="SelectImage" destination="Vfx-It-97e" id="PbL-kV-1qT"/>
+                        <outlet property="additonalInfo" destination="W1c-6I-MLJ" id="bdL-Qm-qkE"/>
                         <outlet property="eventTitle" destination="YPx-wm-N8h" id="U7Z-LS-sdp"/>
                         <outlet property="textBoxTypeOfData" destination="zds-Eq-Rjc" id="N4N-bb-pw5"/>
                         <outlet property="theScrollView" destination="2ql-ar-Pny" id="VcS-7o-nj7"/>
@@ -2500,7 +2501,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="w8n-zp-bw9">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="w8n-zp-bw9" customClass="FutureRSVPDate" customModule="Ordinem" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w8n-zp-bw9" id="XzV-Yw-LHz">
@@ -2813,10 +2814,10 @@
             </objects>
             <point key="canvasLocation" x="6233" y="-1871"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Circle List-->
         <scene sceneID="myF-bF-hNB">
             <objects>
-                <tableViewController restorationIdentifier="Circles" id="Uio-q0-qO0" sceneMemberID="viewController">
+                <tableViewController restorationIdentifier="Circles" id="Uio-q0-qO0" customClass="CircleList" customModule="Ordinem" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="SgP-mG-fcL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2906,7 +2907,7 @@
         <!--Profile-->
         <scene sceneID="wHw-jK-46S">
             <objects>
-                <viewController id="CUF-r6-oEC" sceneMemberID="viewController">
+                <viewController id="CUF-r6-oEC" customClass="UserProfile" customModule="Ordinem" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LXM-PG-k7p"/>
                         <viewControllerLayoutGuide type="bottom" id="fm2-LW-u3z"/>
@@ -2943,7 +2944,7 @@
                                             <outlet property="FutureRsvpDate" destination="pfi-2P-xLC" id="b4z-Dm-qzM"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserProfileFuture" rowHeight="94" id="fMb-Ub-mz4" customClass="FutureRSVPCell" customModule="Ordinem" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserProfileFuture" rowHeight="94" id="fMb-Ub-mz4" customClass="OrgNewsFeedCell" customModule="Ordinem" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="320" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fMb-Ub-mz4" id="O0t-1b-FIT">
@@ -3048,29 +3049,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRc-7I-5bR">
                                 <rect key="frame" x="0.0" y="55" width="320" height="181"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ChapmanLogo" translatesAutoresizingMaskIntoConstraints="NO" id="uZ4-0o-5sA">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChapmanLogo" translatesAutoresizingMaskIntoConstraints="NO" id="uZ4-0o-5sA">
                                         <rect key="frame" x="123" y="11.5" width="75" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="uZ4-0o-5sA" secondAttribute="height" multiplier="1:1" id="5jt-gy-fbe"/>
                                         </constraints>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="EsV-1c-hF9">
-                                        <rect key="frame" x="119" y="91" width="83" height="21"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOQ-vk-iIS">
-                                                <rect key="frame" x="0.0" y="0.0" width="36" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oR9-Mm-aNF">
-                                                <rect key="frame" x="48" y="0.0" width="34.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For this, the user can add their own caption to their profile" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4o-Uy-b9S">
                                         <rect key="frame" x="19" y="140" width="282" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -3083,23 +3067,36 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Last" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7H-rL-cin">
+                                        <rect key="frame" x="125.5" y="92" width="70.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.96690819299999997" green="0.96690819299999997" blue="0.96690819299999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="W4o-Uy-b9S" firstAttribute="leading" secondItem="hRc-7I-5bR" secondAttribute="leading" constant="19" id="0h8-EB-a3X"/>
-                                    <constraint firstItem="EsV-1c-hF9" firstAttribute="top" secondItem="uZ4-0o-5sA" secondAttribute="bottom" constant="4" id="1gd-xE-yOk"/>
+                                    <constraint firstItem="lMO-5T-zBQ" firstAttribute="top" secondItem="W7H-rL-cin" secondAttribute="bottom" id="5Ti-JP-CJI"/>
                                     <constraint firstAttribute="trailing" secondItem="W4o-Uy-b9S" secondAttribute="trailing" constant="19" id="5fg-fq-Ntt"/>
                                     <constraint firstAttribute="bottom" secondItem="W4o-Uy-b9S" secondAttribute="bottom" id="Byr-Nh-zME"/>
                                     <constraint firstAttribute="width" secondItem="hRc-7I-5bR" secondAttribute="height" multiplier="320:181" id="Pd9-cj-ZTi"/>
                                     <constraint firstItem="uZ4-0o-5sA" firstAttribute="centerX" secondItem="hRc-7I-5bR" secondAttribute="centerX" id="Qiu-Ya-P0M"/>
-                                    <constraint firstItem="lMO-5T-zBQ" firstAttribute="top" secondItem="EsV-1c-hF9" secondAttribute="bottom" constant="1" id="Rab-3b-1z3"/>
                                     <constraint firstItem="W4o-Uy-b9S" firstAttribute="top" secondItem="lMO-5T-zBQ" secondAttribute="bottom" constant="6" id="XVi-hF-KEO"/>
                                     <constraint firstItem="uZ4-0o-5sA" firstAttribute="leading" secondItem="hRc-7I-5bR" secondAttribute="leading" constant="122.5" id="a20-pO-cKE"/>
                                     <constraint firstItem="lMO-5T-zBQ" firstAttribute="centerX" secondItem="hRc-7I-5bR" secondAttribute="centerX" id="lr7-Cz-Wub"/>
-                                    <constraint firstItem="EsV-1c-hF9" firstAttribute="centerX" secondItem="hRc-7I-5bR" secondAttribute="centerX" id="wHI-cA-u2o"/>
+                                    <constraint firstItem="W7H-rL-cin" firstAttribute="top" secondItem="uZ4-0o-5sA" secondAttribute="bottom" constant="5.5" id="mbP-iL-sfF"/>
+                                    <constraint firstItem="W7H-rL-cin" firstAttribute="centerX" secondItem="hRc-7I-5bR" secondAttribute="centerX" id="xAA-UW-317"/>
                                     <constraint firstAttribute="trailing" secondItem="uZ4-0o-5sA" secondAttribute="trailing" constant="122.5" id="y0P-A8-dfi"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoF-VS-pZu">
+                                <rect key="frame" x="22" y="8" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -3125,15 +3122,21 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="profileCaption" destination="W4o-Uy-b9S" id="Gsh-xw-PQh"/>
+                        <outlet property="profileCurrentPoints" destination="lMO-5T-zBQ" id="D0Y-96-gzY"/>
+                        <outlet property="profileFirstLastName" destination="W7H-rL-cin" id="U6U-ex-e65"/>
+                        <outlet property="profileImage" destination="uZ4-0o-5sA" id="L0a-xT-lgW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YaM-Ir-wno" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3367.5" y="-2975.7042253521126"/>
         </scene>
-        <!--View Controller-->
+        <!--Org Profile-->
         <scene sceneID="odV-hl-BBs">
             <objects>
-                <viewController id="eLc-In-cuK" sceneMemberID="viewController">
+                <viewController id="eLc-In-cuK" customClass="OrgProfile" customModule="Ordinem" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="exA-YC-cKR"/>
                         <viewControllerLayoutGuide type="bottom" id="wfh-fy-oOb"/>
@@ -3210,7 +3213,7 @@
                                             <outlet property="FutureRsvpDate" destination="2AR-XZ-K42" id="sly-hd-JU7"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserProfileFuture" rowHeight="94" id="cKn-3h-peU" customClass="FutureRSVPCell" customModule="Ordinem" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserProfileFuture" rowHeight="94" id="cKn-3h-peU" customClass="OrgNewsFeedCell" customModule="Ordinem" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="320" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cKn-3h-peU" id="das-36-8Cn">
@@ -3330,15 +3333,20 @@
                             <constraint firstItem="eeL-fV-TZP" firstAttribute="top" secondItem="N4x-Xt-05P" secondAttribute="bottom" id="xoy-sh-J2m"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="orgPic" destination="nIR-Yl-qAM" id="l4R-Pj-qgb"/>
+                        <outlet property="orgSubscribe" destination="V5I-Kv-vO9" id="zPx-wS-eLe"/>
+                        <outlet property="orgTitle" destination="7Uz-as-Idb" id="qtb-2N-IYW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9DL-a5-a8l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2591" y="-1052"/>
         </scene>
-        <!--View Controller-->
+        <!--Org Profile Details-->
         <scene sceneID="tni-Lv-W2C">
             <objects>
-                <viewController id="4E2-ci-Z1f" sceneMemberID="viewController">
+                <viewController id="4E2-ci-Z1f" customClass="OrgProfileDetails" customModule="Ordinem" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xPz-U0-qPm"/>
                         <viewControllerLayoutGuide type="bottom" id="zbp-ma-GH9"/>
@@ -3391,7 +3399,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lJn-sg-nAO">
-                                <rect key="frame" x="40" y="340" width="240" height="176"/>
+                                <rect key="frame" x="40" y="344" width="240" height="176"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="lJn-sg-nAO" secondAttribute="height" multiplier="15:11" id="P9R-wy-Rp3"/>
@@ -3403,16 +3411,16 @@
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKk-wp-shS">
-                                <rect key="frame" x="104" y="309" width="113" height="30"/>
+                                <rect key="frame" x="104" y="313" width="113" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eKk-wp-shS" secondAttribute="height" multiplier="113:30" id="VXx-ph-7pb"/>
                                 </constraints>
                                 <state key="normal" title="See who's going"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11 people in your circle going" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5b9-mS-3vc">
-                                <rect key="frame" x="50" y="284" width="221" height="21"/>
+                                <rect key="frame" x="50" y="290.5" width="221" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="5b9-mS-3vc" secondAttribute="height" multiplier="220:21" id="Nld-gY-Q23"/>
+                                    <constraint firstAttribute="width" secondItem="5b9-mS-3vc" secondAttribute="height" multiplier="220:21" constant="1" id="Nld-gY-Q23"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -3422,12 +3430,17 @@
                                 <rect key="frame" x="277" y="69" width="38" height="30"/>
                                 <state key="normal" title="RSVP"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saturday, November 12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGF-TO-Wua">
+                                <rect key="frame" x="95" y="262" width="131" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="5fD-oE-bNP" secondAttribute="trailing" constant="5" id="2km-VD-Teu"/>
-                            <constraint firstItem="eKk-wp-shS" firstAttribute="top" secondItem="5b9-mS-3vc" secondAttribute="bottom" constant="4" id="3Nt-Oz-aZs"/>
-                            <constraint firstItem="5b9-mS-3vc" firstAttribute="top" secondItem="lGy-Wl-M9V" secondAttribute="bottom" constant="22" id="3Ol-XX-5eA"/>
+                            <constraint firstItem="eKk-wp-shS" firstAttribute="top" secondItem="5b9-mS-3vc" secondAttribute="bottom" constant="1.5" id="3Nt-Oz-aZs"/>
                             <constraint firstItem="5fD-oE-bNP" firstAttribute="top" secondItem="xPz-U0-qPm" secondAttribute="bottom" constant="5" id="55m-9j-Gqk"/>
                             <constraint firstItem="ISB-eI-rPB" firstAttribute="top" secondItem="xPz-U0-qPm" secondAttribute="bottom" constant="5" id="9Gz-I9-e7I"/>
                             <constraint firstItem="gag-ZZ-FSL" firstAttribute="centerX" secondItem="nra-Sj-mYf" secondAttribute="centerX" id="9wr-66-pOf"/>
@@ -3442,10 +3455,25 @@
                             <constraint firstItem="wZU-Yd-Top" firstAttribute="top" secondItem="gag-ZZ-FSL" secondAttribute="bottom" constant="6" id="bri-he-7Il"/>
                             <constraint firstItem="lGy-Wl-M9V" firstAttribute="top" secondItem="wZU-Yd-Top" secondAttribute="bottom" constant="1" id="cb2-nz-y3k"/>
                             <constraint firstItem="wZU-Yd-Top" firstAttribute="centerX" secondItem="nra-Sj-mYf" secondAttribute="centerX" id="ene-FQ-Hr3"/>
+                            <constraint firstItem="KGF-TO-Wua" firstAttribute="top" secondItem="lGy-Wl-M9V" secondAttribute="bottom" id="nlg-Jh-UyO"/>
                             <constraint firstItem="lGy-Wl-M9V" firstAttribute="top" secondItem="wZU-Yd-Top" secondAttribute="bottom" constant="1" id="oyE-5c-DB4"/>
+                            <constraint firstItem="5b9-mS-3vc" firstAttribute="top" secondItem="KGF-TO-Wua" secondAttribute="bottom" constant="13.5" id="vH7-KK-nS5"/>
                             <constraint firstItem="lJn-sg-nAO" firstAttribute="centerX" secondItem="nra-Sj-mYf" secondAttribute="centerX" id="wVD-uK-L2P"/>
+                            <constraint firstItem="KGF-TO-Wua" firstAttribute="centerX" secondItem="nra-Sj-mYf" secondAttribute="centerX" id="yQ3-vV-49S"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="eventDate" destination="KGF-TO-Wua" id="Rh9-WK-31T"/>
+                        <outlet property="eventHost" destination="gag-ZZ-FSL" id="aeG-Wd-7FL"/>
+                        <outlet property="eventLocation" destination="wZU-Yd-Top" id="hrs-of-hgz"/>
+                        <outlet property="eventPic" destination="ISB-eI-rPB" id="VpN-pM-R2t"/>
+                        <outlet property="eventPplGoing" destination="5b9-mS-3vc" id="sSc-zq-dxi"/>
+                        <outlet property="eventRSVP" destination="5fD-oE-bNP" id="MBe-UY-ZFf"/>
+                        <outlet property="eventTime" destination="lGy-Wl-M9V" id="fai-P5-9vc"/>
+                        <outlet property="eventTitle" destination="zbZ-M4-7re" id="Ne8-R2-iot"/>
+                        <outlet property="eventViewAttendees" destination="eKk-wp-shS" id="NnY-tH-AXn"/>
+                        <outlet property="eventViewDescription" destination="lJn-sg-nAO" id="jd2-QR-BsC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CI1-zw-9SK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3472,7 +3500,7 @@
         <!--Profile-->
         <scene sceneID="5El-Qe-PZn">
             <objects>
-                <viewController id="5aZ-D5-md8" sceneMemberID="viewController">
+                <viewController id="5aZ-D5-md8" customClass="CircleProfile" customModule="Ordinem" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HHC-TU-HQd"/>
                         <viewControllerLayoutGuide type="bottom" id="n5l-7B-E7c"/>
@@ -3509,7 +3537,7 @@
                                             <outlet property="FutureRsvpDate" destination="aN0-kz-1KW" id="QeY-qe-Alv"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserProfileFuture" rowHeight="94" id="1ar-hB-Jy3" customClass="FutureRSVPCell" customModule="Ordinem" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserProfileFuture" rowHeight="94" id="1ar-hB-Jy3" customClass="OrgNewsFeedCell" customModule="Ordinem" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="320" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1ar-hB-Jy3" id="5vA-eo-6a7">
@@ -3614,8 +3642,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kAi-cX-1P4">
                                 <rect key="frame" x="0.0" y="55" width="320" height="187"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ChapmanLogo" translatesAutoresizingMaskIntoConstraints="NO" id="xIS-VG-ha4">
-                                        <rect key="frame" x="123" y="11.5" width="75" height="75"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChapmanLogo" translatesAutoresizingMaskIntoConstraints="NO" id="xIS-VG-ha4">
+                                        <rect key="frame" x="123" y="3.5" width="75" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="xIS-VG-ha4" secondAttribute="height" multiplier="1:1" id="4M0-gg-Gdp"/>
                                         </constraints>
@@ -3692,10 +3720,10 @@
             </objects>
             <point key="canvasLocation" x="7508" y="-857"/>
         </scene>
-        <!--View Controller-->
+        <!--Org Profile-->
         <scene sceneID="hzK-Fa-sSX">
             <objects>
-                <viewController id="PvR-lj-eIB" sceneMemberID="viewController">
+                <viewController id="PvR-lj-eIB" customClass="OrgProfile" customModule="Ordinem" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wgn-b2-XIk"/>
                         <viewControllerLayoutGuide type="bottom" id="H0J-Vj-4I9"/>
@@ -3760,7 +3788,7 @@
                                             <outlet property="FutureRsvpDate" destination="sHp-mP-bQk" id="mpY-Ay-sPT"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserProfileFuture" rowHeight="94" id="JiP-dy-bKg" customClass="FutureRSVPCell" customModule="Ordinem" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserProfileFuture" rowHeight="94" id="JiP-dy-bKg" customClass="OrgNewsFeedCell" customModule="Ordinem" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="320" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JiP-dy-bKg" id="29Q-7M-AHt">
@@ -3885,10 +3913,10 @@
             </objects>
             <point key="canvasLocation" x="7507.5" y="-2738.0281690140846"/>
         </scene>
-        <!--View Controller-->
+        <!--Org Profile Details-->
         <scene sceneID="QWl-J7-AhV">
             <objects>
-                <viewController id="5Ss-0v-ewZ" sceneMemberID="viewController">
+                <viewController id="5Ss-0v-ewZ" customClass="OrgProfileDetails" customModule="Ordinem" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SNJ-MM-jQr"/>
                         <viewControllerLayoutGuide type="bottom" id="cUt-Yb-M9l"/>

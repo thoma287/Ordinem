@@ -15,6 +15,10 @@ class ESigAndConflictions: UITableViewController {
     
     @IBOutlet weak var ESig: UITextField!
     
+    
+    @IBOutlet weak var orgVerifyPassword: UITextField!
+    
+    
     @IBAction func SubmitButton(_ sender: Any) {
     }
     

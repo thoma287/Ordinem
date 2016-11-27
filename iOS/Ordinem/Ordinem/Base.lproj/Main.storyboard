@@ -1087,20 +1087,20 @@
                                 <rect key="frame" x="0.0" y="363" width="320" height="205"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bv-wi-fAX">
-                                        <rect key="frame" x="130" y="132" width="60" height="30"/>
+                                        <rect key="frame" x="130" y="146" width="60" height="30"/>
                                         <state key="normal" title="Submit"/>
                                         <connections>
                                             <action selector="SubmitButton:" destination="ROi-m7-tdg" eventType="touchUpInside" id="QUs-gs-0gg"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WtW-6r-riV">
-                                        <rect key="frame" x="57" y="94" width="206" height="30"/>
+                                        <rect key="frame" x="57" y="41" width="206" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-Signature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQh-aB-pDg">
-                                        <rect key="frame" x="109" y="33" width="103" height="21"/>
+                                        <rect key="frame" x="109" y="12" width="103" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="103" id="dgi-K6-F3J"/>
                                         </constraints>
@@ -1108,19 +1108,37 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lv2-Iv-Rjv">
+                                        <rect key="frame" x="121.5" y="79" width="77.5" height="21"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KKc-2Q-sfX">
+                                        <rect key="frame" x="57" y="108" width="206" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="8bv-wi-fAX" secondAttribute="trailing" constant="130" id="15q-sN-r2U"/>
-                                    <constraint firstItem="tQh-aB-pDg" firstAttribute="top" secondItem="XNb-68-Cpx" secondAttribute="top" constant="33" id="3h6-ul-DUf"/>
+                                    <constraint firstItem="tQh-aB-pDg" firstAttribute="top" secondItem="XNb-68-Cpx" secondAttribute="top" constant="12" id="3h6-ul-DUf"/>
                                     <constraint firstItem="8bv-wi-fAX" firstAttribute="leading" secondItem="XNb-68-Cpx" secondAttribute="leading" constant="130" id="7cz-oE-bK1"/>
-                                    <constraint firstAttribute="bottom" secondItem="8bv-wi-fAX" secondAttribute="bottom" constant="43" id="K3i-Ai-gKX"/>
+                                    <constraint firstItem="KKc-2Q-sfX" firstAttribute="leading" secondItem="XNb-68-Cpx" secondAttribute="leading" constant="57" id="Cfk-92-4Hg"/>
                                     <constraint firstItem="WtW-6r-riV" firstAttribute="centerX" secondItem="8bv-wi-fAX" secondAttribute="centerX" id="ND9-5a-AWl"/>
+                                    <constraint firstAttribute="bottom" secondItem="8bv-wi-fAX" secondAttribute="bottom" constant="29" id="NbS-X5-hlH"/>
+                                    <constraint firstItem="lv2-Iv-Rjv" firstAttribute="centerX" secondItem="XNb-68-Cpx" secondAttribute="centerX" id="NmL-S5-tN6"/>
+                                    <constraint firstItem="8bv-wi-fAX" firstAttribute="top" secondItem="KKc-2Q-sfX" secondAttribute="bottom" constant="8" id="RVL-ea-86c"/>
+                                    <constraint firstAttribute="trailing" secondItem="KKc-2Q-sfX" secondAttribute="trailing" constant="57" id="Vaw-Lk-eW5"/>
                                     <constraint firstItem="tQh-aB-pDg" firstAttribute="centerX" secondItem="XNb-68-Cpx" secondAttribute="centerX" id="aBJ-6Y-RfJ"/>
                                     <constraint firstAttribute="trailing" secondItem="WtW-6r-riV" secondAttribute="trailing" constant="57" id="bO4-Xu-m3n"/>
                                     <constraint firstItem="WtW-6r-riV" firstAttribute="leading" secondItem="XNb-68-Cpx" secondAttribute="leading" constant="57" id="cAt-zk-xTh"/>
                                     <constraint firstItem="tQh-aB-pDg" firstAttribute="centerX" secondItem="WtW-6r-riV" secondAttribute="centerX" id="hua-fs-NK7"/>
-                                    <constraint firstItem="WtW-6r-riV" firstAttribute="top" secondItem="tQh-aB-pDg" secondAttribute="bottom" constant="40" id="rIs-vE-j9n"/>
-                                    <constraint firstItem="8bv-wi-fAX" firstAttribute="top" secondItem="WtW-6r-riV" secondAttribute="bottom" constant="8" symbolic="YES" id="ukj-8f-2fY"/>
+                                    <constraint firstItem="KKc-2Q-sfX" firstAttribute="top" secondItem="lv2-Iv-Rjv" secondAttribute="bottom" constant="8" id="ijp-Xq-7Wh"/>
+                                    <constraint firstItem="WtW-6r-riV" firstAttribute="top" secondItem="tQh-aB-pDg" secondAttribute="bottom" constant="8" id="rIs-vE-j9n"/>
+                                    <constraint firstItem="lv2-Iv-Rjv" firstAttribute="top" secondItem="WtW-6r-riV" secondAttribute="bottom" constant="8" id="uED-rb-Tlg"/>
+                                    <constraint firstItem="KKc-2Q-sfX" firstAttribute="centerX" secondItem="XNb-68-Cpx" secondAttribute="centerX" id="wQg-NS-nC2"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -1140,12 +1158,13 @@
                     </view>
                     <connections>
                         <outlet property="ESig" destination="WtW-6r-riV" id="bfn-Ih-67C"/>
+                        <outlet property="orgVerifyPassword" destination="KKc-2Q-sfX" id="x24-00-ulN"/>
                         <outlet property="scrollableView" destination="XNb-68-Cpx" id="fqg-Wg-rlG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zzc-d0-IeO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4071" y="675"/>
+            <point key="canvasLocation" x="4070.625" y="675"/>
         </scene>
         <!--New User View Controller-->
         <scene sceneID="FOp-eO-UNq">
@@ -2314,7 +2333,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SubscriptionName" selectionStyle="default" indentationWidth="10" reuseIdentifier="Subscription" id="eD1-R2-kmk">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SearchBar" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchBar" id="eD1-R2-kmk" customClass="searchBar" customModule="Ordinem" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eD1-R2-kmk" id="CkY-mI-GOR">
@@ -2338,7 +2357,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="jx3-To-S1G">
+                                        <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="jx3-To-S1G" customClass="searchBar" customModule="Ordinem" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </searchBar>
@@ -2555,6 +2574,9 @@
                                             <rect key="frame" x="271" y="7" width="41" height="30"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                             <state key="normal" title="RSVP"/>
+                                            <connections>
+                                                <action selector="rsvpButtonPressed:" destination="YM2-PO-HCa" eventType="touchUpInside" id="WLW-HT-EC4"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:00AM-2:00PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xli-qy-f5J">
                                             <rect key="frame" x="91" y="67" width="113" height="17"/>
@@ -2617,7 +2639,10 @@
                                     <outlet property="OrgName" destination="fgl-pz-jpN" id="Y6H-OW-fQd"/>
                                     <outlet property="OrgPointsTitleOnly" destination="3t3-TM-FZd" id="7r1-w4-Vq8"/>
                                     <outlet property="OrgPointsToBeAwarded" destination="4OY-NH-tTy" id="cRl-5U-fhx"/>
+                                    <outlet property="RSVPbutton" destination="AaX-w9-bCh" id="Jqp-W9-pa6"/>
                                     <outlet property="Title" destination="fgl-pz-jpN" id="7dh-MJ-grE"/>
+                                    <outlet property="orgRSVPd" destination="yjl-tu-a9R" id="THd-by-qru"/>
+                                    <outlet property="rsvpDlabel" destination="yjl-tu-a9R" id="QEt-ac-DAE"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -3429,12 +3454,23 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fD-oE-bNP">
                                 <rect key="frame" x="277" y="69" width="38" height="30"/>
                                 <state key="normal" title="RSVP"/>
+                                <connections>
+                                    <action selector="rsvpButtonPressed:" destination="4E2-ci-Z1f" eventType="touchUpInside" id="PFy-8e-5OX"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saturday, November 12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGF-TO-Wua">
                                 <rect key="frame" x="95" y="262" width="131" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RSVP'd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQc-vB-7fu">
+                                <rect key="frame" x="258.5" y="73" width="56.5" height="21"/>
+                                <color key="backgroundColor" red="0.0" green="0.96690819299999997" blue="0.20101832929999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.96690819299999997" green="0.96690819299999997" blue="0.96690819299999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.0" green="0.96690819299999997" blue="0.20101832929999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="shadowColor" red="0.0" green="0.96690819299999997" blue="0.1260647513" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -3457,6 +3493,8 @@
                             <constraint firstItem="wZU-Yd-Top" firstAttribute="centerX" secondItem="nra-Sj-mYf" secondAttribute="centerX" id="ene-FQ-Hr3"/>
                             <constraint firstItem="KGF-TO-Wua" firstAttribute="top" secondItem="lGy-Wl-M9V" secondAttribute="bottom" id="nlg-Jh-UyO"/>
                             <constraint firstItem="lGy-Wl-M9V" firstAttribute="top" secondItem="wZU-Yd-Top" secondAttribute="bottom" constant="1" id="oyE-5c-DB4"/>
+                            <constraint firstAttribute="trailing" secondItem="HQc-vB-7fu" secondAttribute="trailing" constant="5" id="qZG-nk-Mgl"/>
+                            <constraint firstItem="HQc-vB-7fu" firstAttribute="top" secondItem="xPz-U0-qPm" secondAttribute="bottom" constant="9" id="qiR-4Z-WiC"/>
                             <constraint firstItem="5b9-mS-3vc" firstAttribute="top" secondItem="KGF-TO-Wua" secondAttribute="bottom" constant="13.5" id="vH7-KK-nS5"/>
                             <constraint firstItem="lJn-sg-nAO" firstAttribute="centerX" secondItem="nra-Sj-mYf" secondAttribute="centerX" id="wVD-uK-L2P"/>
                             <constraint firstItem="KGF-TO-Wua" firstAttribute="centerX" secondItem="nra-Sj-mYf" secondAttribute="centerX" id="yQ3-vV-49S"/>
@@ -3473,6 +3511,7 @@
                         <outlet property="eventTitle" destination="zbZ-M4-7re" id="Ne8-R2-iot"/>
                         <outlet property="eventViewAttendees" destination="eKk-wp-shS" id="NnY-tH-AXn"/>
                         <outlet property="eventViewDescription" destination="lJn-sg-nAO" id="jd2-QR-BsC"/>
+                        <outlet property="rsvpDLabel" destination="HQc-vB-7fu" id="Uhb-rY-bhe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CI1-zw-9SK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3655,8 +3694,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmj-wC-KhW">
-                                        <rect key="frame" x="56" y="108" width="208" height="30"/>
-                                        <state key="normal" title="11 mutual friends in your circle"/>
+                                        <rect key="frame" x="74" y="108" width="173" height="30"/>
+                                        <state key="normal" title="11 mutual friends in circle"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Andrew Thomas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2eF-nX-OT6">
                                         <rect key="frame" x="98" y="86" width="125" height="21"/>
@@ -3715,6 +3754,15 @@
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="xzk-KF-GMb"/>
                         <barButtonItem key="rightBarButtonItem" title="Cash" id="wAt-yc-uph"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="joinCircleRequest" destination="dnF-gK-aVC" id="7Wy-Gf-kGX"/>
+                        <outlet property="mutualFriends" destination="lmj-wC-KhW" id="oH3-On-iys"/>
+                        <outlet property="peopleInCircle" destination="lmj-wC-KhW" id="Kme-Mf-mYx"/>
+                        <outlet property="profileCaption" destination="Jxv-9a-4Mj" id="HYo-pX-GTt"/>
+                        <outlet property="profileFirstAndLast" destination="2eF-nX-OT6" id="FXl-lh-HkD"/>
+                        <outlet property="profileImage" destination="xIS-VG-ha4" id="2j9-u4-Ycn"/>
+                        <outlet property="rsvpdLabel" destination="BcB-5d-1Wx" id="8Kt-Cr-rgc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pB3-wj-zQ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

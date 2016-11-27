@@ -38,11 +38,31 @@ class OrgNewsFeedCell : UITableViewCell{
     @IBOutlet weak var OrgPointsTitleOnly: UILabel!
     @IBOutlet weak var OrgPointsToBeAwarded: UILabel!
     @IBOutlet weak var OrgEventLocation: UILabel!
+    @IBOutlet weak var orgRSVPd: UILabel!
+    @IBOutlet weak var RSVPbutton: UIButton!
+    
+    @IBOutlet weak var rsvpDlabel: UILabel!
+    
+    
+    
+    @IBAction func rsvpButtonPressed(_ sender: Any) {
+        RSVPbutton.isHidden = true
+        rsvpDlabel.isHidden = false
+        
+        
+    }
     
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        rsvpDlabel.isHidden = true
+        
+        RSVPbutton.backgroundColor = .clear
+        RSVPbutton.layer.cornerRadius = 5
+        RSVPbutton.layer.borderWidth = 1
+        RSVPbutton.layer.borderColor = UIColor.black.cgColor
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

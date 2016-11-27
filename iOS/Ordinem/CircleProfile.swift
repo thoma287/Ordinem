@@ -10,6 +10,17 @@ import UIKit
 
 class CircleProfile: UIViewController {
 
+    
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var profileFirstAndLast: UILabel!
+    @IBOutlet weak var mutualFriends: UIButton!
+
+    @IBOutlet weak var profileCaption: UILabel!
+    @IBOutlet weak var joinCircleRequest: UIButton!
+    
+    @IBOutlet weak var rsvpdLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

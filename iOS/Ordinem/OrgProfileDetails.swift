@@ -21,11 +21,21 @@ class OrgProfileDetails: UIViewController {
     @IBOutlet weak var eventViewDescription: UITextView!
     
     @IBOutlet weak var eventRSVP: UIButton!
+    @IBOutlet weak var rsvpDLabel: UILabel!
     
+    
+
+    @IBAction func rsvpButtonPressed(_ sender: Any) {
+        
+        eventRSVP.isHidden = true
+        rsvpDLabel.isHidden = false
+        
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        rsvpDLabel.isHidden = true
 
         // Do any additional setup after loading the view.
     }

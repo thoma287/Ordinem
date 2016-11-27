@@ -49,3 +49,19 @@ class SubscriptionCell : UITableViewCell{
     
     
 }
+
+class searchBar : UITableViewCell{
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}

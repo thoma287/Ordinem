@@ -20,8 +20,15 @@ class CircleProfile: UIViewController {
     
     @IBOutlet weak var rsvpdLabel: UILabel!
     
+    @IBAction func requestCirclePressed(_ sender: Any) {
+        joinCircleRequest.isHidden = true
+        rsvpdLabel.isHidden = false
+        
+        
+    }
     
     override func viewDidLoad() {
+        rsvpdLabel.isHidden = true
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

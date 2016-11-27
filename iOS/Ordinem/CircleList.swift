@@ -33,3 +33,12 @@ class CircleList: UITableViewController {
     */
 
 }
+
+
+class people : UITableViewCell{
+    
+    
+    
+    
+    
+}

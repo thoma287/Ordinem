@@ -14,9 +14,15 @@ class OrgProfile: UIViewController {
     @IBOutlet weak var orgPic: UIImageView!
     @IBOutlet weak var orgTitle: UILabel!
     @IBOutlet weak var orgSubscribe: UIButton!
+    @IBOutlet weak var subscribedLabel: UILabel!
     
+    @IBAction func subscribeButtonPressed(_ sender: Any) {
+        orgSubscribe.isHidden = true
+        subscribedLabel.isHidden = false
+    }
     
     override func viewDidLoad() {
+        subscribedLabel.isHidden = true
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

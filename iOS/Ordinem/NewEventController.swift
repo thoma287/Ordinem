@@ -21,12 +21,12 @@ class NewEventController: UIViewController {
     
     
     var image : UIImage{
-    get{
-        return _image
-    }
-    set{
-        _image = newValue
-    }
+        get{
+            return _image
+        }
+        set{
+            _image = newValue
+        }
         
     }
     var sTime : DateFormatter{
@@ -98,5 +98,5 @@ class NewEventController: UIViewController {
         return "\(name) \(image) \(sTime) \(eTime) \(location) \(eTitle) \(points)"
     }
     
-
+    
 }

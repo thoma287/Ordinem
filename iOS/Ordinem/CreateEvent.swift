@@ -60,8 +60,9 @@ UINavigationControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     //Type OF EVENT TEXTBOX
     @IBOutlet weak var textBoxTypeOfData: UITextField!
     //TYPE OF EVENTS
-
     @IBOutlet weak var eventTitle: UITextField!
+    
+    @IBOutlet weak var additonalInfo: UITextView!
 
     
     

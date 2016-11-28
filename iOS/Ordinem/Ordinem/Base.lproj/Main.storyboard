@@ -210,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z8n-t0-NTs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="735" y="-201"/>
+            <point key="canvasLocation" x="1170" y="-202"/>
         </scene>
         <!--News Feed-->
         <scene sceneID="L8G-ob-qwz">
@@ -403,7 +403,21 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gS0-xc-diI">
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LKj-3P-Twc">
+                                        <rect key="frame" x="40" y="96" width="240" height="240"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="240" id="23F-tf-nS5"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="LKj-3P-Twc" firstAttribute="top" secondItem="gS0-xc-diI" secondAttribute="top" constant="96" id="4EO-g7-zyI"/>
+                                    <constraint firstAttribute="trailing" secondItem="LKj-3P-Twc" secondAttribute="trailing" constant="40" id="QXB-tv-zDx"/>
+                                    <constraint firstItem="LKj-3P-Twc" firstAttribute="centerX" secondItem="gS0-xc-diI" secondAttribute="centerX" id="UoU-zv-9J6"/>
+                                    <constraint firstItem="LKj-3P-Twc" firstAttribute="leading" secondItem="gS0-xc-diI" secondAttribute="leading" constant="40" id="ikk-Mp-W6C"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -418,7 +432,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJp-Om-7l6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4071" y="-201"/>
+            <point key="canvasLocation" x="4070.625" y="-201.7605633802817"/>
         </scene>
         <!--Create Event-->
         <scene sceneID="r5C-pX-tZ2">
@@ -576,7 +590,7 @@
                                         </connections>
                                     </stepper>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnn-6d-wry">
-                                        <rect key="frame" x="212.5" y="469" width="77.5" height="31"/>
+                                        <rect key="frame" x="213" y="469" width="77" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="cnn-6d-wry" secondAttribute="height" multiplier="37:15" id="y0Z-wS-4U2"/>
                                         </constraints>

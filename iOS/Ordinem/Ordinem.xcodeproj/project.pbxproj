@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18068A6A1DECB80F002706F9 /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18068A691DECB80F002706F9 /* QRCode.swift */; };
+		18068A701DECB895002706F9 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18068A6D1DECB895002706F9 /* UIImageViewExtension.swift */; };
+		18068A711DECB895002706F9 /* CIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18068A6E1DECB895002706F9 /* CIColorExtension.swift */; };
 		181920DA1DD98E380046A4D3 /* OrgNewsFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181920D91DD98E380046A4D3 /* OrgNewsFeed.swift */; };
 		181920DC1DDA79E10046A4D3 /* UserProfileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181920DB1DDA79E10046A4D3 /* UserProfileInfo.swift */; };
 		181920E01DDA7DDC0046A4D3 /* CameraForUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181920DF1DDA7DDC0046A4D3 /* CameraForUser.swift */; };
@@ -35,7 +38,7 @@
 		189196061DEC000900D5D4DE /* ReaderOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189195FE1DEC000900D5D4DE /* ReaderOverlayView.swift */; };
 		189196071DEC000900D5D4DE /* SwitchCameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189195FF1DEC000900D5D4DE /* SwitchCameraButton.swift */; };
 		189196081DEC000900D5D4DE /* ToggleTorchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189196001DEC000900D5D4DE /* ToggleTorchButton.swift */; };
-		1891960E1DEC026700D5D4DE /* NewEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891960D1DEC026700D5D4DE /* NewEventController.swift */; };
+		189196121DECABD200D5D4DE /* NewEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189196111DECABD200D5D4DE /* NewEventController.swift */; };
 		18B8309B1DD5711A0028651C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B8309A1DD5711A0028651C /* AppDelegate.swift */; };
 		18B8309D1DD5711A0028651C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B8309C1DD5711A0028651C /* ViewController.swift */; };
 		18B830A01DD5711A0028651C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B8309E1DD5711A0028651C /* Main.storyboard */; };
@@ -77,6 +80,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18068A691DECB80F002706F9 /* QRCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
+		18068A6D1DECB895002706F9 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		18068A6E1DECB895002706F9 /* CIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIColorExtension.swift; sourceTree = "<group>"; };
+		18068A6F1DECB895002706F9 /* QRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCode.h; sourceTree = "<group>"; };
 		181920D91DD98E380046A4D3 /* OrgNewsFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrgNewsFeed.swift; path = ../OrgNewsFeed.swift; sourceTree = "<group>"; };
 		181920DB1DDA79E10046A4D3 /* UserProfileInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfileInfo.swift; path = ../UserProfileInfo.swift; sourceTree = "<group>"; };
 		181920DF1DDA7DDC0046A4D3 /* CameraForUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraForUser.swift; path = ../CameraForUser.swift; sourceTree = "<group>"; };
@@ -105,7 +112,7 @@
 		189195FE1DEC000900D5D4DE /* ReaderOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaderOverlayView.swift; sourceTree = "<group>"; };
 		189195FF1DEC000900D5D4DE /* SwitchCameraButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchCameraButton.swift; sourceTree = "<group>"; };
 		189196001DEC000900D5D4DE /* ToggleTorchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleTorchButton.swift; sourceTree = "<group>"; };
-		1891960D1DEC026700D5D4DE /* NewEventController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEventController.swift; sourceTree = "<group>"; };
+		189196111DECABD200D5D4DE /* NewEventController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewEventController.swift; path = Ordinem/Controller/NewEventController.swift; sourceTree = "<group>"; };
 		18B830971DD5711A0028651C /* Ordinem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ordinem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B8309A1DD5711A0028651C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18B8309C1DD5711A0028651C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -160,7 +167,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		189195F61DEBFFD600D5D4DE /* QRCodeReader */ = {
+		18068A6B1DECB831002706F9 /* QRGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				18068A691DECB80F002706F9 /* QRCode.swift */,
+				18068A6D1DECB895002706F9 /* UIImageViewExtension.swift */,
+				18068A6E1DECB895002706F9 /* CIColorExtension.swift */,
+				18068A6F1DECB895002706F9 /* QRCode.h */,
+			);
+			name = QRGenerator;
+			sourceTree = "<group>";
+		};
+		18068A6C1DECB84A002706F9 /* QRReader */ = {
 			isa = PBXGroup;
 			children = (
 				189195F41DEBFFA400D5D4DE /* QRCodeReader.swift */,
@@ -174,13 +192,22 @@
 				189195FF1DEC000900D5D4DE /* SwitchCameraButton.swift */,
 				189196001DEC000900D5D4DE /* ToggleTorchButton.swift */,
 			);
-			name = QRCodeReader;
+			name = QRReader;
+			sourceTree = "<group>";
+		};
+		189195F61DEBFFD600D5D4DE /* QR */ = {
+			isa = PBXGroup;
+			children = (
+				18068A6C1DECB84A002706F9 /* QRReader */,
+				18068A6B1DECB831002706F9 /* QRGenerator */,
+			);
+			name = QR;
 			sourceTree = "<group>";
 		};
 		18B8308E1DD571190028651C = {
 			isa = PBXGroup;
 			children = (
-				189195F61DEBFFD600D5D4DE /* QRCodeReader */,
+				189195F61DEBFFD600D5D4DE /* QR */,
 				18FD01561DE569A200071850 /* Controller */,
 				18FD01541DE556C100071850 /* Stripe-server */,
 				18B830991DD5711A0028651C /* Ordinem */,
@@ -259,10 +286,10 @@
 		18FD01561DE569A200071850 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				189196111DECABD200D5D4DE /* NewEventController.swift */,
 				18C5AF101DE621720051989B /* AdminAwardController.swift */,
 				18C5AF121DE62EAE0051989B /* AdminAwardVerification.swift */,
 				18C5AF141DE630680051989B /* LoginController.swift */,
-				1891960D1DEC026700D5D4DE /* NewEventController.swift */,
 				18FD01611DE56AA600071850 /* OrgController.swift */,
 				18C5AF181DE78B8A0051989B /* PointCalculatorController.swift */,
 				18FD01631DE56D9300071850 /* UserController.swift */,
@@ -422,13 +449,15 @@
 				181920E21DDA83680046A4D3 /* UserCashTable.swift in Sources */,
 				189196061DEC000900D5D4DE /* ReaderOverlayView.swift in Sources */,
 				189195F51DEBFFA400D5D4DE /* QRCodeReader.swift in Sources */,
+				18068A701DECB895002706F9 /* UIImageViewExtension.swift in Sources */,
+				18068A6A1DECB80F002706F9 /* QRCode.swift in Sources */,
 				182F07101DE8E29100B2428E /* SubscriptionList.swift in Sources */,
 				18C5AF131DE62EAE0051989B /* AdminAwardVerification.swift in Sources */,
 				182F07161DEB83B500B2428E /* OrgProfileDetails.swift in Sources */,
 				182F070C1DE8C7C300B2428E /* UserProfileMenu.swift in Sources */,
 				1866858F1DE550BE001F1AF0 /* BillingInformation.swift in Sources */,
 				18C5AF111DE621720051989B /* AdminAwardController.swift in Sources */,
-				1891960E1DEC026700D5D4DE /* NewEventController.swift in Sources */,
+				189196121DECABD200D5D4DE /* NewEventController.swift in Sources */,
 				18B8309D1DD5711A0028651C /* ViewController.swift in Sources */,
 				189195F81DEBFFFA00D5D4DE /* QRCodeReaderResult.swift in Sources */,
 				182F07121DEB823000B2428E /* UserProfile.swift in Sources */,
@@ -442,6 +471,7 @@
 				18248D891DD79E100022A7D4 /* CreateEvent.swift in Sources */,
 				189196071DEC000900D5D4DE /* SwitchCameraButton.swift in Sources */,
 				18248D8B1DD7BF650022A7D4 /* OrgDirectLoginScreen.swift in Sources */,
+				18068A711DECB895002706F9 /* CIColorExtension.swift in Sources */,
 				18B830A31DD5711A0028651C /* Ordinem.xcdatamodeld in Sources */,
 				181920DC1DDA79E10046A4D3 /* UserProfileInfo.swift in Sources */,
 				18CED9FD1DE278B4008FBABA /* ESigAndConflictions.swift in Sources */,

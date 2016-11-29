@@ -158,6 +158,7 @@ UINavigationControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
         LocationOfEvent.inputAccessoryView = toolBar
         eventTitle.inputAccessoryView = toolBar
         textBoxTypeOfData.inputAccessoryView = toolBar
+        additonalInfo.inputAccessoryView = toolBar
 
         
         

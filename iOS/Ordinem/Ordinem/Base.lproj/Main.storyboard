@@ -365,7 +365,7 @@
                     <navigationItem key="navigationItem" title="News Feed" id="yRy-7a-9iM">
                         <barButtonItem key="leftBarButtonItem" title="Profile" id="LUa-fm-dRZ">
                             <connections>
-                                <segue destination="ZaV-v1-YpF" kind="show" id="onK-AU-kMz"/>
+                                <segue destination="ZaV-v1-YpF" kind="presentation" id="3zT-tc-6Ov"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Camera" id="0lC-lv-015">
@@ -433,7 +433,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJp-Om-7l6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4070.625" y="-201.7605633802817"/>
+            <point key="canvasLocation" x="5068.125" y="-201.7605633802817"/>
         </scene>
         <!--Create Event-->
         <scene sceneID="r5C-pX-tZ2">
@@ -500,7 +500,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="The more detail the better" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sfb-1a-hQB">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="If address needed use add info" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sfb-1a-hQB">
                                         <rect key="frame" x="30" y="231" width="260" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="fg7-TC-uF4"/>
@@ -591,7 +591,7 @@
                                         </connections>
                                     </stepper>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnn-6d-wry">
-                                        <rect key="frame" x="212.5" y="469" width="77.5" height="31"/>
+                                        <rect key="frame" x="213" y="469" width="77" height="31"/>
                                         <color key="backgroundColor" red="0.96690819299999997" green="0.96690819299999997" blue="0.96690819299999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="cnn-6d-wry" secondAttribute="height" multiplier="37:15" id="y0Z-wS-4U2"/>
@@ -610,7 +610,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="W1c-6I-MLJ">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Phone Number, Links, Addrsses etc are referenceable" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="W1c-6I-MLJ">
                                         <rect key="frame" x="30" y="401" width="260" height="63"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -2436,38 +2436,25 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m1k-gI-K6c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5220" y="-2738"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="gWR-c4-yP6">
-            <objects>
-                <navigationController id="iXz-EA-9bc" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Njq-vh-eij">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="CUF-r6-oEC" kind="relationship" relationship="rootViewController" id="Mfk-II-lj9"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Sok-v6-Z8f" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1568" y="-1874"/>
+            <point key="canvasLocation" x="2588" y="-2696"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="kkn-qq-GG4">
             <objects>
                 <splitViewController id="ZaV-v1-YpF" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Rj9-pT-3l1">
+                        <barButtonItem key="backBarButtonItem" title="Menu" id="QZR-Dc-YFM"/>
+                    </navigationItem>
                     <connections>
-                        <segue destination="iXz-EA-9bc" kind="relationship" relationship="masterViewController" id="WKd-x1-bLl"/>
-                        <segue destination="M6k-HK-Jwq" kind="relationship" relationship="detailViewController" id="wv1-eO-lGF"/>
+                        <segue destination="svI-WU-GvR" kind="relationship" relationship="detailViewController" id="Bg2-zA-ECY"/>
+                        <segue destination="M6k-HK-Jwq" kind="relationship" relationship="masterViewController" id="wQi-hb-imU"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YFm-qe-mu9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1568" y="-2700"/>
+            <point key="canvasLocation" x="1659" y="-2695"/>
         </scene>
-        <!--Org News Feed-->
+        <!--Your Feed-->
         <scene sceneID="s8x-QD-dWi">
             <objects>
                 <tableViewController storyboardIdentifier="OrgNewsFeed" id="psb-7f-40E" customClass="OrgNewsFeed" customModule="Ordinem" customModuleProvider="target" sceneMemberID="viewController">
@@ -2476,45 +2463,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <tableView key="tableFooterView" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="V1m-fI-EPD">
-                            <rect key="frame" x="0.0" y="210" width="320" height="44"/>
+                            <rect key="frame" x="0.0" y="230" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </tableView>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrgFeed" id="rRf-lc-uDJ">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rRf-lc-uDJ" id="aVG-6m-zvc">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DsT-PC-HSe">
-                                            <rect key="frame" x="0.0" y="-1" width="320" height="44"/>
-                                            <items>
-                                                <navigationItem title="Your Feed" id="S9g-4J-W4o">
-                                                    <barButtonItem key="leftBarButtonItem" title="Open QR" id="DEk-r7-fyu">
-                                                        <connections>
-                                                            <segue destination="llQ-W4-o2O" kind="show" id="1rr-wU-zVo"/>
-                                                        </connections>
-                                                    </barButtonItem>
-                                                    <barButtonItem key="rightBarButtonItem" title="Add Event" id="gj3-GC-soR">
-                                                        <connections>
-                                                            <segue destination="hkk-HH-JiH" kind="show" id="DwA-uN-rOP"/>
-                                                        </connections>
-                                                    </barButtonItem>
-                                                </navigationItem>
-                                            </items>
-                                        </navigationBar>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="DsT-PC-HSe" firstAttribute="top" secondItem="aVG-6m-zvc" secondAttribute="top" constant="-1" id="GMp-MG-wpw"/>
-                                        <constraint firstAttribute="trailing" secondItem="DsT-PC-HSe" secondAttribute="trailing" id="WCU-81-VgB"/>
-                                        <constraint firstItem="DsT-PC-HSe" firstAttribute="leading" secondItem="aVG-6m-zvc" secondAttribute="leading" id="w6q-Lb-Cet"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                            </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="w8n-zp-bw9" customClass="FutureRSVPDate" customModule="Ordinem" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w8n-zp-bw9" id="XzV-Yw-LHz">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -2536,7 +2491,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="orgdirectfeed" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrgNewsFeedCell" rowHeight="94" id="YM2-PO-HCa" customClass="OrgNewsFeedCell" customModule="Ordinem" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="116" width="320" height="94"/>
+                                <rect key="frame" x="0.0" y="72" width="320" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YM2-PO-HCa" id="AHo-57-dQC">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="93.5"/>
@@ -2646,14 +2601,27 @@
                             <outlet property="delegate" destination="psb-7f-40E" id="xGB-df-Hfk"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Your Feed" id="egd-kk-d3A">
+                        <barButtonItem key="leftBarButtonItem" title="Open QR" id="DEk-r7-fyu">
+                            <connections>
+                                <segue destination="llQ-W4-o2O" kind="show" id="1rr-wU-zVo"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Add Event" id="gj3-GC-soR">
+                            <connections>
+                                <segue destination="hkk-HH-JiH" kind="show" id="DwA-uN-rOP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tr5-z6-pkH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2333" y="-202"/>
+            <point key="canvasLocation" x="3330" y="-202.81690140845072"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="m0T-fL-lga">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BjB-SG-RXN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="M6k-HK-Jwq" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SKW-b4-Avo">
@@ -2662,12 +2630,11 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="svI-WU-GvR" kind="relationship" relationship="rootViewController" id="CH2-VH-5xv"/>
+                        <segue destination="CUF-r6-oEC" kind="show" id="MaJ-Dm-1X0"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BjB-SG-RXN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4071" y="-2737"/>
+            <point key="canvasLocation" x="1661" y="-1873"/>
         </scene>
         <!--Subscription Details-->
         <scene sceneID="Unz-Zf-STa">
@@ -2834,7 +2801,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rQy-pA-ZnL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6233" y="-2851"/>
+            <point key="canvasLocation" x="6233" y="-2738"/>
         </scene>
         <!--Circle List-->
         <scene sceneID="myF-bF-hNB">
@@ -3037,7 +3004,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TxU-fw-p41" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7507.5" y="406.6901408450704"/>
+            <point key="canvasLocation" x="8505" y="406.6901408450704"/>
         </scene>
         <!--Profile-->
         <scene sceneID="wHw-jK-46S">
@@ -3230,13 +3197,6 @@
                                     <constraint firstAttribute="trailing" secondItem="uZ4-0o-5sA" secondAttribute="trailing" constant="122.5" id="y0P-A8-dfi"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoF-VS-pZu">
-                                <rect key="frame" x="22" y="8" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -3251,11 +3211,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="8rR-XV-wS8">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="ZMI-d5-iQB">
-                            <connections>
-                                <segue destination="M6k-HK-Jwq" kind="show" id="cfE-Ex-rCG"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="ZMI-d5-iQB"/>
                         <barButtonItem key="rightBarButtonItem" title="Cash" id="1Ja-bx-rS0">
                             <connections>
                                 <segue destination="c40-wC-J5x" kind="show" id="9WK-v8-VRa"/>
@@ -4569,10 +4525,10 @@
             </objects>
             <point key="canvasLocation" x="8505" y="-2738"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Initial Message Table-->
         <scene sceneID="GQ8-NW-0lv">
             <objects>
-                <tableViewController id="pX9-EE-YWW" sceneMemberID="viewController">
+                <tableViewController id="pX9-EE-YWW" customClass="InitialMessageTable" customModule="Ordinem" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="wtR-XL-Wb0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4603,14 +4559,14 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dO9-xH-KjL">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dO9-xH-KjL" customClass="publicVPrivate" customModule="Ordinem" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dO9-xH-KjL" id="QIA-N0-dpR">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xz6-YH-cPp">
+                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aUh-4Z-rQX">
                                             <rect key="frame" x="103" y="8" width="115" height="29"/>
                                             <segments>
                                                 <segment title="Public"/>
@@ -4619,12 +4575,16 @@
                                         </segmentedControl>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="xz6-YH-cPp" firstAttribute="top" secondItem="QIA-N0-dpR" secondAttribute="topMargin" id="L1A-z6-v7L"/>
-                                        <constraint firstItem="xz6-YH-cPp" firstAttribute="centerX" secondItem="QIA-N0-dpR" secondAttribute="centerX" id="iWI-TW-ixQ"/>
+                                        <constraint firstItem="aUh-4Z-rQX" firstAttribute="centerX" secondItem="QIA-N0-dpR" secondAttribute="centerX" id="Jt5-RG-1IE"/>
+                                        <constraint firstItem="aUh-4Z-rQX" firstAttribute="top" secondItem="QIA-N0-dpR" secondAttribute="top" constant="8" id="eTB-ST-AkO"/>
+                                        <constraint firstAttribute="bottom" secondItem="aUh-4Z-rQX" secondAttribute="bottom" constant="7" id="qEJ-jg-3Hm"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="pvP" destination="aUh-4Z-rQX" id="kRs-TA-BJ1"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="61" id="vwd-Pr-ggJ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="61" id="vwd-Pr-ggJ" customClass="messageSelectTemp" customModule="Ordinem" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="116" width="320" height="61"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vwd-Pr-ggJ" id="1Pc-kW-Xta">
@@ -4669,6 +4629,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="date" destination="soK-l2-giH" id="LHJ-kc-c6w"/>
+                                    <outlet property="image" destination="Pdy-rG-T0P" id="tjE-Rq-8vH"/>
+                                    <outlet property="imaging" destination="Pdy-rG-T0P" id="j96-vU-grA"/>
+                                    <outlet property="message" destination="udP-5Q-Tpz" id="xb0-lz-Heq"/>
+                                    <outlet property="name" destination="hlg-UD-nBB" id="1pZ-Ro-ZqJ"/>
                                     <segue destination="TAd-Qp-pYj" kind="show" id="i8D-Un-Ljc"/>
                                 </connections>
                             </tableViewCell>
@@ -5216,6 +5181,24 @@
             </objects>
             <point key="canvasLocation" x="-548" y="-1052"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="W8v-Uv-gmc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tBS-Lg-ZuN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5hJ-XJ-6BM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="psb-7f-40E" kind="relationship" relationship="rootViewController" id="sOy-s6-U0w"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="13P-G9-iG0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2332.5" y="-202.81690140845072"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ChapmanLogo" width="350" height="297"/>
@@ -5223,8 +5206,7 @@
         <image name="ordinempic" width="1920" height="1080"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cfE-Ex-rCG"/>
-        <segue reference="olL-f5-0Cx"/>
-        <segue reference="DwA-uN-rOP"/>
+        <segue reference="oq3-QL-cky"/>
+        <segue reference="Sbf-lo-t7F"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -108,7 +108,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         let login = LoginController()
         
-        login.school = SchoolLoginPicker.textInputContextIdentifier!
+
         login.email = LoginSchoolEmail.text!
         login.password = LoginPassword.text!
         login.type = LoginUserVsOrg.selectedSegmentIndex
@@ -118,16 +118,18 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let adminReward = storyboard.instantiateViewController(withIdentifier: "AwardTableTemplateViewController")
-            present(adminReward, animated: true, completion: nil)
+            navigationController!.pushViewController(adminReward, animated: true)
+           
         }
         else if LoginUserVsOrg.selectedSegmentIndex == 0 {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let newsFeedVC = storyboard.instantiateViewController(withIdentifier: "UserNewsFeed")
-            present(newsFeedVC, animated: true, completion: nil)        }
+            navigationController!.pushViewController(newsFeedVC, animated: true)
+                 }
         else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let newsFeedVC = storyboard.instantiateViewController(withIdentifier: "OrgNewsFeed")
-            present(newsFeedVC, animated: true, completion: nil)        }
+            navigationController!.pushViewController(newsFeedVC, animated: true)        }
         
         
     }

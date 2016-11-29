@@ -10,7 +10,7 @@ import UIKit
 
 class NewEventController: UIViewController {
     
-    private var _name = String()
+    private var _name = ""
     private var _image = UIImage()
     private var _sTime = DateFormatter()
     private var _eTime = DateFormatter()
@@ -18,6 +18,7 @@ class NewEventController: UIViewController {
     private var _eTitle = ""
     private var _type = ""
     private var _points = Int(0)
+    private var _addInfo = ""
     
     
     var image : UIImage{
@@ -94,8 +95,17 @@ class NewEventController: UIViewController {
         }
     }
     
+    var addInfo : String{
+        get{
+            return _addInfo
+        }
+        set{
+            _addInfo = newValue
+        }
+    }
+    
     func getEverything() -> String{
-        return "\(name) \(image) \(sTime) \(eTime) \(location) \(eTitle) \(points)"
+        return "\(name) \(image) \(sTime) \(eTime) \(location) \(eTitle) \(addInfo) \(points)"
     }
     
     

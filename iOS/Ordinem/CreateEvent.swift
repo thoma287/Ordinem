@@ -90,13 +90,15 @@ UINavigationControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
             event.title = eventTitle.text!
             event.type = textBoxTypeOfData.text!
             event.points = Int(PointStepperLabel.text!)!
+            event.addInfo = additonalInfo.text!
             
         }
 
     }
     
-    var list = ["Chapman"]
+    var list = ["Competitive", "Conference", "Educational", "Promotional", "Fundraising", "Other"]
     var picker = UIPickerView()
+    var picker2 = UIPickerView()
     
     @available(iOS 2.0, *)
     public func numberOfComponents(in pickerView: UIPickerView) -> Int{
@@ -129,8 +131,11 @@ UINavigationControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
         picker.dataSource = self
         textBoxTypeOfData.inputView = picker
         
-        DateOfEvent.delegate = self
         
+        
+        
+        DateOfEvent.delegate = self
+        EndDateOfEvent.delegate = self
         
         PointStepper.maximumValue = 10
         PointStepper.stepValue = 1
@@ -194,8 +199,13 @@ UINavigationControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     func datePickerChanged(sender: UIDatePicker){
         let formatter = DateFormatter()
         formatter.dateStyle = .full
-        DateOfEvent.text = formatter.string(from: sender.date)
-        
+        if DateOfEvent.isEditing {
+            DateOfEvent.text = formatter.string(from: sender.date)
+        }
+
+        if(EndDateOfEvent.isEditing){
+        EndDateOfEvent.text = formatter.string(from: sender.date)
+        }
         
     }
     

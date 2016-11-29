@@ -10,6 +10,10 @@
 		18068A6A1DECB80F002706F9 /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18068A691DECB80F002706F9 /* QRCode.swift */; };
 		18068A701DECB895002706F9 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18068A6D1DECB895002706F9 /* UIImageViewExtension.swift */; };
 		18068A711DECB895002706F9 /* CIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18068A6E1DECB895002706F9 /* CIColorExtension.swift */; };
+		18068A731DECDC48002706F9 /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18068A721DECDC48002706F9 /* ChangePassword.swift */; };
+		18068A751DECDD18002706F9 /* ChangeCaption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18068A741DECDD18002706F9 /* ChangeCaption.swift */; };
+		18068A771DECDD59002706F9 /* ChangeProfilePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18068A761DECDD59002706F9 /* ChangeProfilePicture.swift */; };
+		18068A791DECE2AC002706F9 /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18068A781DECE2AC002706F9 /* UserProfileController.swift */; };
 		181920DA1DD98E380046A4D3 /* OrgNewsFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181920D91DD98E380046A4D3 /* OrgNewsFeed.swift */; };
 		181920DC1DDA79E10046A4D3 /* UserProfileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181920DB1DDA79E10046A4D3 /* UserProfileInfo.swift */; };
 		181920E01DDA7DDC0046A4D3 /* CameraForUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181920DF1DDA7DDC0046A4D3 /* CameraForUser.swift */; };
@@ -84,6 +88,10 @@
 		18068A6D1DECB895002706F9 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		18068A6E1DECB895002706F9 /* CIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIColorExtension.swift; sourceTree = "<group>"; };
 		18068A6F1DECB895002706F9 /* QRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCode.h; sourceTree = "<group>"; };
+		18068A721DECDC48002706F9 /* ChangePassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
+		18068A741DECDD18002706F9 /* ChangeCaption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeCaption.swift; sourceTree = "<group>"; };
+		18068A761DECDD59002706F9 /* ChangeProfilePicture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeProfilePicture.swift; sourceTree = "<group>"; };
+		18068A781DECE2AC002706F9 /* UserProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfileController.swift; path = Controller/UserProfileController.swift; sourceTree = "<group>"; };
 		181920D91DD98E380046A4D3 /* OrgNewsFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrgNewsFeed.swift; path = ../OrgNewsFeed.swift; sourceTree = "<group>"; };
 		181920DB1DDA79E10046A4D3 /* UserProfileInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfileInfo.swift; path = ../UserProfileInfo.swift; sourceTree = "<group>"; };
 		181920DF1DDA7DDC0046A4D3 /* CameraForUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraForUser.swift; path = ../CameraForUser.swift; sourceTree = "<group>"; };
@@ -248,6 +256,10 @@
 				181920DF1DDA7DDC0046A4D3 /* CameraForUser.swift */,
 				18248D881DD79E100022A7D4 /* CreateEvent.swift */,
 				18B8309E1DD5711A0028651C /* Main.storyboard */,
+				18068A721DECDC48002706F9 /* ChangePassword.swift */,
+				18068A741DECDD18002706F9 /* ChangeCaption.swift */,
+				18068A761DECDD59002706F9 /* ChangeProfilePicture.swift */,
+				18068A781DECE2AC002706F9 /* UserProfileController.swift */,
 				18EAD5121DD6D4E30024BA14 /* NewOrgSignUp.swift */,
 				255D40CA1DD5A3290050F177 /* NewUserViewController.swift */,
 				18248D8A1DD7BF650022A7D4 /* OrgDirectLoginScreen.swift */,
@@ -444,12 +456,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18068A731DECDC48002706F9 /* ChangePassword.swift in Sources */,
 				18FD01641DE56D9300071850 /* UserController.swift in Sources */,
+				18068A751DECDD18002706F9 /* ChangeCaption.swift in Sources */,
 				189196011DEC000900D5D4DE /* QRCodeReaderView.swift in Sources */,
 				181920E21DDA83680046A4D3 /* UserCashTable.swift in Sources */,
 				189196061DEC000900D5D4DE /* ReaderOverlayView.swift in Sources */,
 				189195F51DEBFFA400D5D4DE /* QRCodeReader.swift in Sources */,
 				18068A701DECB895002706F9 /* UIImageViewExtension.swift in Sources */,
+				18068A791DECE2AC002706F9 /* UserProfileController.swift in Sources */,
 				18068A6A1DECB80F002706F9 /* QRCode.swift in Sources */,
 				182F07101DE8E29100B2428E /* SubscriptionList.swift in Sources */,
 				18C5AF131DE62EAE0051989B /* AdminAwardVerification.swift in Sources */,
@@ -468,6 +483,7 @@
 				189196031DEC000900D5D4DE /* QRCodeReaderViewController.swift in Sources */,
 				18CEDA011DE3D189008FBABA /* PointCalculator.swift in Sources */,
 				18C5AF151DE630680051989B /* LoginController.swift in Sources */,
+				18068A771DECDD59002706F9 /* ChangeProfilePicture.swift in Sources */,
 				18248D891DD79E100022A7D4 /* CreateEvent.swift in Sources */,
 				189196071DEC000900D5D4DE /* SwitchCameraButton.swift in Sources */,
 				18248D8B1DD7BF650022A7D4 /* OrgDirectLoginScreen.swift in Sources */,

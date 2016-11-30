@@ -12,7 +12,7 @@ class UserProfileMenu: UITableViewController, UISplitViewControllerDelegate {
 
     var array : NSMutableArray! = NSMutableArray()
     
-    let menuItems : [String] = ["Notifications", "News Feed", "Profile",  "Subscriptions", "Circle", "Connect with Facebook", "Edit Profile", "Settings"]
+    let menuItems : [String] = ["Notifications3", "News Feed1", "Profile4",  "2Subscriptions", "Circle", "Connect with Facebook", "Edit Profile", "Settings"]
     
     override func viewDidLoad() {
         self.array.addObjects(from: menuItems)
@@ -39,14 +39,12 @@ class UserProfileMenu: UITableViewController, UISplitViewControllerDelegate {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.array.count
+        return self.menuItems.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-
-        cell.textLabel?.text = self.array.object(at: indexPath.row) as? String
+        let cell = tableView.dequeueReusableCell(withIdentifier: "menu", for: indexPath) 
         
         return cell
         

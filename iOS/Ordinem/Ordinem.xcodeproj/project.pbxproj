@@ -94,6 +94,7 @@
 		18068A761DECDD59002706F9 /* ChangeProfilePicture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeProfilePicture.swift; sourceTree = "<group>"; };
 		18068A781DECE2AC002706F9 /* UserProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfileController.swift; path = Controller/UserProfileController.swift; sourceTree = "<group>"; };
 		18068A7C1DED2262002706F9 /* InitialMessageTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialMessageTable.swift; sourceTree = "<group>"; };
+		18068A7E1DED5A44002706F9 /* Ordinem-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ordinem-Bridging-Header.h"; sourceTree = "<group>"; };
 		181920D91DD98E380046A4D3 /* OrgNewsFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrgNewsFeed.swift; path = ../OrgNewsFeed.swift; sourceTree = "<group>"; };
 		181920DB1DDA79E10046A4D3 /* UserProfileInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfileInfo.swift; path = ../UserProfileInfo.swift; sourceTree = "<group>"; };
 		181920DF1DDA7DDC0046A4D3 /* CameraForUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraForUser.swift; path = ../CameraForUser.swift; sourceTree = "<group>"; };
@@ -276,6 +277,7 @@
 				18B830A61DD5711A0028651C /* LaunchScreen.storyboard */,
 				18B830A91DD5711A0028651C /* Info.plist */,
 				18B830A11DD5711A0028651C /* Ordinem.xcdatamodeld */,
+				18068A7E1DED5A44002706F9 /* Ordinem-Bridging-Header.h */,
 			);
 			path = Ordinem;
 			sourceTree = "<group>";
@@ -389,6 +391,7 @@
 					18B830961DD571190028651C = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 42EJRMJVC5;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					18B830AD1DD5711A0028651C = {
@@ -659,11 +662,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 42EJRMJVC5;
 				INFOPLIST_FILE = Ordinem/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DAS.Ordinem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Ordinem/Ordinem-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -672,11 +678,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 42EJRMJVC5;
 				INFOPLIST_FILE = Ordinem/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DAS.Ordinem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Ordinem/Ordinem-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

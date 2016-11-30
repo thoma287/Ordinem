@@ -96,7 +96,7 @@ UINavigationControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
 
     }
     
-    var list = ["Competitive", "Conference", "Educational", "Promotional", "Fundraising", "Other"]
+    var list = ["Competitive", "Career Development", "Conference", "Educational", "Promotional", "Fundraising", "Other"]
     var picker = UIPickerView()
     var picker2 = UIPickerView()
     

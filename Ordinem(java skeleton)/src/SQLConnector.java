@@ -6,11 +6,8 @@
 
 //import com.intellij.ide.ui.AppearanceOptionsTopHitProvider;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
+import java.util.InputMismatchException;
 
 public class SQLConnector {
 
@@ -19,9 +16,10 @@ public class SQLConnector {
     public String username;
     public String password;
     public String dbname;
-    private Connection mysql;
-    private PreparedStatement pst;
+    public Connection mysql;
+    public PreparedStatement pst;
     public ResultSet data;
+    public ResultSetMetaData specialData;
 
     public SQLConnector() {
         //default constructor
@@ -32,6 +30,7 @@ public class SQLConnector {
         this.mysql = null;
         this.pst = null;
         this.data = null;
+        this.specialData = null;
     }
 
     public SQLConnector(String _dbname, String _connectionURL, String _username, String _password) {
@@ -43,6 +42,7 @@ public class SQLConnector {
         this.mysql = null;
         this.pst = null;
         this.data = null;
+        this.specialData = null;
         this.init();
     }
 
@@ -95,11 +95,12 @@ public class SQLConnector {
         return output;
     }
 
-    public boolean runSelect(String query) {
+    public boolean runSelect() {
         //runs the given SQL query
         try {
-            this.pst = mysql.prepareStatement(query);
+            //this.pst = mysql.prepareStatement(query);
             this.data = pst.executeQuery();
+
             return true;
         } catch (Exception e) {
             //System.out.println("An error occurred, please try again.");
@@ -108,17 +109,31 @@ public class SQLConnector {
         }
     }
 
-    public boolean runUpdate(String query) {
+    public boolean runUpdate() {
         //runs the given SQL query
         try {
-            this.pst = mysql.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
-            this.pst.executeUpdate();
+            //this.pst = mysql.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+            int num = this.pst.executeUpdate();
             return true;
         } catch (Exception e) {
             //System.out.println("An error occurred, please try again.");
             //e.printStackTrace();
             return false;
         }
+    }
+
+    public String printEventData(){
+        String temp = "";
+        try{
+            while(this.data.next()){
+                temp = data.getString(1);
+
+            }
+
+        }catch(Exception e){
+            System.out.println("No data found");
+        }
+        return temp;
     }
 
     public String getGeneratedKey() {

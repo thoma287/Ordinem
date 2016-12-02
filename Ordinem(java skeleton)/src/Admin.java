@@ -55,6 +55,7 @@ public class Admin {
     }
 
     public boolean AddOrg(){
+        /*
         Scanner prompt = new Scanner(System.in);
         System.out.println("Choose Organization Name: ");
         username = prompt.next();
@@ -72,6 +73,8 @@ public class Admin {
         //uniqueID = UUID.randomUUID().toString();
 
         return sql.runUpdate("INSERT INTO organizations(name, email, password, typeID) VALUES ('"+username+"', '"+email+"', '"+password+"', "+typeID+")");
+        */
+        return true;
     }
 
     public String editOrg(){

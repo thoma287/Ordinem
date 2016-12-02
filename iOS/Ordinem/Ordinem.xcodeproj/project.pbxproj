@@ -32,6 +32,7 @@
 		182F07161DEB83B500B2428E /* OrgProfileDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F07151DEB83B500B2428E /* OrgProfileDetails.swift */; };
 		182F07181DEB86DB00B2428E /* CircleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F07171DEB86DB00B2428E /* CircleList.swift */; };
 		182F071A1DEB875E00B2428E /* CircleProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F07191DEB875E00B2428E /* CircleProfile.swift */; };
+		185A9ACD1DF2119300A613C1 /* AdditionalProfiling.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185A9ACC1DF2119300A613C1 /* AdditionalProfiling.storyboard */; };
 		1866858F1DE550BE001F1AF0 /* BillingInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1866858E1DE550BE001F1AF0 /* BillingInformation.swift */; };
 		189195F51DEBFFA400D5D4DE /* QRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189195F41DEBFFA400D5D4DE /* QRCodeReader.swift */; };
 		189195F81DEBFFFA00D5D4DE /* QRCodeReaderResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189195F71DEBFFFA00D5D4DE /* QRCodeReaderResult.swift */; };
@@ -112,6 +113,7 @@
 		182F07151DEB83B500B2428E /* OrgProfileDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrgProfileDetails.swift; path = ../OrgProfileDetails.swift; sourceTree = "<group>"; };
 		182F07171DEB86DB00B2428E /* CircleList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleList.swift; path = ../CircleList.swift; sourceTree = "<group>"; };
 		182F07191DEB875E00B2428E /* CircleProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleProfile.swift; path = ../CircleProfile.swift; sourceTree = "<group>"; };
+		185A9ACC1DF2119300A613C1 /* AdditionalProfiling.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AdditionalProfiling.storyboard; sourceTree = "<group>"; };
 		1866858E1DE550BE001F1AF0 /* BillingInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BillingInformation.swift; path = ../BillingInformation.swift; sourceTree = "<group>"; };
 		189195F41DEBFFA400D5D4DE /* QRCodeReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReader.swift; sourceTree = "<group>"; };
 		189195F71DEBFFFA00D5D4DE /* QRCodeReaderResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReaderResult.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 		18B8308E1DD571190028651C = {
 			isa = PBXGroup;
 			children = (
+				185A9ACC1DF2119300A613C1 /* AdditionalProfiling.storyboard */,
 				18068A7C1DED2262002706F9 /* InitialMessageTable.swift */,
 				189195F61DEBFFD600D5D4DE /* QR */,
 				18FD01561DE569A200071850 /* Controller */,
@@ -435,6 +438,7 @@
 			files = (
 				18B830A81DD5711A0028651C /* LaunchScreen.storyboard in Resources */,
 				18B830A51DD5711A0028651C /* Assets.xcassets in Resources */,
+				185A9ACD1DF2119300A613C1 /* AdditionalProfiling.storyboard in Resources */,
 				18248D8F1DD848290022A7D4 /* Controller in Resources */,
 				18FD01551DE556C100071850 /* Stripe-server in Resources */,
 				18B830A01DD5711A0028651C /* Main.storyboard in Resources */,
